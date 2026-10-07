@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-70%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="70 Skills"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-16%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="16 Tracks"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-80%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="80 Skills"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-17%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="17 Tracks"></a>
   <a href="#"><img src="https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Cursor%20%7C%20Claude-10b981?style=for-the-badge&logo=openai&logoColor=white" alt="Agent Ready"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge" alt="License"></a>
 </p>
@@ -13,7 +13,7 @@
 
 > 🌐 **Interactive Animated Showcase Site**: Visit the live single-page web app in [`docs/index.html`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/docs/index.html) with 60 FPS interactive particle constellation animations, instant search, track filters, and 1-click prompt copies! Easily deployed to **GitHub Pages** via the `/docs` folder.
 
-A comprehensive, production-grade suite of **70 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, and **Principal Cybersecurity & Threat Defense Architect** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, and EPSS vulnerability triage.
+A comprehensive, production-grade suite of **80 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, and **Mobile & Multi-Platform Application Engineer** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, and Fastlane CI/CD store delivery.
 
 Designed for modern AI coding agents (**Antigravity**, **Gemini CLI**, **Cursor**, **Claude Code**, **Copilot Workspace**, and **Windsurf**), this repository provides modular, standardized runbooks (`SKILL.md`) that instruct AI agents how to think and operate as domain experts across every organizational role.
 
@@ -122,14 +122,27 @@ flowchart TD
         S20 --> S30["30: Compliance, Governance & Risk (GRC)"]
     end
 
-    S22 -.->|Continuous Feedback Loop| S27
+    subgraph S11["11. Mobile, Native & Multi-Platform Application Engineering"]
+        S52 & S05 --> S71["71: React Native & Expo Architecture"]
+        S05 --> S72["72: Native Android & Jetpack Compose"]
+        S05 --> S73["73: Native iOS & SwiftUI"]
+        S72 & S73 --> S74["74: E-Reader Document Engines & Pagination"]
+        S71 --> S75["75: Flutter & Multiplatform Dart"]
+        S71 & S72 & S73 --> S76["76: Mobile Offline Sync & SQLite"]
+        S71 & S72 & S73 --> S77["77: Push Notifications & Deep Linking"]
+        S76 --> S78["78: Mobile Security & Anti-Tamper"]
+        S74 & S75 --> S79["79: Mobile Performance & Battery Profiling"]
+        S78 & S79 --> S80["80: Mobile CI/CD & Fastlane Release"]
+    end
+
+    S80 & S22 -.->|Continuous Feedback Loop| S27
 ```
 
 ---
 
-## 🏛️ The 16 Functional Organizational Tracks
+## 🏛️ The 17 Functional Organizational Tracks
 
-The 70 skills are organized into 16 distinct professional disciplines:
+The 80 skills are organized into 17 distinct professional disciplines:
 
 | Track | Focus Area | Skills Included |
 | :--- | :--- | :--- |
@@ -149,10 +162,11 @@ The 70 skills are organized into 16 distinct professional disciplines:
 | **Track N** | Code Review, Quality Audit & AST Codemods | `18`, `19`, `48` |
 | **Track O** | DevOps, GitOps, SRE, Chaos Engineering & Operations | `20`, `21`, `22`, `29`, `36`, `38`, `46` |
 | **Track P** | Cybersecurity Engineering, Threat Defense & Data Protection | `61`, `62`, `63`, `64`, `65`, `66`, `67`, `68`, `69`, `70` |
+| **Track Q** | Mobile, Native & Multi-Platform Application Engineering | `71`, `72`, `73`, `74`, `75`, `76`, `77`, `78`, `79`, `80` |
 
 ---
 
-## 📚 Master Skills Directory & Catalog (70 Skills)
+## 📚 Master Skills Directory & Catalog (80 Skills)
 
 | # | Skill Directory | Track | Role & Capabilities | Key Deliverables |
 | :-: | :--- | :--- | :--- | :--- |
@@ -226,6 +240,16 @@ The 70 skills are organized into 16 distinct professional disciplines:
 | `68` | [`68-runtime-defense-and-container-hardening`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/68-runtime-defense-and-container-hardening/SKILL.md) | Cyber Defense | **Principal Workload Security Engineer**: Kubernetes Restricted PodSecurity, seccomp BPF syscall allowlists, rootless containers, gVisor microVMs. | Restricted Deployments, Seccomp JSON, gVisor Pods |
 | `69` | [`69-cloud-security-posture-and-kubernetes-hardening`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/69-cloud-security-posture-and-kubernetes-hardening/SKILL.md) | Cyber Defense | **Principal Cloud Security Architect**: CIS Benchmarks, Default-Deny K8s NetworkPolicies, Kyverno declarative admission control, Cloud Custodian. | Default-Deny Policies, Kyverno ClusterPolicies, CSPM Rules |
 | `70` | [`70-vulnerability-management-and-cvss-triage`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/70-vulnerability-management-and-cvss-triage/SKILL.md) | Cyber Defense | **Principal Vulnerability Lead**: CVSS v3.1/v4.0 scoring, FIRST.org EPSS exploit likelihood, CISA KEV catalog tracking, RFC 9116 security.txt. | EPSS Triage Engines, security.txt Policies, Exception Templates |
+| `71` | [`71-cross-platform-mobile-react-native-expo`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/71-cross-platform-mobile-react-native-expo/SKILL.md) | Mobile & Native | **Principal Mobile Architect**: React Native Fabric New Architecture, TurboModules C++ JSI, Expo Router v3, Reanimated 3 UI worklets. | Fabric Modules, Expo Router Layouts, Gesture Handlers |
+| `72` | [`72-native-android-kotlin-and-jetpack-compose`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/72-native-android-kotlin-and-jetpack-compose/SKILL.md) | Mobile & Native | **Lead Android Engineer**: Modern Kotlin, Jetpack Compose, Material 3, Unidirectional Data Flow (MVI), Room DB, WorkManager. | Compose Screen Hierarchies, Room DAOs, MVI ViewModels |
+| `73` | [`73-native-ios-swift-and-swiftui`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/73-native-ios-swift-and-swiftui/SKILL.md) | Mobile & Native | **Lead iOS Engineer**: Swift 6 structured concurrency, SwiftUI declarative views, NavigationStack, AppStorage, Keychain biometrics. | Swift Concurrency Services, SwiftUI Navigations |
+| `74` | [`74-ereader-document-rendering-and-pagination`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/74-ereader-document-rendering-and-pagination/SKILL.md) | Mobile & Native | **Principal Document & Reader Engineer**: EPUB3/PDF rendering, CSS multi-column reflowable pagination, EPUB CFI canonical bookmarks, AMOLED & E-Ink tuning. | Reflowable Reader Engines, CFI Resolvers, Theme Palettes |
+| `75` | [`75-flutter-and-multiplatform-dart`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/75-flutter-and-multiplatform-dart/SKILL.md) | Mobile & Native | **Principal Flutter Architect**: Flutter 3, Impeller GPU rendering, BLoC state management, platform channels, adaptive foldable layouts. | BLoC State Machines, Adaptive Responsive Layouts |
+| `76` | [`76-mobile-offline-sync-and-sqlite-architecture`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/76-mobile-offline-sync-and-sqlite-architecture/SKILL.md) | Mobile & Native | **Mobile Data Architect**: Local-first offline sync, SQLCipher AES-256 encryption, SQLite FTS5 full-text search, offline outbox sync workers. | Encrypted SQLite Helpers, FTS5 Search, Outbox Workers |
+| `77` | [`77-push-notifications-and-deep-linking`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/77-push-notifications-and-deep-linking/SKILL.md) | Mobile & Native | **Mobile Messaging Architect**: Apple APNs, Google FCM v1, Notification Service payload decryptors, iOS Universal Links, Android App Links. | Notification Services, App Site Associations, Deep Link Routers |
+| `78` | [`78-mobile-security-and-tamper-resistance`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/78-mobile-security-and-tamper-resistance/SKILL.md) | Mobile & Native | **Principal Mobile Security Architect**: Root/Jailbreak detection, Google Play Integrity attestation, SSL public key hash pinning, Secure Enclave/KeyStore, R8 rules. | Root/Jailbreak Detectors, HPKP Pinning Delegates, R8 Rules |
+| `79` | [`79-mobile-performance-profiling-and-battery`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/79-mobile-performance-profiling-and-battery/SKILL.md) | Mobile & Native | **Mobile Performance Engineer**: 120 FPS jank elimination, LeakCanary memory leak diagnosis, Macrobenchmarks, battery radio throttling, MetricKit. | MetricKit Subscribers, Macrobenchmarks, WorkManager Sync |
+| `80` | [`80-mobile-cicd-fastlane-and-store-deployment`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/80-mobile-cicd-fastlane-and-store-deployment/SKILL.md) | Mobile & Native | **Mobile Release Operations Engineer**: Fastlane automated release pipelines, Match encrypted code signing, TestFlight, staged rollouts, privacy manifests. | Fastfiles, Matchfiles, Privacy Manifests, GitHub Actions |
 
 ---
 
@@ -235,7 +259,7 @@ The 70 skills are organized into 16 distinct professional disciplines:
 
 #### On Windows (PowerShell):
 ```powershell
-# Copy all 70 skills to a target project:
+# Copy all 80 skills to a target project:
 .\install-skills.ps1 -Destination "C:\Path\To\MyProject"
 
 # Or install globally for all projects on your machine:
@@ -350,6 +374,38 @@ chmod +x install-skills.sh
 "Scale our PostgreSQL database beyond 15 TB using database-sharding-and-partitioning with consistent hashing and declarative range partitioning."
 ```
 
+### Mobile, Native & E-Reader App Developer Prompts
+```text
+"Build a cross-platform mobile reader using cross-platform-mobile-react-native-expo with TurboModules, Reanimated 3 UI worklets, and Expo Router v3."
+```
+```text
+"Implement a modern native Android screen using native-android-kotlin-and-jetpack-compose with Material 3, Unidirectional Data Flow, and Room DB."
+```
+```text
+"Develop an offline-first iOS reader using native-ios-swift-and-swiftui with Swift 6 structured concurrency and biometric Keychain authentication."
+```
+```text
+"Architect an EPUB3/PDF pagination engine using ereader-document-rendering-and-pagination with CSS multi-column reflow, EPUB CFI bookmarks, and E-Ink tuning."
+```
+```text
+"Create an adaptive multi-platform Flutter app using flutter-and-multiplatform-dart with Impeller GPU rendering and BLoC state management."
+```
+```text
+"Implement local encrypted storage and background sync using mobile-offline-sync-and-sqlite-architecture with SQLCipher AES-256 and an atomic outbox queue."
+```
+```text
+"Configure end-to-end push notifications and Universal Links using push-notifications-and-deep-linking with APNs decryptor extensions and assetlinks.json."
+```
+```text
+"Harden our mobile apps against tampering using mobile-security-and-tamper-resistance with SSL public key pinning, root/jailbreak checks, and R8 rules."
+```
+```text
+"Profile and eliminate UI jank at 120 FPS using mobile-performance-profiling-and-battery with Perfetto traces, Macrobenchmarks, and MetricKit."
+```
+```text
+"Automate our release pipeline using mobile-cicd-fastlane-and-store-deployment with Fastlane Match code signing and staged App Store / Google Play rollouts."
+```
+
 ---
 
 ## 🚀 How to Push to GitHub & Enable Animated GitHub Pages
@@ -365,7 +421,7 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "feat: complete suite of 70 enterprise AI agent skills and animated showcase"
+git commit -m "feat: complete suite of 80 enterprise AI agent skills and animated showcase"
 
 # Set primary branch to main
 git branch -M main
@@ -390,7 +446,7 @@ git push -u origin main
 
 Your live site features:
 - **Interactive 60 FPS Particle Constellation Canvas** with mouse gravity.
-- **Dynamic Search & Instant Filtering** across all 70 skills.
+- **Dynamic Search & Instant Filtering** across all 80 skills.
 - **Interactive Skill Runbook Drawer** with 1-click prompt copying.
 - **Native Animated SVG Header** rendering directly in GitHub's markdown view.
 

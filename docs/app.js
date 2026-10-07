@@ -2,7 +2,7 @@
  * MASTER AI AGENT SKILLS - PRODUCTION GITHUB PAGES APP
  * Features:
  * - 60 FPS Particle Constellation Canvas with Mouse Gravity
- * - Real-Time Dynamic Search & Track Filtering across 70 Skills
+ * - Real-Time Dynamic Search & Track Filtering across 80 Skills
  * - Interactive Modal Inspector & Instant Prompt Snippet Copy
  * - Animated Stats Counters & Terminal Tab Switcher
  */
@@ -191,7 +191,8 @@ function renderTrackFilterPills() {
   if (!container || !window.SKILLS_DATA || !window.SKILLS_DATA.tracks) return;
 
   const tracks = window.SKILLS_DATA.tracks;
-  let html = `<button class="track-pill active" data-track-id="ALL">⚡ All Tracks (70)</button>`;
+  const totalCount = window.SKILLS_DATA?.skills?.length || 80;
+  let html = `<button class="track-pill active" data-track-id="ALL">⚡ All Tracks (${totalCount})</button>`;
 
   tracks.forEach((track) => {
     const shortName = track.name.split(':')[1]?.trim() || track.name;
@@ -258,7 +259,8 @@ function renderCardsHtml(skillsList) {
   const countDisplay = document.getElementById('filtered-count-display');
 
   if (countDisplay) {
-    countDisplay.textContent = `Showing ${skillsList.length} of 70 Skills`;
+    const totalCount = window.SKILLS_DATA?.skills?.length || 80;
+    countDisplay.textContent = `Showing ${skillsList.length} of ${totalCount} Skills`;
   }
 
   if (!container) return;

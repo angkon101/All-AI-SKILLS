@@ -1,83 +1,158 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "master-ai-agent-skills-enterprise-engineering",
-  "version": "6.0.0",
-  "description": "Comprehensive suite of 70 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, and Principal Cybersecurity & Threat Defense Architect: from executive strategy and full-stack type safety, to OWASP API Top 10, WAF/DDoS, DLP, red teaming, eBPF Blue Team SOC, Zero Trust IAM, Vault secrets, and container hardening.",
+  "version": "8.0.0",
+  "description": "Comprehensive suite of 80 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, Principal Cybersecurity Architect, and Mobile Application Engineer: from executive strategy and full-stack type safety, to e-reader document engines, native Android/iOS, Flutter, offline sync, APNs/FCM push, OWASP API Top 10, and container hardening.",
   "tracks": [
     {
       "id": "track-strategy-and-user-research",
       "name": "Track A: Executive Strategy, Market Inception & User Research",
-      "skills": ["27-product-strategy-and-market-research", "40-user-research-and-usability-testing", "26-business-analysis-and-process-modeling", "32-executive-stakeholder-communication"]
+      "skills": [
+        "27-product-strategy-and-market-research",
+        "40-user-research-and-usability-testing",
+        "26-business-analysis-and-process-modeling",
+        "32-executive-stakeholder-communication"
+      ]
     },
     {
       "id": "track-research-and-principal-thinking",
       "name": "Track B: Deep Technical Research & Principal Systems Thinking",
-      "skills": ["23-deep-technical-research-and-rfcs", "24-principal-systems-thinking", "25-build-vs-buy-evaluation", "31-team-topologies-and-org-design"]
+      "skills": [
+        "23-deep-technical-research-and-rfcs",
+        "24-principal-systems-thinking",
+        "25-build-vs-buy-evaluation",
+        "31-team-topologies-and-org-design"
+      ]
     },
     {
       "id": "track-ai-and-agent-architectures",
       "name": "Track C: AI Systems, LLMs & Autonomous Agent Architectures",
-      "skills": ["33-llm-and-rag-system-architecture", "34-ai-agent-design-and-tool-use"]
+      "skills": [
+        "33-llm-and-rag-system-architecture",
+        "34-ai-agent-design-and-tool-use"
+      ]
     },
     {
       "id": "track-system-architecture-and-specs",
       "name": "Track D: System Architecture, Domain Modeling & Event Sourcing",
-      "skills": ["01-requirements-spec", "02-domain-driven-design", "03-system-architecture-design", "04-architecture-decision-records", "05-api-contract-design", "06-event-and-messaging-design", "44-event-sourcing-and-cqrs"]
+      "skills": [
+        "01-requirements-spec",
+        "02-domain-driven-design",
+        "03-system-architecture-design",
+        "04-architecture-decision-records",
+        "05-api-contract-design",
+        "06-event-and-messaging-design",
+        "44-event-sourcing-and-cqrs"
+      ]
     },
     {
       "id": "track-edge-networking-and-service-mesh",
       "name": "Track E: Edge Networking, API Gateways & Service Mesh",
-      "skills": ["37-api-gateway-and-service-mesh"]
+      "skills": [
+        "37-api-gateway-and-service-mesh"
+      ]
     },
     {
       "id": "track-data-engineering-and-storage",
       "name": "Track F: Data Engineering, Lakehouses, Storage Engines & Sharding",
-      "skills": ["07-database-modeling-and-migrations", "08-caching-and-data-stores", "35-data-pipeline-and-streaming-architecture", "42-database-internals-and-storage-engines", "50-database-sharding-and-partitioning"]
+      "skills": [
+        "07-database-modeling-and-migrations",
+        "08-caching-and-data-stores",
+        "35-data-pipeline-and-streaming-architecture",
+        "42-database-internals-and-storage-engines",
+        "50-database-sharding-and-partitioning"
+      ]
     },
     {
       "id": "track-distributed-systems-and-performance",
       "name": "Track G: Distributed Systems, Consensus & Low-Latency Performance",
-      "skills": ["41-distributed-consensus-and-replication", "43-high-performance-and-low-latency"]
+      "skills": [
+        "41-distributed-consensus-and-replication",
+        "43-high-performance-and-low-latency"
+      ]
     },
     {
       "id": "track-security-and-cryptography",
       "name": "Track H: Security Architecture, Applied Cryptography & GRC",
-      "skills": ["09-security-and-threat-modeling", "30-compliance-governance-and-risk", "39-devsecops-and-supply-chain-security", "47-applied-cryptography-and-data-protection"]
+      "skills": [
+        "09-security-and-threat-modeling",
+        "30-compliance-governance-and-risk",
+        "39-devsecops-and-supply-chain-security",
+        "47-applied-cryptography-and-data-protection"
+      ]
     },
     {
       "id": "track-saas-and-multi-tenancy",
       "name": "Track I: Enterprise Multi-Tenancy & SaaS Architecture",
-      "skills": ["45-multi-tenant-saas-architecture"]
+      "skills": [
+        "45-multi-tenant-saas-architecture"
+      ]
     },
     {
       "id": "track-software-engineering-and-patterns",
       "name": "Track J: Core Software Engineering & Clean Code",
-      "skills": ["10-clean-architecture-and-solid", "11-design-patterns-and-idioms", "12-resilience-and-error-handling", "13-concurrency-and-async-systems"]
+      "skills": [
+        "10-clean-architecture-and-solid",
+        "11-design-patterns-and-idioms",
+        "12-resilience-and-error-handling",
+        "13-concurrency-and-async-systems"
+      ]
     },
     {
       "id": "track-super-expert-fullstack-frameworks",
       "name": "Track K: Super Expert Full-Stack Frameworks & Type Safety",
-      "skills": ["51-end-to-end-type-safety-and-trpc", "52-ssr-rsc-and-modern-fullstack-frameworks", "53-advanced-form-architecture-and-validation", "57-fullstack-auth-sessions-and-passkeys", "58-media-processing-and-edge-delivery", "59-fullstack-monorepo-and-turborepo"]
+      "skills": [
+        "51-end-to-end-type-safety-and-trpc",
+        "52-ssr-rsc-and-modern-fullstack-frameworks",
+        "53-advanced-form-architecture-and-validation",
+        "57-fullstack-auth-sessions-and-passkeys",
+        "58-media-processing-and-edge-delivery",
+        "59-fullstack-monorepo-and-turborepo"
+      ]
     },
     {
       "id": "track-realtime-localfirst-and-motion",
       "name": "Track L: Real-Time Multiplayer, Local-First Sync & UI Motion",
-      "skills": ["54-realtime-collaboration-websockets-and-crdts", "55-offline-first-indexeddb-and-local-sync", "56-web-animations-and-60fps-ui-performance", "14-frontend-architecture-and-state", "49-micro-frontends-and-modular-web"]
+      "skills": [
+        "54-realtime-collaboration-websockets-and-crdts",
+        "55-offline-first-indexeddb-and-local-sync",
+        "56-web-animations-and-60fps-ui-performance",
+        "14-frontend-architecture-and-state",
+        "49-micro-frontends-and-modular-web"
+      ]
     },
     {
       "id": "track-testing-analytics-and-debugging",
       "name": "Track M: Quality Engineering, Full-Stack Debugging & Product Analytics",
-      "skills": ["15-test-driven-development", "16-integration-and-e2e-testing", "17-performance-and-load-testing", "28-data-analytics-and-experimentation", "60-fullstack-debugging-and-devtools-profiling"]
+      "skills": [
+        "15-test-driven-development",
+        "16-integration-and-e2e-testing",
+        "17-performance-and-load-testing",
+        "28-data-analytics-and-experimentation",
+        "60-fullstack-debugging-and-devtools-profiling"
+      ]
     },
     {
       "id": "track-code-review-and-tooling",
       "name": "Track N: Code Review, Quality Audit & AST Codemods",
-      "skills": ["18-code-review-and-audit", "19-refactoring-and-debt-reduction", "48-ast-codemods-and-developer-tooling"]
+      "skills": [
+        "18-code-review-and-audit",
+        "19-refactoring-and-debt-reduction",
+        "48-ast-codemods-and-developer-tooling"
+      ]
     },
     {
       "id": "track-devops-sre-and-operations",
       "name": "Track O: DevOps, GitOps, SRE, Chaos & Operations",
-      "skills": ["20-containerization-and-devops", "21-observability-and-telemetry", "29-cloud-economics-and-finops", "36-chaos-engineering-and-disaster-recovery", "38-sre-slo-and-error-budget-engineering", "46-infrastructure-as-code-and-gitops", "22-incident-debugging-and-runbooks"]
+      "skills": [
+        "20-containerization-and-devops",
+        "21-observability-and-telemetry",
+        "29-cloud-economics-and-finops",
+        "36-chaos-engineering-and-disaster-recovery",
+        "38-sre-slo-and-error-budget-engineering",
+        "46-infrastructure-as-code-and-gitops",
+        "22-incident-debugging-and-runbooks"
+      ]
     },
     {
       "id": "track-cybersecurity-and-threat-defense",
@@ -93,6 +168,22 @@
         "68-runtime-defense-and-container-hardening",
         "69-cloud-security-posture-and-kubernetes-hardening",
         "70-vulnerability-management-and-cvss-triage"
+      ]
+    },
+    {
+      "id": "track-mobile-and-multiplatform",
+      "name": "Track Q: Mobile, Native & Multi-Platform Application Engineering",
+      "skills": [
+        "71-cross-platform-mobile-react-native-expo",
+        "72-native-android-kotlin-and-jetpack-compose",
+        "73-native-ios-swift-and-swiftui",
+        "74-ereader-document-rendering-and-pagination",
+        "75-flutter-and-multiplatform-dart",
+        "76-mobile-offline-sync-and-sqlite-architecture",
+        "77-push-notifications-and-deep-linking",
+        "78-mobile-security-and-tamper-resistance",
+        "79-mobile-performance-profiling-and-battery",
+        "80-mobile-cicd-fastlane-and-store-deployment"
       ]
     }
   ],
@@ -586,6 +677,76 @@
       "path": "skills/70-vulnerability-management-and-cvss-triage/SKILL.md",
       "category": "Cybersecurity & Threat Defense",
       "summary": "Vulnerability management lifecycle, CVSS v3.1/v4.0 scoring, EPSS exploit likelihood analysis, CISA KEV tracking, reachability analysis, and bug bounty triage."
+    },
+    {
+      "id": "71-cross-platform-mobile-react-native-expo",
+      "name": "cross-platform-mobile-react-native-expo",
+      "path": "skills/71-cross-platform-mobile-react-native-expo/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "React Native Fabric New Architecture, TurboModules C++ JSI, Expo Router v3 file-based navigation, Reanimated 3 worklets, and 120 FPS gesture handling."
+    },
+    {
+      "id": "72-native-android-kotlin-and-jetpack-compose",
+      "name": "native-android-kotlin-and-jetpack-compose",
+      "path": "skills/72-native-android-kotlin-and-jetpack-compose/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Modern Android development with Kotlin, Jetpack Compose, Material 3, Unidirectional Data Flow (MVI), Room Database, Coroutines/StateFlow, and WorkManager."
+    },
+    {
+      "id": "73-native-ios-swift-and-swiftui",
+      "name": "native-ios-swift-and-swiftui",
+      "path": "skills/73-native-ios-swift-and-swiftui/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Production iOS engineering with Swift 6 structured concurrency, SwiftUI declarative view hierarchies, NavigationStack, AppStorage, and Keychain biometrics."
+    },
+    {
+      "id": "74-ereader-document-rendering-and-pagination",
+      "name": "ereader-document-rendering-and-pagination",
+      "path": "skills/74-ereader-document-rendering-and-pagination/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "E-reader engines, EPUB3 and PDF rendering, CSS multi-column reflowable pagination, EPUB CFI canonical bookmarks, font typography, and AMOLED/E-Ink optimizations."
+    },
+    {
+      "id": "75-flutter-and-multiplatform-dart",
+      "name": "flutter-and-multiplatform-dart",
+      "path": "skills/75-flutter-and-multiplatform-dart/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Cross-platform Flutter 3 with Impeller GPU rendering, BLoC state management, custom painters, platform channels, and adaptive layouts for foldables and tablets."
+    },
+    {
+      "id": "76-mobile-offline-sync-and-sqlite-architecture",
+      "name": "mobile-offline-sync-and-sqlite-architecture",
+      "path": "skills/76-mobile-offline-sync-and-sqlite-architecture/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Local-first mobile architecture, SQLCipher AES-256 database encryption, SQLite FTS5 full-text search, optimistic writes, and offline outbox sync workers."
+    },
+    {
+      "id": "77-push-notifications-and-deep-linking",
+      "name": "push-notifications-and-deep-linking",
+      "path": "skills/77-push-notifications-and-deep-linking/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Unified push notification delivery with Apple APNs and Google FCM v1, Notification Service payload decryptors, iOS Universal Links, and Android App Links."
+    },
+    {
+      "id": "78-mobile-security-and-tamper-resistance",
+      "name": "mobile-security-and-tamper-resistance",
+      "path": "skills/78-mobile-security-and-tamper-resistance/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Client-side hardening, Root & Jailbreak detection, Google Play Integrity attestation, SSL public key hash pinning, Secure Enclave / KeyStore, and R8 obfuscation."
+    },
+    {
+      "id": "79-mobile-performance-profiling-and-battery",
+      "name": "mobile-performance-profiling-and-battery",
+      "path": "skills/79-mobile-performance-profiling-and-battery/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Frame rate optimization (60/120 FPS jank elimination), memory leak diagnosis with LeakCanary and Instruments, cold startup benchmarks, and battery radio conservation."
+    },
+    {
+      "id": "80-mobile-cicd-fastlane-and-store-deployment",
+      "name": "mobile-cicd-fastlane-and-store-deployment",
+      "path": "skills/80-mobile-cicd-fastlane-and-store-deployment/SKILL.md",
+      "category": "Mobile & Multi-Platform Engineering",
+      "summary": "Automated mobile release pipelines with Fastlane, iOS Match certificates, Google Play App Signing, TestFlight, staged rollouts, OTA updates, and store compliance."
     }
   ]
 }
