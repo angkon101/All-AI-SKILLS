@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-100%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="100 Skills"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-20%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="20 Tracks"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-110%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="110 Skills"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-21%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="21 Tracks"></a>
   <a href="#"><img src="https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Cursor%20%7C%20Claude-10b981?style=for-the-badge&logo=openai&logoColor=white" alt="Agent Ready"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge" alt="License"></a>
 </p>
@@ -13,7 +13,7 @@
 
 > 🌐 **Interactive Animated Showcase Site**: Visit the live single-page web app in [`docs/index.html`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/docs/index.html) with 60 FPS interactive particle constellation animations, instant search, track filters, and 1-click prompt copies! Easily deployed to **GitHub Pages** via the `/docs` folder.
 
-A comprehensive, production-grade suite of **100 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, **Professional QA & SDET Test Architect**, and **Principal Anti-Slop Code Simplifier** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, Session-Based Test Management (SBTM), and the ruthless elimination of AI code slop, phantom dependencies, mock theater, context window bloat, and vibe-coding technical debt.
+A comprehensive, production-grade suite of **110 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, **Professional QA & SDET Test Architect**, **Principal Anti-Slop Code Simplifier**, and **AI Agent Token Optimization & Context Economics Specialist** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, Session-Based Test Management (SBTM), ruthless elimination of AI code slop and phantom dependencies, and advanced AI agent token optimization (KV-cache prompt caching, AST repository maps, tool output distillation, multi-turn trajectory compaction, frugal model cascades, schema minification, line-range chunking, semantic RAG, scratchpad pruning, and token budget governance).
 
 Designed for modern AI coding agents (**Antigravity**, **Gemini CLI**, **Cursor**, **Claude Code**, **Copilot Workspace**, and **Windsurf**), this repository provides modular, standardized runbooks (`SKILL.md`) that instruct AI agents how to think and operate as domain experts across every organizational role.
 
@@ -164,14 +164,27 @@ flowchart TD
         S98 & S99 --> S100["100: Vibe-Coding Recovery & Debt Rehabilitation"]
     end
 
-    S80 & S90 & S100 & S22 -.->|Continuous Feedback Loop| S27
+    subgraph S15["15. AI Agent Token Optimization & Context Economics"]
+        S96 --> S101["101: Prompt Caching & Prefix Alignment"]
+        S101 --> S102["102: AST Repository Mapping & Code Compression"]
+        S101 --> S103["103: Tool Output Distillation & Truncation"]
+        S103 --> S104["104: Multi-Turn Trajectory Compaction"]
+        S104 --> S105["105: Model Cascades & Frugal Agent Routing"]
+        S105 --> S106["106: Schema Minification & Compact Tool Calling"]
+        S106 --> S107["107: Scoped Line-Range & Diff Context"]
+        S107 --> S108["108: Semantic Embedding RAG & Vector Pre-Filtering"]
+        S108 --> S109["109: Attention De-Poisoning & Scratchpad Pruning"]
+        S109 --> S110["110: Token Budgeting & Cost Telemetry"]
+    end
+
+    S80 & S90 & S100 & S110 & S22 -.->|Continuous Feedback Loop| S27
 ```
 
 ---
 
-## 🏛️ The 20 Functional Organizational Tracks
+## 🏛️ The 21 Functional Organizational Tracks
 
-The 100 skills are organized into 20 distinct professional disciplines:
+The 110 skills are organized into 21 distinct professional disciplines:
 
 | Track | Focus Area | Skills Included |
 | :--- | :--- | :--- |
@@ -195,10 +208,11 @@ The 100 skills are organized into 20 distinct professional disciplines:
 | **Track R** | Software Design & Architecture (SDA) & System Design Authority | `81`, `82`, `83` |
 | **Track S** | Professional Software Testing, QA & SDET Excellence | `84`, `85`, `86`, `87`, `88`, `89`, `90` |
 | **Track T** | AI Slop Removal, Code De-Bloating & LLM Output Sanitization | `91`, `92`, `93`, `94`, `95`, `96`, `97`, `98`, `99`, `100` |
+| **Track U** | AI Agent Token Optimization, Context Compression & Token Economics | `101`, `102`, `103`, `104`, `105`, `106`, `107`, `108`, `109`, `110` |
 
 ---
 
-## 📚 Master Skills Directory & Catalog (100 Skills)
+## 📚 Master Skills Directory & Catalog (110 Skills)
 
 | # | Skill Directory | Track | Role & Capabilities | Key Deliverables |
 | :-: | :--- | :--- | :--- | :--- |
@@ -302,6 +316,16 @@ The 100 skills are organized into 20 distinct professional disciplines:
 | `98` | [`98-ai-code-smell-detection-and-deodorizing`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/98-ai-code-smell-detection-and-deodorizing/SKILL.md) | Anti-Slop | **Code Quality Fellow**: Detect AI smells (zombie parameters, amnesiac reinvented helpers, placebo retries, hallucinated config keys). | Deodorized Refactoring Plans, Clean Signatures |
 | `99` | [`99-insecure-ai-defaults-and-exploit-remediation`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/99-insecure-ai-defaults-and-exploit-remediation/SKILL.md) | Anti-Slop | **Security Auditor**: Remediate insecure AI defaults (SQL template injection, fallback secret bypasses, disabled TLS checks, ReDoS regexes). | Hardened Parameterized Queries, Secret Validators |
 | `100` | [`100-vibe-coding-remediation-and-technical-debt-recovery`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/100-vibe-coding-remediation-and-technical-debt-recovery/SKILL.md) | Anti-Slop | **Architecture Recovery Fellow**: 5-phase rehabilitation of vibe-coded repositories, characterization test nets, schema extraction, god file strangler. | Characterization Suites, Schema Migrations |
+| `101` | [`101-prompt-caching-and-prefix-alignment`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/101-prompt-caching-and-prefix-alignment/SKILL.md) | Token Optimization | **Prompt Caching Architect**: Enforce byte-for-byte prefix invariance, volatility layering, eliminate dynamic timestamps, ephemeral cache breakpoints. | Cache-Aligned Prompts, Breakpoint Configurations |
+| `102` | [`102-ast-repository-mapping-and-code-compression`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/102-ast-repository-mapping-and-code-compression/SKILL.md) | Token Optimization | **AST Compression Engineer**: Extract Tree-sitter symbol graphs, PageRank repo maps, strip implementation bodies, 90-95% codebase token reduction. | AST Skeletons, PageRank Repo Maps |
+| `103` | [`103-tool-output-distillation-and-truncation`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/103-tool-output-distillation-and-truncation/SKILL.md) | Token Optimization | **Tool Output Distillation Specialist**: Intercept verbose test/build logs, extract FAIL assertions, Head-Tail slicing, tombstone historical tool outputs. | Distillation Middleware, Truncation Policies |
+| `104` | [`104-multi-turn-agent-trajectory-compaction`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/104-multi-turn-agent-trajectory-compaction/SKILL.md) | Token Optimization | **Trajectory Compaction Architect**: Eliminate O(N^2) token explosion, prune intermediate CoT thoughts, fold history into Anchored State Tuples. | Compaction Engines, Anchored State Checkpoints |
+| `105` | [`105-model-cascades-and-frugal-agent-routing`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/105-model-cascades-and-frugal-agent-routing/SKILL.md) | Token Optimization | **Model Routing & Cost Architect**: Multi-tiered cascades (FrugalGPT/RouteLLM), delegate scouting/git to Haiku/Flash, reserve frontier models for deep reasoning. | Frugal Cascade Routers, Cost Telemetry Handlers |
+| `106` | [`106-schema-minification-and-compact-tool-calling`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/106-schema-minification-and-compact-tool-calling/SKILL.md) | Token Optimization | **Tool Schema Optimizer**: Minify function calling schemas, strip verbose JSON metadata, compact TypeScript interfaces (TypeChat), 70% schema reduction. | Minified Tool Schemas, TypeChat Contracts |
+| `107` | [`107-scoped-line-range-and-diff-anchored-context`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/107-scoped-line-range-and-diff-anchored-context/SKILL.md) | Token Optimization | **Scoped Context Engineer**: Enforce targeted line-range reads (`StartLine`, `EndLine`), AST function boundary slicing, diff-only replacement. | Scoped Slice Extractors, Diff Anchor Guidelines |
+| `108` | [`108-semantic-embedding-rag-and-vector-pre-filtering`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/108-semantic-embedding-rag-and-vector-pre-filtering/SKILL.md) | Token Optimization | **Contextual RAG Architect**: Hybrid lexical (BM25) + dense vector pre-filtering, cross-encoder reranking, sub-500-token context clamping. | Token-Clamped Hybrid Retrievers, RRF Indices |
+| `109` | [`109-attention-de-poisoning-and-scratchpad-pruning`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/109-attention-de-poisoning-and-scratchpad-pruning/SKILL.md) | Token Optimization | **Attention Hygiene Specialist**: Prune historical reasoning chains, tombstone consumed tool results, replace thoughts with declarative state commits. | Attention De-Poisoners, Result Tombstones |
+| `110` | [`110-agent-token-budgeting-and-cost-telemetry`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/110-agent-token-budgeting-and-cost-telemetry/SKILL.md) | Token Optimization | **Token Governance Architect**: Hard token/spend ceilings per task, loop circuit breakers, OpenTelemetry GenAI telemetry, spend attribution. | Budget Governors, Loop Circuit Breakers |
 
 ---
 
@@ -311,21 +335,21 @@ The 100 skills are organized into 20 distinct professional disciplines:
 
 #### On Windows (PowerShell):
 ```powershell
-# Copy all 100 skills to a target project:
+# Copy all 110 skills to a target project:
 .\install-skills.ps1 -Destination "C:\Path\To\MyProject"
 
 # Or install globally for all projects on your machine:
 .\install-skills.ps1 -Global
 
 # Or copy just a specific skill:
-.\install-skills.ps1 -Destination "C:\Path\To\MyProject" -SkillName "61-api-security-and-zero-trust-gateways"
+.\install-skills.ps1 -Destination "C:\Path\To\MyProject" -SkillName "101-prompt-caching-and-prefix-alignment"
 ```
 
 #### On Linux / macOS / Git Bash:
 ```bash
 chmod +x install-skills.sh
 
-# Copy all skills:
+# Copy all 110 skills:
 ./install-skills.sh /path/to/my-project
 
 # Or install globally:
@@ -524,6 +548,38 @@ chmod +x install-skills.sh
 "Rehabilitate our vibe-coded repository using vibe-coding-remediation-and-technical-debt-recovery through characterization test nets, schema extraction, and god file strangler refactoring."
 ```
 
+### AI Agent Token Optimization & Context Economics Prompts
+```text
+"Structure our agent system prompts using prompt-caching-and-prefix-alignment to enforce byte-for-byte prefix invariance and achieve an 85%+ KV cache hit rate on Anthropic, OpenAI, and Gemini."
+```
+```text
+"Generate an ultra-compact codebase map using ast-repository-mapping-and-code-compression to extract Tree-sitter AST symbol signatures and compress our 80k token repository to under 2.5k tokens."
+```
+```text
+"Intercept and condense our verbose test runner and compiler logs using tool-output-distillation-and-truncation to extract only failed test assertions and prevent context window exhaustion."
+```
+```text
+"Prevent quadratic multi-turn token explosion using multi-turn-agent-trajectory-compaction by pruning historical CoT monologues and maintaining an Anchored State Tuple checkpoint."
+```
+```text
+"Implement a cost-efficient multi-model cascade using model-cascades-and-frugal-agent-routing to route file searches and git operations to Claude 3.5 Haiku and escalate to Claude 3.7 Sonnet only for complex debugging."
+```
+```text
+"Minify our bloated function calling schemas using schema-minification-and-compact-tool-calling to adopt TypeChat compact TypeScript interfaces and save 70% tool definition overhead."
+```
+```text
+"Prevent whole-file context dumping using scoped-line-range-and-diff-anchored-context to enforce StartLine/EndLine slice extraction and anchor edits to localized replacement diffs."
+```
+```text
+"Implement token-clamped hybrid retrieval using semantic-embedding-rag-and-vector-pre-filtering with BM25 plus vector embeddings to inject sub-500-token contextual documentation slices."
+```
+```text
+"De-poison our agent attention window using attention-de-poisoning-and-scratchpad-pruning to purge historical reasoning monologues and tombstone consumed tool outputs."
+```
+```text
+"Enforce task-level financial guardrails using agent-token-budgeting-and-cost-telemetry to stop runaway tool loops and export OpenTelemetry GenAI spend metrics."
+```
+
 ---
 
 ## 🚀 How to Push to GitHub & Enable Animated GitHub Pages
@@ -539,7 +595,7 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "feat: complete suite of 100 enterprise AI agent skills and animated showcase"
+git commit -m "feat: expand to 110 enterprise AI agent skills with Track U agent token optimization suite"
 
 # Set primary branch to main
 git branch -M main
@@ -564,7 +620,7 @@ git push -u origin main
 
 Your live site features:
 - **Interactive 60 FPS Particle Constellation Canvas** with mouse gravity.
-- **Dynamic Search & Instant Filtering** across all 100 skills.
+- **Dynamic Search & Instant Filtering** across all 110 skills.
 - **Interactive Skill Runbook Drawer** with 1-click prompt copying.
 - **Native Animated SVG Header** rendering directly in GitHub's markdown view.
 
