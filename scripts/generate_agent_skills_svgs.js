@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
+// Script to generate high-fidelity, White Background Architectural Drafting SVG animations for:
+// 1. assets/commercial-building-site.svg & docs/assets/commercial-building-site.svg
+//    (Full 1200x540 AI Agent Skill Definition & Listing Matrix)
+// 2. assets/ai-agent-skills-matrix.svg & docs/assets/ai-agent-skills-matrix.svg
+//    (Identical copy under descriptive name)
+// 3. assets/animated-banner.svg & docs/assets/animated-banner.svg
+//    (Header hero banner 1200x440 with AI Agent Skill Definition & Listing)
+
+const fs = require('fs');
+const path = require('path');
+
+function generateAgentSkillsMatrixSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
   <defs>
     <!-- Crisp White Architectural Paper Background -->
     <linearGradient id="whitePaperBg" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -790,4 +802,356 @@
       </text>
     </g>
   </g>
-</svg>
+</svg>`;
+}
+
+function generateAnimatedBannerSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="100%">
+  <defs>
+    <!-- White Paper Background -->
+    <linearGradient id="bWhiteBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#fafafa" />
+      <stop offset="100%" stop-color="#f4f4f5" />
+    </linearGradient>
+
+    <!-- Data Pulse Gradient -->
+    <linearGradient id="bCyanPulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- CAD Coordinate Grid on White -->
+    <pattern id="bCadGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#000000" stroke-width="0.6" stroke-opacity="0.05" />
+    </pattern>
+
+    <pattern id="bTechStripe" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="6" height="12" fill="#09090b" />
+      <rect x="6" width="6" height="12" fill="#ffffff" />
+    </pattern>
+
+    <filter id="bShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+
+    <style>
+    <![CDATA[
+      @keyframes bAgentHover1 {
+        0%, 100% { transform: translateY(0px); }
+        50%      { transform: translateY(-10px); }
+      }
+      @keyframes bAgentHover2 {
+        0%, 100% { transform: translateY(0px); }
+        50%      { transform: translateY(-12px); }
+      }
+      @keyframes bRingSpin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes bConveyorFlow {
+        0%   { transform: translateX(0px); }
+        100% { transform: translateX(-360px); }
+      }
+      @keyframes bLaserSweep {
+        0%   { transform: translateY(0px); opacity: 0.4; }
+        50%  { transform: translateY(130px); opacity: 1; }
+        100% { transform: translateY(0px); opacity: 0.4; }
+      }
+      @keyframes bDataFlow {
+        0%   { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes bBlinkCursor {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0; }
+      }
+      @keyframes bStrobe {
+        0%, 100% { opacity: 0.2; transform: scale(0.9); }
+        50%      { opacity: 1; transform: scale(1.1); }
+      }
+      @keyframes bSealSpin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .b-agent-1 { animation: bAgentHover1 4.5s ease-in-out infinite; }
+      .b-agent-2 { animation: bAgentHover2 5.2s ease-in-out infinite; }
+      .b-ring-cw { animation: bRingSpin 8s linear infinite; transform-origin: 0 0; }
+      .b-conveyor { animation: bConveyorFlow 12s linear infinite; }
+      .b-laser-sweep { animation: bLaserSweep 4s ease-in-out infinite; }
+      .b-data-flow { stroke-dasharray: 6 10; animation: bDataFlow 1.2s linear infinite; }
+      .b-cursor { animation: bBlinkCursor 0.8s infinite; }
+      .b-strobe { animation: bStrobe 1.5s ease-in-out infinite; }
+      .b-seal { animation: bSealSpin 20s linear infinite; transform-origin: 0 0; }
+    ]]>
+    </style>
+  </defs>
+
+  <!-- Clean White Background Base -->
+  <rect width="1200" height="440" fill="url(#bWhiteBg)" />
+  <rect width="1200" height="405" fill="url(#bCadGrid)" />
+
+  <!-- Outer Technical Blueprint Border -->
+  <rect x="15" y="15" width="1170" height="410" fill="none" stroke="#09090b" stroke-width="2" />
+  <rect x="18" y="18" width="1164" height="404" fill="none" stroke="#09090b" stroke-width="0.75" stroke-dasharray="8 4" opacity="0.5" />
+
+  <!-- Corner Calibration Marks -->
+  <g stroke="#09090b" stroke-width="2.5">
+    <path d="M 10 30 L 30 30 M 30 10 L 30 30" />
+    <path d="M 1190 30 L 1170 30 M 1170 10 L 1170 30" />
+    <path d="M 10 410 L 30 410 M 30 430 L 30 410" />
+    <path d="M 1190 410 L 1170 410 M 1170 430 L 1170 410" />
+  </g>
+
+  <!-- ======================================================================
+       LEFT HALF: TERMINAL & AI AGENT DEFINITION RUNBOOK (x=35 to x=560)
+       ====================================================================== -->
+  <g transform="translate(35, 35)" filter="url(#bShadow)">
+    <rect width="520" height="340" rx="10" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
+    
+    <!-- Terminal Header Bar -->
+    <rect width="520" height="34" rx="10" fill="#09090b" />
+    <circle cx="20" cy="17" r="5" fill="#ef4444" />
+    <circle cx="36" cy="17" r="5" fill="#f59e0b" />
+    <circle cx="52" cy="17" r="5" fill="#10b981" />
+    
+    <text x="280" y="22" fill="#ffffff" font-family="'JetBrains Mono', Courier, monospace" font-size="10.5" font-weight="900" text-anchor="middle" letter-spacing="1">
+      MASTER AI AGENT SKILLS • DEFINITION &amp; LISTING RUNBOOK
+    </text>
+
+    <!-- Terminal Content Stream -->
+    <g font-family="'JetBrains Mono', Courier, monospace" font-size="10" fill="#18181b" transform="translate(22, 60)">
+      <text x="0" y="0"><tspan fill="#71717a">$</tspan> <tspan fill="#09090b" font-weight="900">antigravity</tspan> swarm --define-skills --list-all</text>
+      
+      <text x="0" y="24" fill="#52525b">
+        [FOUNDATION]   : <tspan fill="#09090b" font-weight="700">Storage engines, Raft consensus, Event Sourcing</tspan>
+      </text>
+      <text x="0" y="48" fill="#52525b">
+        [FULLSTACK]    : <tspan fill="#09090b" font-weight="700">tRPC v11, RSC streaming, Passkeys, Yjs CRDTs</tspan>
+      </text>
+      <text x="0" y="72" fill="#52525b">
+        [CYBER &amp; ZERO] : <tspan fill="#09090b" font-weight="700">OWASP API BOLA, WAF L7, DLP vaults, eBPF Falco</tspan>
+      </text>
+      <text x="0" y="96" fill="#52525b">
+        [SDA &amp; ISTQB]  : <tspan fill="#09090b" font-weight="700">OOAD GRASP, ATAM, Pact contracts, Stryker mutants</tspan>
+      </text>
+      <text x="0" y="120" fill="#52525b">
+        [ANTI-SLOP]    : <tspan fill="#09090b" font-weight="700">Purged mock theater, 0 phantom dependencies</tspan>
+      </text>
+      <text x="0" y="144" fill="#52525b">
+        [TOKEN DIET]   : <tspan fill="#09090b" font-weight="700">KV prompt cache (89% hit), AST repo maps (95%)</tspan>
+      </text>
+
+      <text x="0" y="176">
+        <tspan fill="#71717a">$</tspan> <tspan fill="#09090b" font-weight="800">status: 115 skills verified &amp; listed in 22 tracks</tspan>
+        <tspan class="b-cursor" fill="#0284c7" font-weight="900"> █</tspan>
+      </text>
+    </g>
+
+    <!-- Bottom Badges inside Terminal -->
+    <g transform="translate(22, 275)">
+      <rect x="0" y="0" width="110" height="26" rx="4" fill="#09090b" />
+      <text x="55" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">115 SKILLS</text>
+
+      <rect x="122" y="0" width="110" height="26" rx="4" fill="#09090b" />
+      <text x="177" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">22 TRACKS</text>
+
+      <rect x="244" y="0" width="110" height="26" rx="4" fill="#09090b" />
+      <text x="299" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">ZERO SLOP</text>
+
+      <rect x="366" y="0" width="110" height="26" rx="4" fill="#09090b" />
+      <text x="421" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">TOKEN SAVED</text>
+    </g>
+  </g>
+
+  <!-- ======================================================================
+       RIGHT HALF: AUTONOMOUS AGENTS, CONVEYOR & 22-TRACK CATALOG MATRIX
+       ====================================================================== -->
+  <!-- Agent 1 Floating Above Matrix (x=640, y=65) -->
+  <g transform="translate(640, 65)">
+    <g class="b-agent-1">
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#09090b" stroke-width="1.5" stroke-dasharray="8 4" class="b-ring-cw" />
+      <rect x="-14" y="-14" width="28" height="28" rx="6" fill="#ffffff" stroke="#09090b" stroke-width="2" filter="url(#bShadow)" />
+      <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#09090b" />
+      <rect x="-7" y="-3" width="14" height="6" rx="2" fill="#06b6d4" />
+      <rect x="-24" y="18" width="48" height="13" rx="2" fill="#09090b" />
+      <text x="0" y="27" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="900" text-anchor="middle">
+        ANTIGRAVITY
+      </text>
+    </g>
+  </g>
+
+  <!-- Agent 2 Floating Above Matrix (x=775, y=65) -->
+  <g transform="translate(775, 65)">
+    <g class="b-agent-2">
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#09090b" stroke-width="1.5" stroke-dasharray="6 4" class="b-ring-cw" />
+      <rect x="-13" y="-13" width="26" height="26" rx="5" fill="#ffffff" stroke="#09090b" stroke-width="2" filter="url(#bShadow)" />
+      <rect x="-9" y="-9" width="18" height="18" rx="3" fill="#18181b" />
+      <rect x="-6" y="-3" width="12" height="6" rx="2" fill="#06b6d4" />
+      <rect x="-22" y="17" width="44" height="13" rx="2" fill="#09090b" />
+      <text x="0" y="26" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="900" text-anchor="middle">
+        CLAUDE 3.7
+      </text>
+    </g>
+  </g>
+
+  <!-- Continuous Skill Ingestion Conveyor (x=585, y=115 to y=175) -->
+  <g transform="translate(585, 115)" filter="url(#bShadow)">
+    <rect width="570" height="52" rx="6" fill="#ffffff" stroke="#09090b" stroke-width="2" />
+    <rect x="0" y="44" width="570" height="8" fill="url(#bTechStripe)" />
+
+    <clipPath id="bConveyorClip">
+      <rect x="4" y="4" width="562" height="42" rx="4" />
+    </clipPath>
+
+    <g clip-path="url(#bConveyorClip)">
+      <g class="b-conveyor">
+        <!-- Flowing skill cards -->
+        <g transform="translate(10, 6)">
+          <rect width="105" height="34" rx="3" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+          <rect width="105" height="11" rx="3" fill="#09090b" />
+          <text x="5" y="8" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900">01: PRD SPEC</text>
+          <text x="5" y="24" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="800">✓ [LISTED]</text>
+        </g>
+        <g transform="translate(125, 6)">
+          <rect width="105" height="34" rx="3" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+          <rect width="105" height="11" rx="3" fill="#09090b" />
+          <text x="5" y="8" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900">51: tRPC v11</text>
+          <text x="5" y="24" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+        <g transform="translate(240, 6)">
+          <rect width="105" height="34" rx="3" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+          <rect width="105" height="11" rx="3" fill="#09090b" />
+          <text x="5" y="8" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900">86: PACT QA</text>
+          <text x="5" y="24" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+        <g transform="translate(355, 6)">
+          <rect width="105" height="34" rx="3" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+          <rect width="105" height="11" rx="3" fill="#09090b" />
+          <text x="5" y="8" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900">91: ANTI-SLOP</text>
+          <text x="5" y="24" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+        <g transform="translate(470, 6)">
+          <rect width="105" height="34" rx="3" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+          <rect width="105" height="11" rx="3" fill="#09090b" />
+          <text x="5" y="8" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900">101: PROMPT CACHE</text>
+          <text x="5" y="24" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+        <g transform="translate(585, 6)">
+          <rect width="105" height="34" rx="3" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+          <rect width="105" height="11" rx="3" fill="#09090b" />
+          <text x="5" y="8" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900">110: TOKEN BUDGET</text>
+          <text x="5" y="24" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- 22-Track Listed Skills Matrix Display (x=585, y=180 to y=375) -->
+  <g transform="translate(585, 180)" filter="url(#bShadow)">
+    <rect width="570" height="195" rx="8" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
+    <rect width="570" height="26" rx="8" fill="#09090b" />
+    <text x="14" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="1">
+      ENTERPRISE SKILL REGISTRY • 22 TRACKS DEFINED &amp; LISTED
+    </text>
+    <text x="556" y="17" fill="#06b6d4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="900" text-anchor="end">
+      115/115 VERIFIED
+    </text>
+
+    <!-- Track Grid Columns -->
+    <g transform="translate(14, 38)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <!-- Col 1 -->
+      <g>
+        <rect width="170" height="60" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+        <rect width="170" height="15" rx="4" fill="#18181b" />
+        <text x="6" y="11" fill="#ffffff" font-weight="800" font-size="7">STRATEGY &amp; ARCH (01-05)</text>
+        <text x="6" y="28" fill="#09090b" font-size="7">● PRD Spec &amp; DDD Models</text>
+        <text x="6" y="42" fill="#09090b" font-size="7">● C4 Architecture &amp; ADRs</text>
+        <text x="6" y="54" fill="#16a34a" font-size="6.5" font-weight="800">✓ [100% COMPLETE]</text>
+      </g>
+
+      <!-- Col 2 -->
+      <g transform="translate(185, 0)">
+        <rect width="170" height="60" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+        <rect width="170" height="15" rx="4" fill="#18181b" />
+        <text x="6" y="11" fill="#ffffff" font-weight="800" font-size="7">FULLSTACK &amp; CYBER (51-70)</text>
+        <text x="6" y="28" fill="#09090b" font-size="7">● tRPC, RSC &amp; Passkeys</text>
+        <text x="6" y="42" fill="#09090b" font-size="7">● OWASP API BOLA &amp; WAF</text>
+        <text x="6" y="54" fill="#16a34a" font-size="6.5" font-weight="800">✓ [100% COMPLETE]</text>
+      </g>
+
+      <!-- Col 3 -->
+      <g transform="translate(370, 0)">
+        <rect width="170" height="60" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.5" />
+        <rect width="170" height="15" rx="4" fill="#18181b" />
+        <text x="6" y="11" fill="#ffffff" font-weight="800" font-size="7">QA, ANTI-SLOP &amp; TOKEN (81-115)</text>
+        <text x="6" y="28" fill="#09090b" font-size="7">● ISTQB, Pact &amp; Stryker</text>
+        <text x="6" y="42" fill="#09090b" font-size="7">● 0 Slop, KV Prompt Cache</text>
+        <text x="6" y="54" fill="#16a34a" font-size="6.5" font-weight="800">✓ [100% COMPLETE]</text>
+      </g>
+    </g>
+
+    <!-- Rotating Certification Seal on Banner (at x=490, y=142) -->
+    <g transform="translate(490, 142)">
+      <g class="b-seal">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#09090b" stroke-width="1.5" stroke-dasharray="6 3" />
+      </g>
+      <circle cx="0" cy="0" r="22" fill="#09090b" />
+      <text x="0" y="-3" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" text-anchor="middle">115</text>
+      <text x="0" y="7" fill="#06b6d4" font-family="'JetBrains Mono', monospace" font-size="5.5" font-weight="900" text-anchor="middle">SKILLS</text>
+      <text x="0" y="15" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="4.5" font-weight="700" text-anchor="middle">VERIFIED</text>
+    </g>
+
+    <!-- Bottom Metrics Strip inside Registry -->
+    <g transform="translate(14, 172)" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#52525b">
+      <text x="0" y="0">
+        TOKENS SAVED: <tspan fill="#09090b" font-weight="900">-94%</tspan> • KV CACHE HIT: <tspan fill="#09090b" font-weight="900">89.4%</tspan> • SLOP: <tspan fill="#16a34a" font-weight="900">0.0%</tspan> • TESTS: <tspan fill="#09090b" font-weight="900">100% PASS</tspan>
+      </text>
+    </g>
+
+    <!-- Sweeping Laser Beam across Catalog -->
+    <g transform="translate(10, 30)">
+      <g class="b-laser-sweep">
+        <line x1="0" y1="0" x2="550" y2="0" stroke="#0284c7" stroke-width="1.8" />
+        <circle cx="0" cy="0" r="2.5" fill="#0284c7" />
+        <circle cx="550" cy="0" r="2.5" fill="#0284c7" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Coordinate Strip -->
+  <g transform="translate(15, 416)">
+    <rect width="1170" height="22" fill="#ffffff" stroke="#09090b" stroke-width="1.5" />
+    <g font-family="'JetBrains Mono', Courier" font-size="8" fill="#52525b" transform="translate(20, 15)">
+      <text x="0" y="0">MASTER AI AGENT SKILLS • 115 VERIFIED RUNBOOKS • 22 ENTERPRISE TRACKS • ZERO DRIFT</text>
+      <text x="1130" y="0" text-anchor="end" fill="#09090b" font-weight="900">SYSTEM: ONLINE ⚡</text>
+    </g>
+  </g>
+</svg>`;
+}
+
+// Write the files
+const matrixSvg = generateAgentSkillsMatrixSVG();
+const bannerSvg = generateAnimatedBannerSVG();
+
+const paths = [
+  // Commercial building site name (backwards compatible with existing docs links)
+  { file: path.join(__dirname, '../assets/commercial-building-site.svg'), content: matrixSvg },
+  { file: path.join(__dirname, '../docs/assets/commercial-building-site.svg'), content: matrixSvg },
+
+  // Descriptive new name
+  { file: path.join(__dirname, '../assets/ai-agent-skills-matrix.svg'), content: matrixSvg },
+  { file: path.join(__dirname, '../docs/assets/ai-agent-skills-matrix.svg'), content: matrixSvg },
+
+  // Hero Animated Banner
+  { file: path.join(__dirname, '../assets/animated-banner.svg'), content: bannerSvg },
+  { file: path.join(__dirname, '../docs/assets/animated-banner.svg'), content: bannerSvg },
+];
+
+paths.forEach(({ file, content }) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, content, 'utf8');
+  console.log(`Generated: ${file} (${Buffer.byteLength(content, 'utf8')} bytes)`);
+});

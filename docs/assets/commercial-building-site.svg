@@ -3,1045 +3,791 @@
     <!-- Crisp White Architectural Paper Background -->
     <linearGradient id="whitePaperBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="60%" stop-color="#fafafa" />
+      <stop offset="70%" stop-color="#fafafa" />
       <stop offset="100%" stop-color="#f4f4f5" />
     </linearGradient>
 
-    <!-- Structural Steel Grayscale Gradients (Dark Inks) -->
-    <linearGradient id="inkSteel" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Deep Charcoal & Black Inks for Architectural Precision -->
+    <linearGradient id="inkPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#09090b" />
-      <stop offset="35%" stop-color="#27272a" />
-      <stop offset="70%" stop-color="#3f3f46" />
-      <stop offset="100%" stop-color="#09090b" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#27272a" />
     </linearGradient>
 
-    <linearGradient id="craneInk" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#000000" />
-      <stop offset="40%" stop-color="#18181b" />
-      <stop offset="80%" stop-color="#27272a" />
-      <stop offset="100%" stop-color="#000000" />
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanDataPulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
     </linearGradient>
 
-    <!-- Glass Curtain Wall (White Blueprint Reflective Glazing) -->
-    <linearGradient id="inkGlass" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f4f4f5" stop-opacity="0.9" />
-      <stop offset="30%" stop-color="#e4e4e7" stop-opacity="0.8" />
-      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.95" />
-      <stop offset="100%" stop-color="#d4d4d8" stop-opacity="0.9" />
+    <linearGradient id="laserBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Architectural CAD Grid (Faint Drafting Graph on White) -->
-    <pattern id="cadGridWhite" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.06" />
-      <path d="M 20 0 L 20 40 M 0 20 L 40 20" fill="none" stroke="#000000" stroke-width="0.35" stroke-opacity="0.03" />
+    <!-- CAD Technical Coordinate Grid on White -->
+    <pattern id="cadGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#000000" stroke-width="0.7" stroke-opacity="0.05" />
+      <path d="M 20 0 L 20 40 M 0 20 L 40 20" fill="none" stroke="#000000" stroke-width="0.35" stroke-opacity="0.025" />
     </pattern>
 
-    <!-- Black and White 45-degree Safety Hazard Chevrons -->
-    <pattern id="hazardStripeWhite" width="20" height="20" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-      <rect width="10" height="20" fill="#000000" />
-      <rect x="10" width="10" height="20" fill="#ffffff" />
+    <!-- Blueprint Dot Matrix -->
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#000000" fill-opacity="0.07" />
     </pattern>
 
-    <!-- Drop Shadow and Flare Filters -->
-    <filter id="draftingShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.12" />
-    </filter>
+    <!-- Striped Processing Badge Pattern -->
+    <pattern id="techStripe" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="6" height="12" fill="#09090b" />
+      <rect x="6" width="6" height="12" fill="#ffffff" />
+    </pattern>
 
-    <filter id="arcFlashFilter" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <!-- Subtle Drop Shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08" />
     </filter>
 
     <!-- ====================================================================
-         BOLD, PROMINENT, CONTINUOUS PHYSICAL MOVEMENTS (60 FPS PURE CSS)
+         PURE CSS 60 FPS MOTION KEYFRAMES (PHYSICAL, TANGIBLE AGENT MOVEMENTS)
          ==================================================================== -->
     <style>
     <![CDATA[
-      /* 1. Tower Crane 1: BOLD Trolley Travel Across Working Jib (220px sweep!) */
-      @keyframes crane1TrolleySweep {
-        0%, 100% { transform: translateX(0px); }
-        50%      { transform: translateX(230px); }
-      }
-
-      /* 2. Tower Crane 1: ACTUAL VERTICAL HOISTING + PENDULUM SWAY (lowers 65px and lifts back up) */
-      @keyframes crane1HoistLift {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        20%      { transform: translateY(65px) rotate(-2.8deg); }
-        50%      { transform: translateY(65px) rotate(2.2deg); }
-        75%      { transform: translateY(15px) rotate(-1.5deg); }
-      }
-
-      /* 3. Core Luffing Crane 3: PROMINENT BOOM ANGLE ARTICULATION (swings from -28deg to -64deg) */
-      @keyframes crane3BoomLuffing {
-        0%, 100% { transform: rotate(-28deg); }
-        50%      { transform: rotate(-64deg); }
-      }
-      @keyframes crane3CableTravel {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50%      { transform: translateY(-38px) rotate(2.5deg); }
-      }
-
-      /* 4. Tower Crane 2 (East Wing): Trolley Runs Across and Hoists Concrete Skip */
-      @keyframes crane2TrolleyRun {
-        0%, 100% { transform: translateX(0px); }
-        50%      { transform: translateX(-160px); }
-      }
-      @keyframes crane2SkipHoist {
+      /* 1. Autonomous Agent Floating / Hovering Physics */
+      @keyframes agentHover1 {
         0%, 100% { transform: translateY(0px); }
-        35%      { transform: translateY(50px); }
-        70%      { transform: translateY(-10px); }
+        50%      { transform: translateY(-10px); }
+      }
+      @keyframes agentHover2 {
+        0%, 100% { transform: translateY(0px); }
+        50%      { transform: translateY(-8px); }
+      }
+      @keyframes agentHover3 {
+        0%, 100% { transform: translateY(0px); }
+        50%      { transform: translateY(-11px); }
       }
 
-      /* 5. Alimak Construction Hoist: FULL-HEIGHT TRANSIT UP AND DOWN (310px travel!) */
-      @keyframes alimakCarAscent {
-        0%, 5%   { transform: translateY(0px); }
-        45%, 55% { transform: translateY(-310px); }
-        95%, 100%{ transform: translateY(0px); }
+      /* 2. Robotic Sensory Ring Rotation */
+      @keyframes sensorRingSpin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
-      @keyframes alimakCarDescent {
-        0%, 5%   { transform: translateY(-310px); }
-        45%, 55% { transform: translateY(0px); }
-        95%, 100%{ transform: translateY(-310px); }
+      @keyframes sensorRingSpinReverse {
+        0%   { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
       }
 
-      /* 6. Hydraulic Excavator: ACTUAL FULL DIGGING and LOADING CYCLE (Boom + Stick + Bucket) */
-      @keyframes excavatorBoomDig {
-        0%, 100% { transform: rotate(0deg); }
-        25%      { transform: rotate(-14deg); }
-        50%      { transform: rotate(8deg); }
-        75%      { transform: rotate(-4deg); }
-      }
-      @keyframes excavatorBucketDig {
-        0%, 100% { transform: rotate(0deg); }
-        30%      { transform: rotate(-35deg); }
-        60%      { transform: rotate(28deg); }
-        85%      { transform: rotate(-10deg); }
+      /* 3. Skill Definition Laser Scanning Cone */
+      @keyframes laserScanSweep {
+        0%, 100% { transform: rotate(-12deg); opacity: 0.55; }
+        50%      { transform: rotate(14deg); opacity: 0.95; }
       }
 
-      /* 7. Dump Truck Bed: Tilts Up and Shakes While Loading */
-      @keyframes dumpBedTilt {
-        0%, 100% { transform: rotate(0deg); }
-        40%, 60% { transform: rotate(-16deg); }
+      /* 4. Horizontal Conveyor Motion of Skill Cards Being Listed */
+      @keyframes skillConveyorFlow {
+        0%   { transform: translateX(0px); }
+        100% { transform: translateX(-380px); }
       }
 
-      /* 8. Concrete Mixer Truck Drum: FAST VISIBLE ROTATION */
-      @keyframes mixerDrumSpin {
-        0%   { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: 80; }
+      /* 5. Central Vertical Verification Laser Sweep */
+      @keyframes verticalLaserSweep {
+        0%   { transform: translateY(0px); opacity: 0.4; }
+        50%  { transform: translateY(220px); opacity: 1; }
+        100% { transform: translateY(0px); opacity: 0.4; }
       }
 
-      /* 9. Concrete Boom Pump: High-Frequency Slurry Flow Pulse */
-      @keyframes concreteSlurryFlow {
+      /* 6. Continuous Data Pulse Travelling along Circuit Conduits */
+      @keyframes dataConduitFlow {
         0%   { stroke-dashoffset: 80; }
         100% { stroke-dashoffset: 0; }
       }
 
-      /* 10. Mobile Crawler Crane: Lifts Pipe Cargo High into the Air */
-      @keyframes crawlerCargoLift {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        45%, 55% { transform: translateY(-38px) rotate(-2.5deg); }
-        80%      { transform: translateY(-10px) rotate(1.8deg); }
+      /* 7. Rotating Verification Seal */
+      @keyframes sealRotate {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
 
-      /* 11. Electric Arc Welding: HIGH INTENSITY FLASH and CASCADING SPARKS */
-      @keyframes arcWeldingFlash {
-        0%, 100% { opacity: 0; transform: scale(0.5); }
-        12%      { opacity: 1; transform: scale(1.7); }
-        18%      { opacity: 0.15; transform: scale(0.7); }
-        25%      { opacity: 1; transform: scale(2.0); }
-        35%      { opacity: 0.2; transform: scale(0.8); }
-        45%      { opacity: 0.95; transform: scale(1.5); }
-        55%, 95% { opacity: 0; }
-      }
-      @keyframes sparkCascade1 {
-        0%   { transform: translate(0, 0) scale(1); opacity: 1; }
-        100% { transform: translate(-24px, 58px) scale(0.2); opacity: 0; }
-      }
-      @keyframes sparkCascade2 {
-        0%   { transform: translate(0, 0) scale(1); opacity: 1; }
-        100% { transform: translate(18px, 66px) scale(0.2); opacity: 0; }
-      }
-      @keyframes sparkCascade3 {
-        0%   { transform: translate(0, 0) scale(1); opacity: 1; }
-        100% { transform: translate(-8px, 50px) scale(0.2); opacity: 0; }
+      /* 8. Pulsating Metric Dial Needle */
+      @keyframes gaugeOscillate {
+        0%, 100% { transform: rotate(-35deg); }
+        50%      { transform: rotate(38deg); }
       }
 
-      /* 12. Laser Datum Elevation Scanner: Bold Vertical Sweep Across All Floors */
-      @keyframes laserDatumSweep {
-        0%   { transform: translateY(0px); opacity: 0.9; }
-        50%  { transform: translateY(320px); opacity: 1; }
-        100% { transform: translateY(0px); opacity: 0.9; }
+      /* 9. Blinking Terminal Cursor */
+      @keyframes cursorBlink {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0; }
       }
 
-      /* 13. High-Visibility Strobe Flasher Beacons (Dark / High Contrast) */
-      @keyframes strobeFlashDark {
-        0%, 100% { opacity: 0.15; }
-        50%      { opacity: 1; filter: drop-shadow(0 0 6px #000000); }
+      /* 10. Status Indicator Beacon Strobe */
+      @keyframes statusStrobe {
+        0%, 100% { opacity: 0.2; transform: scale(0.9); }
+        50%      { opacity: 1; transform: scale(1.1); }
       }
 
-      /* 14. Autonomous Site Drone 1: Active Aerial Patrol across Sky */
-      @keyframes dronePatrol1 {
-        0%, 100% { transform: translate(0, 0); }
-        30%      { transform: translate(35px, -24px); }
-        70%      { transform: translate(-25px, 16px); }
+      /* 11. Skill Ingestion Stamp Flash */
+      @keyframes stampPulse {
+        0%, 100% { opacity: 0.3; }
+        50%      { opacity: 1; }
       }
 
-      /* 15. Rigger Signalman: Rapid Baton Waving */
-      @keyframes riggerBatonWave {
-        0%, 100% { transform: rotate(0deg); }
-        25%      { transform: rotate(-45deg); }
-        75%      { transform: rotate(35deg); }
+      /* 12. Token Progress Bar Fill */
+      @keyframes progressBarFill {
+        0%, 100% { width: 140px; }
+        50%      { width: 175px; }
       }
 
-      /* 16. Distant Background Crane Slew */
-      @keyframes distantCraneSlew {
-        0%, 100% { transform: rotate(0deg); }
-        50%      { transform: rotate(-8deg); }
-      }
-
-      /* Applied Animation Classes */
-      .anim-crane1-trolley { animation: crane1TrolleySweep 12s ease-in-out infinite; }
-      .anim-crane1-hoist { animation: crane1HoistLift 12s ease-in-out infinite; }
-      .anim-crane2-trolley { animation: crane2TrolleyRun 14s ease-in-out infinite; }
-      .anim-crane2-skip { animation: crane2SkipHoist 14s ease-in-out infinite; }
-      .anim-crane3-boom { animation: crane3BoomLuffing 10s ease-in-out infinite; transform-origin: 483px 26px; }
-      .anim-crane3-cable { animation: crane3CableTravel 10s ease-in-out infinite; }
-      .anim-alimak-up { animation: alimakCarAscent 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; }
-      .anim-alimak-down { animation: alimakCarDescent 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; }
-      .anim-excavator-arm { animation: excavatorBoomDig 7s ease-in-out infinite; transform-origin: 105px 455px; }
-      .anim-excavator-bucket { animation: excavatorBucketDig 7s ease-in-out infinite; transform-origin: 65px 440px; }
-      .anim-dump-bed { animation: dumpBedTilt 7s ease-in-out infinite; transform-origin: 145px 458px; }
-      .anim-mixer-drum { stroke-dasharray: 8 12; animation: mixerDrumSpin 2s linear infinite; }
-      .anim-concrete-slurry { stroke-dasharray: 8 14; animation: concreteSlurryFlow 1.4s linear infinite; }
-      .anim-crawler-cargo { animation: crawlerCargoLift 9s ease-in-out infinite; }
-      .anim-weld-flash1 { animation: arcWeldingFlash 4s ease-in-out infinite; transform-origin: center; }
-      .anim-weld-flash2 { animation: arcWeldingFlash 3.6s ease-in-out 1.5s infinite; transform-origin: center; }
-      .anim-weld-flash3 { animation: arcWeldingFlash 4.4s ease-in-out 2.5s infinite; transform-origin: center; }
-      .anim-spark1 { animation: sparkCascade1 1.1s ease-out infinite; }
-      .anim-spark2 { animation: sparkCascade2 1.3s ease-out 0.25s infinite; }
-      .anim-spark3 { animation: sparkCascade3 1.1s ease-out 0.5s infinite; }
-      .anim-laser-sweep { animation: laserDatumSweep 7s ease-in-out infinite; }
-      .anim-strobe { animation: strobeFlashDark 0.9s ease-in-out infinite; }
-      .anim-drone-patrol { animation: dronePatrol1 8s ease-in-out infinite; }
-      .anim-rigger-wave { animation: riggerBatonWave 1.8s ease-in-out infinite; transform-origin: 18px -10px; }
-      .anim-distant-crane { animation: distantCraneSlew 14s ease-in-out infinite; transform-origin: 220px 240px; }
+      /* CSS Class Assignments */
+      .anim-agent-1 { animation: agentHover1 4.5s ease-in-out infinite; }
+      .anim-agent-2 { animation: agentHover2 5.2s ease-in-out infinite; }
+      .anim-agent-3 { animation: agentHover3 4.8s ease-in-out infinite; }
+      .anim-ring-cw { animation: sensorRingSpin 8s linear infinite; transform-origin: 0 0; }
+      .anim-ring-ccw { animation: sensorRingSpinReverse 6s linear infinite; transform-origin: 0 0; }
+      .anim-laser-cone { animation: laserScanSweep 3.5s ease-in-out infinite; transform-origin: 0 0; }
+      .anim-conveyor { animation: skillConveyorFlow 14s linear infinite; }
+      .anim-vert-laser { animation: verticalLaserSweep 4.5s ease-in-out infinite; }
+      .anim-conduit { stroke-dasharray: 8 12; animation: dataConduitFlow 1.6s linear infinite; }
+      .anim-conduit-fast { stroke-dasharray: 6 10; animation: dataConduitFlow 1s linear infinite; }
+      .anim-seal-spin { animation: sealRotate 22s linear infinite; transform-origin: 0 0; }
+      .anim-needle { animation: gaugeOscillate 5.5s ease-in-out infinite; transform-origin: 0 15px; }
+      .anim-cursor { animation: cursorBlink 0.8s infinite; }
+      .anim-strobe { animation: statusStrobe 1.5s ease-in-out infinite; }
+      .anim-stamp { animation: stampPulse 2s ease-in-out infinite; }
+      .anim-progress { animation: progressBarFill 7s ease-in-out infinite; }
     ]]>
     </style>
   </defs>
 
   <!-- ======================================================================
-       1. WHITE ARCHITECTURAL CANVAS and TECHNICAL GRID
+       1. WHITE ARCHITECTURAL DRAFTING CANVAS & COORDINATE GRID
        ====================================================================== -->
-  <!-- Clean White Paper Base -->
   <rect width="1200" height="540" fill="url(#whitePaperBg)" />
+  <rect width="1200" height="505" fill="url(#cadGrid)" />
+  <rect x="25" y="25" width="1150" height="470" fill="url(#dotGrid)" opacity="0.4" />
 
-  <!-- CAD Drafting Coordinate Grid on White -->
-  <rect width="1200" height="490" fill="url(#cadGridWhite)" />
+  <!-- Outer Technical Blueprint Border with Corner Brackets -->
+  <rect x="15" y="15" width="1170" height="510" fill="none" stroke="#09090b" stroke-width="2" />
+  <rect x="18" y="18" width="1164" height="504" fill="none" stroke="#09090b" stroke-width="0.75" stroke-dasharray="8 4" opacity="0.5" />
 
-  <!-- Elevation Ruler Calibration Lines (Left Technical Margin) -->
-  <g font-family="'JetBrains Mono', Courier, monospace" font-size="8.5" fill="#52525b" opacity="0.9">
-    <line x1="20" y1="35" x2="32" y2="35" stroke="#000000" stroke-width="1.2" />
-    <text x="36" y="38" font-weight="700">+225.0m [CORE LUFFING CRANE]</text>
-    <line x1="20" y1="80" x2="32" y2="80" stroke="#000000" stroke-width="1" />
-    <text x="36" y="83">+185.0m [TOWER APEX JIB]</text>
-    <line x1="20" y1="140" x2="32" y2="140" stroke="#000000" stroke-width="1" />
-    <text x="36" y="143">+140.0m [CORE SLIPFORM L-34]</text>
-    <line x1="20" y1="230" x2="32" y2="230" stroke="#000000" stroke-width="1" />
-    <text x="36" y="233">+95.0m  [STEEL ERECTION L-24]</text>
-    <line x1="20" y1="330" x2="32" y2="330" stroke="#000000" stroke-width="1" />
-    <text x="36" y="333">+50.0m  [CURTAIN WALL GLZ]</text>
-    <line x1="20" y1="480" x2="32" y2="480" stroke="#000000" stroke-width="1.5" />
-    <text x="36" y="483" font-weight="700">±0.0m   [GROUND LEVEL DATUM]</text>
+  <!-- Corner Datum Calibration Marks -->
+  <g stroke="#09090b" stroke-width="2.5">
+    <path d="M 10 30 L 30 30 M 30 10 L 30 30" />
+    <path d="M 1190 30 L 1170 30 M 1170 10 L 1170 30" />
+    <path d="M 10 510 L 30 510 M 30 530 L 30 510" />
+    <path d="M 1190 510 L 1170 510 M 1170 530 L 1170 510" />
+  </g>
+
+  <!-- Elevation & Axis Calibration Ticks (Left & Top Margins) -->
+  <g font-family="'JetBrains Mono', Courier, monospace" font-size="7.5" fill="#52525b" font-weight="700">
+    <text x="32" y="32">AXIS A-01 [SWARM DEFINITION NEXUS]</text>
+    <text x="400" y="32">AXIS B-07 [SKILL INGESTION CONVEYOR]</text>
+    <text x="850" y="32">AXIS C-22 [ORGANIZATION CATALOG MATRIX]</text>
   </g>
 
   <!-- ======================================================================
-       2. DISTANT BACKGROUND MEGA-SKYLINE (Crisp Grey Drafting Silhouettes)
+       2. DATA BUS CONDUITS CONNECTING ALL SYSTEM MODULES
        ====================================================================== -->
-  <g fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.2">
-    <!-- Skyscraper A (Far Left) -->
-    <rect x="50" y="310" width="85" height="170" />
-    <line x1="95" y1="310" x2="95" y2="255" stroke="#71717a" stroke-width="1.2" />
-    <line x1="70" y1="260" x2="130" y2="260" stroke="#71717a" stroke-width="1" />
-    <circle cx="95" cy="255" r="2" fill="#000000" class="anim-strobe" />
+  <g fill="none" stroke="#09090b" stroke-width="2">
+    <!-- Main Horizontal Bus line -->
+    <path d="M 360 85 L 830 85" stroke-width="3" />
+    <path d="M 360 85 L 830 85" stroke="url(#cyanDataPulse)" stroke-width="2" class="anim-conduit-fast" />
 
-    <!-- Skyscraper B (Mid Left) with Slewing Crane -->
-    <rect x="165" y="255" width="110" height="225" />
-    <g class="anim-distant-crane">
-      <line x1="220" y1="255" x2="220" y2="210" stroke="#52525b" stroke-width="1.5" />
-      <line x1="175" y1="215" x2="265" y2="215" stroke="#52525b" stroke-width="1.2" />
-      <line x1="220" y1="202" x2="255" y2="215" stroke="#71717a" stroke-width="0.8" />
-      <circle cx="220" cy="202" r="2" fill="#000000" class="anim-strobe" />
-      <circle cx="265" cy="215" r="1.5" fill="#000000" class="anim-strobe" />
-    </g>
+    <!-- Bus drop to Registry shelf -->
+    <path d="M 400 85 L 400 140" stroke-width="2.5" />
+    <path d="M 600 85 L 600 140" stroke-width="2.5" />
+    <path d="M 800 85 L 800 140" stroke-width="2.5" />
 
-    <!-- Skyscraper C (Mid-Right) -->
-    <rect x="715" y="275" width="95" height="205" />
-    <line x1="760" y1="275" x2="760" y2="230" stroke="#71717a" stroke-width="1.2" />
-    <line x1="730" y1="235" x2="800" y2="235" stroke="#71717a" stroke-width="1" />
-    <circle cx="760" cy="230" r="2" fill="#000000" class="anim-strobe" />
+    <!-- Bus to Telemetry Cards on Right -->
+    <path d="M 830 85 L 860 85 L 860 170 L 880 170" stroke-width="2" />
+    <path d="M 860 170 L 860 350 L 880 350" stroke-width="2" />
+    <path d="M 860 85 L 860 350" stroke="url(#cyanDataPulse)" stroke-width="1.5" class="anim-conduit" />
 
-    <!-- Skyscraper D (Far Right) with Twin Cranes -->
-    <rect x="1050" y="235" width="125" height="245" />
-    <line x1="1090" y1="235" x2="1090" y2="190" stroke="#52525b" stroke-width="1.5" />
-    <line x1="1060" y1="195" x2="1135" y2="195" stroke="#52525b" stroke-width="1.2" />
-    <circle cx="1090" cy="190" r="2" fill="#000000" class="anim-strobe" />
-    <line x1="1145" y1="235" x2="1145" y2="205" stroke="#71717a" stroke-width="1.2" />
-    <line x1="1125" y1="210" x2="1170" y2="210" stroke="#71717a" stroke-width="1" />
-    <circle cx="1145" cy="205" r="2" fill="#000000" class="anim-strobe" />
-  </g>
-
-  <!-- Distant Window Array Matrix -->
-  <g fill="#d4d4d8">
-    <rect x="180" y="270" width="80" height="3" />
-    <rect x="180" y="285" width="80" height="3" />
-    <rect x="180" y="300" width="80" height="3" />
-    <rect x="180" y="315" width="80" height="3" />
-    <rect x="180" y="330" width="80" height="3" />
-    <rect x="1065" y="250" width="95" height="3" />
-    <rect x="1065" y="265" width="95" height="3" />
-    <rect x="1065" y="280" width="95" height="3" />
-    <rect x="1065" y="295" width="95" height="3" />
+    <!-- Bus from Definition Terminal to Conveyor -->
+    <path d="M 350 350 L 375 350 L 375 85" stroke-width="2" />
+    <path d="M 350 350 L 375 350 L 375 85" stroke="url(#cyanDataPulse)" stroke-width="1.5" class="anim-conduit" />
   </g>
 
   <!-- ======================================================================
-       3. EAST COMMERCIAL TOWER WING (Midground: x=780 to x=980)
+       3. ZONE 1 (LEFT: x=30 to x=365):
+          AUTONOMOUS AI AGENTS DEFINING SKILLS & LIVE COMPILER TERMINAL
        ====================================================================== -->
-  <g id="east-commercial-wing" filter="url(#draftingShadow)">
-    <rect x="780" y="160" width="200" height="320" fill="#fafafa" stroke="#000000" stroke-width="2.5" />
-
-    <!-- Ribbon Glazing Window Arrays (Levels 1 to 14) -->
-    <g fill="url(#inkGlass)" stroke="#000000" stroke-width="1.2">
-      <rect x="795" y="180" width="170" height="13" />
-      <rect x="795" y="202" width="170" height="13" />
-      <rect x="795" y="224" width="170" height="13" />
-      <rect x="795" y="246" width="170" height="13" />
-      <rect x="795" y="268" width="170" height="13" />
-      <rect x="795" y="290" width="170" height="13" />
-      <rect x="795" y="312" width="170" height="13" />
-      <rect x="795" y="334" width="170" height="13" />
-      <rect x="795" y="356" width="170" height="13" />
-      <rect x="795" y="378" width="170" height="13" />
-      <rect x="795" y="400" width="170" height="13" />
-      <rect x="795" y="422" width="170" height="13" />
-      <rect x="795" y="444" width="170" height="13" />
-    </g>
-
-    <!-- Vertical Architectural Mullions in Crisp Black -->
-    <g stroke="#000000" stroke-width="1.5">
-      <line x1="835" y1="160" x2="835" y2="480" />
-      <line x1="880" y1="160" x2="880" y2="480" />
-      <line x1="925" y1="160" x2="925" y2="480" />
-    </g>
-
-    <!-- Rooftop Mechanical Chiller Enclosure -->
-    <rect x="805" y="138" width="150" height="22" fill="#e4e4e7" stroke="#000000" stroke-width="2" />
-    <circle cx="840" cy="149" r="6" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-    <circle cx="870" cy="149" r="6" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-    <circle cx="900" cy="149" r="6" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-    <circle cx="805" cy="136" r="3" fill="#000000" class="anim-strobe" />
-    <circle cx="955" cy="136" r="3" fill="#000000" class="anim-strobe" />
-
-    <!-- Exterior Modular Scaffolding with Climbing Worker (x=760 to x=780) -->
-    <g id="east-scaffolding">
-      <line x1="765" y1="280" x2="765" y2="480" stroke="#000000" stroke-width="1.8" />
-      <line x1="778" y1="280" x2="778" y2="480" stroke="#000000" stroke-width="1.8" />
-      <path d="M 765 295 L 778 295 M 765 315 L 778 315 M 765 335 L 778 335
-               M 765 355 L 778 355 M 765 375 L 778 375 M 765 395 L 778 395
-               M 765 415 L 778 415 M 765 435 L 778 435 M 765 455 L 778 455" stroke="#000000" stroke-width="1.2" />
-      <!-- Worker on scaffolding -->
-      <circle cx="771" cy="350" r="3.2" fill="#000000" />
-      <circle cx="771" cy="349" r="2.2" fill="#ffffff" /> <!-- Hardhat -->
-      <rect x="768" y="353" width="6" height="10" fill="#000000" />
-    </g>
+  <!-- Header Label for Agent Zone (Matches Terminal Width 325) -->
+  <g transform="translate(30, 48)">
+    <rect width="325" height="20" rx="3" fill="#09090b" />
+    <circle cx="12" cy="10" r="3.5" fill="#ffffff" class="anim-strobe" />
+    <text x="22" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="0.5">
+      AUTONOMOUS AGENT DEFINITION SWARM
+    </text>
+    <text x="315" y="14" fill="#06b6d4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" text-anchor="end">
+      3 ACTIVE PODS
+    </text>
   </g>
 
-  <!-- ======================================================================
-       4. SECONDARY TOWER CRANE #2 (Mounted behind East Wing at x=995)
-       ====================================================================== -->
-  <g id="secondary-tower-crane-2">
-    <!-- Crane 2 Mast Tower (Solid Black Lattice) -->
-    <g stroke="#000000" stroke-width="2" fill="none">
-      <line x1="990" y1="95" x2="990" y2="480" stroke-width="3" />
-      <line x1="1010" y1="95" x2="1010" y2="480" stroke-width="3" />
-      <path d="M 990 95 L 1010 115 M 1010 95 L 990 115
-               M 990 115 L 1010 135 M 1010 135 L 990 135
-               M 990 135 L 1010 155 M 1010 155 L 990 155
-               M 990 155 L 1010 175 M 1010 175 L 990 175
-               M 990 175 L 1010 195 M 1010 195 L 990 195
-               M 990 195 L 1010 215 M 1010 215 L 990 215
-               M 990 215 L 1010 235 M 1010 235 L 990 235
-               M 990 235 L 1010 255 M 1010 255 L 990 255
-               M 990 255 L 1010 275 M 1010 275 L 990 275" stroke="#3f3f46" stroke-width="1.5" />
-    </g>
+  <!-- AGENT 1: "ANTIGRAVITY" (Chief Systems Architect Pod) -->
+  <g transform="translate(75, 125)">
+    <g class="anim-agent-1">
+      <!-- Hovering Thruster Field Lines -->
+      <line x1="0" y1="28" x2="0" y2="44" stroke="#09090b" stroke-width="2" stroke-dasharray="3 2" />
+      <circle cx="0" cy="46" r="2.5" fill="#09090b" class="anim-strobe" />
 
-    <!-- Turntable and Cab -->
-    <rect x="985" y="85" width="30" height="12" rx="2" fill="#18181b" stroke="#000000" stroke-width="1.8" />
-    <rect x="988" y="87" width="10" height="8" fill="#ffffff" stroke="#000000" stroke-width="1" />
+      <!-- Outer Rotating Sensor Ring -->
+      <g class="anim-ring-cw">
+        <circle cx="0" cy="0" r="26" fill="none" stroke="#09090b" stroke-width="1.5" stroke-dasharray="12 6" />
+        <circle cx="26" cy="0" r="3" fill="#09090b" />
+        <circle cx="-26" cy="0" r="3" fill="#09090b" />
+      </g>
+      <!-- Counter-rotating inner ring -->
+      <g class="anim-ring-ccw">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="#52525b" stroke-width="1.2" stroke-dasharray="8 4" />
+      </g>
 
-    <!-- A-Frame Peak -->
-    <polygon points="990,85 1010,85 1000,60" fill="#27272a" stroke="#000000" stroke-width="2.5" />
-    <circle cx="1000" cy="58" r="3.5" fill="#000000" class="anim-strobe" />
+      <!-- Main Agent Chassis Core -->
+      <rect x="-16" y="-16" width="32" height="32" rx="7" fill="#ffffff" stroke="#09090b" stroke-width="2.5" filter="url(#softShadow)" />
+      <rect x="-12" y="-12" width="24" height="24" rx="4" fill="#09090b" />
 
-    <!-- Jib Arm -->
-    <g stroke="#000000" stroke-width="1.8" fill="none">
-      <line x1="1000" y1="80" x2="790" y2="80" stroke-width="3" />
-      <line x1="1000" y1="70" x2="800" y2="80" stroke-width="2" />
-      <line x1="1000" y1="80" x2="1060" y2="80" stroke-width="3" />
-      <rect x="1040" y="76" width="22" height="14" rx="1" fill="#27272a" stroke="#000000" stroke-width="2" />
-      <line x1="1000" y1="60" x2="850" y2="80" stroke="#000000" stroke-width="1.5" />
-      <line x1="1000" y1="60" x2="1055" y2="80" stroke="#000000" stroke-width="1.5" />
-      <path d="M 1000 80 L 980 72 L 960 80 L 940 73 L 920 80 L 900 74 L 880 80 L 860 75 L 840 80 L 820 76 L 800 80" stroke="#52525b" />
-    </g>
+      <!-- Glowing Cybernetic Eye / Visor -->
+      <rect x="-9" y="-4" width="18" height="8" rx="2.5" fill="#06b6d4" />
+      <circle cx="0" cy="0" r="2" fill="#ffffff" />
 
-    <!-- PROMINENT MOVEMENT: Crane 2 Traveling Trolley & Lowering Concrete Skip -->
-    <g transform="translate(950, 0)">
-      <g class="anim-crane2-trolley">
-        <rect x="-8" y="77" width="16" height="7" rx="1.5" fill="#000000" />
-        <g class="anim-crane2-skip">
-          <line x1="0" y1="84" x2="0" y2="135" stroke="#000000" stroke-width="1.5" stroke-dasharray="3 1" />
-          <polygon points="-6,135 6,135 4,152 -4,152" fill="#18181b" stroke="#000000" stroke-width="1.8" />
-          <rect x="-3" y="152" width="6" height="5" fill="#000000" />
-          <line x1="0" y1="157" x2="8" y2="182" stroke="#52525b" stroke-width="1" /> <!-- Guide tag line -->
+      <!-- Agent Pod Badge -->
+      <rect x="-32" y="22" width="64" height="14" rx="3" fill="#09090b" />
+      <text x="0" y="32" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="900" text-anchor="middle">
+        ANTIGRAVITY
+      </text>
+
+      <!-- Scanning Laser Projection Cone (Aiming right toward Skill Conveyor) -->
+      <g transform="translate(16, 0)">
+        <g class="anim-laser-cone">
+          <polygon points="0,0 85,-22 85,22" fill="url(#laserBeamGrad)" opacity="0.65" />
+          <line x1="0" y1="0" x2="85" y2="0" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4 2" />
+          <circle cx="85" cy="0" r="2.5" fill="#0284c7" class="anim-strobe" />
         </g>
       </g>
     </g>
   </g>
 
-  <!-- ======================================================================
-       5. MAIN COMMERCIAL HIGH-RISE SUPERSTRUCTURE (Center: x=370 to x=650)
-       ====================================================================== -->
-  <g id="main-commercial-skyscraper" filter="url(#draftingShadow)">
-    <!-- Solid Concrete Core Box -->
-    <rect x="370" y="55" width="280" height="425" fill="#fafafa" stroke="#000000" stroke-width="3" />
+  <!-- AGENT 2: "CLAUDE" (Lead Reasoning & Verification Pod) -->
+  <g transform="translate(185, 125)">
+    <g class="anim-agent-2">
+      <!-- Hovering Thruster Field -->
+      <line x1="0" y1="28" x2="0" y2="44" stroke="#09090b" stroke-width="2" stroke-dasharray="3 2" />
+      <circle cx="0" cy="46" r="2.5" fill="#09090b" class="anim-strobe" />
 
-    <!-- Crown Penthouse Structure (Floors 28 - 34) -->
-    <polygon points="415,55 605,55 605,130 415,130" fill="#f4f4f5" stroke="#000000" stroke-width="2" />
-
-    <!-- Self-Climbing Slipform Core Jump Rig (Roof Level: y=34) -->
-    <g id="slipform-jump-rig">
-      <rect x="465" y="34" width="90" height="24" fill="#000000" stroke="#000000" stroke-width="2" />
-      <rect x="470" y="38" width="80" height="5" fill="#ffffff" />
-      <text x="510" y="51" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="7.5" font-weight="900" text-anchor="middle">SLIPFORM L-34</text>
-      <!-- Rebar dowel rods protruding vertically -->
-      <line x1="475" y1="34" x2="475" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="485" y1="34" x2="485" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="495" y1="34" x2="495" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="505" y1="34" x2="505" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="515" y1="34" x2="515" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="525" y1="34" x2="525" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="535" y1="34" x2="535" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="545" y1="34" x2="545" y2="24" stroke="#000000" stroke-width="2" />
-      <line x1="545" y1="34" x2="545" y2="18" stroke="#000000" stroke-width="2" />
-      <circle cx="545" cy="16" r="4" fill="#000000" class="anim-strobe" />
-
-      <!-- ================================================================
-           PROMINENT MOVEMENT: TOWER CRANE #3 (CORE-MOUNTED LUFFING BOOM)
-           ================================================================ -->
-      <g id="climbing-crane-3">
-        <!-- Climbing Base -->
-        <rect x="476" y="16" width="14" height="20" fill="#27272a" stroke="#000000" stroke-width="1.8" />
-        <rect x="473" y="10" width="20" height="8" rx="1.5" fill="#000000" />
-        <polygon points="475,10 491,10 483,-2" fill="#000000" />
-        <circle cx="483" cy="-3" r="3.5" fill="#000000" class="anim-strobe" />
-
-        <!-- ACTUAL PIVOTING LUFFING JIB BOOM (Swings between -28deg and -64deg) -->
-        <g class="anim-crane3-boom">
-          <line x1="483" y1="24" x2="540" y2="-12" stroke="#000000" stroke-width="3" />
-          <line x1="483" y1="18" x2="536" y2="-12" stroke="#000000" stroke-width="2" />
-          <path d="M 483 24 L 495 18 L 507 22 L 519 14 L 531 18 L 540 -12" stroke="#000000" stroke-width="1.2" fill="none" />
-          <circle cx="540" cy="-12" r="3.5" fill="#000000" class="anim-strobe" />
-
-          <!-- Cable Lowering and Raising Rebar Load -->
-          <g transform="translate(540, -12)">
-            <g class="anim-crane3-cable">
-              <line x1="0" y1="0" x2="0" y2="42" stroke="#000000" stroke-width="1.5" stroke-dasharray="2 1" />
-              <!-- Heavy Rebar Cage -->
-              <g transform="translate(-10, 42)">
-                <rect width="20" height="24" fill="#ffffff" stroke="#000000" stroke-width="2" />
-                <line x1="5" y1="0" x2="5" y2="24" stroke="#000000" stroke-width="1.5" />
-                <line x1="10" y1="0" x2="10" y2="24" stroke="#000000" stroke-width="1.5" />
-                <line x1="15" y1="0" x2="15" y2="24" stroke="#000000" stroke-width="1.5" />
-                <line x1="0" y1="6" x2="20" y2="6" stroke="#000000" stroke-width="1.5" />
-                <line x1="0" y1="12" x2="20" y2="12" stroke="#000000" stroke-width="1.5" />
-                <line x1="0" y1="18" x2="20" y2="18" stroke="#000000" stroke-width="1.5" />
-              </g>
-            </g>
-          </g>
-        </g>
+      <!-- Outer Rotating Sensor Ring -->
+      <g class="anim-ring-cw">
+        <circle cx="0" cy="0" r="24" fill="none" stroke="#09090b" stroke-width="1.5" stroke-dasharray="10 5" />
+        <circle cx="0" cy="24" r="3" fill="#09090b" />
+        <circle cx="0" cy="-24" r="3" fill="#09090b" />
       </g>
-    </g>
 
-    <!-- Structural High-Rise Heavy Steel Framework (Floors 18 - 32: y=60 to y=250) -->
-    <g stroke="url(#inkSteel)" stroke-width="2.5" fill="none">
-      <!-- Super-Columns -->
-      <line x1="385" y1="55" x2="385" y2="260" stroke="#000000" stroke-width="3.5" />
-      <line x1="440" y1="55" x2="440" y2="260" stroke="#000000" stroke-width="2.8" />
-      <line x1="510" y1="55" x2="510" y2="260" stroke="#000000" stroke-width="3.8" />
-      <line x1="580" y1="55" x2="580" y2="260" stroke="#000000" stroke-width="2.8" />
-      <line x1="635" y1="55" x2="635" y2="260" stroke="#000000" stroke-width="3.5" />
+      <!-- Main Chassis Core -->
+      <rect x="-15" y="-15" width="30" height="30" rx="6" fill="#ffffff" stroke="#09090b" stroke-width="2.5" filter="url(#softShadow)" />
+      <rect x="-11" y="-11" width="22" height="22" rx="4" fill="#18181b" />
 
-      <!-- Horizontal Girders -->
-      <line x1="370" y1="75" x2="650" y2="75" stroke="#000000" stroke-width="2.5" />
-      <line x1="370" y1="95" x2="650" y2="95" stroke="#27272a" stroke-width="2" />
-      <line x1="370" y1="115" x2="650" y2="115" stroke="#27272a" stroke-width="2" />
-      <line x1="370" y1="135" x2="650" y2="135" stroke="#000000" stroke-width="3" />
-      <line x1="370" y1="155" x2="650" y2="155" stroke="#27272a" stroke-width="2" />
-      <line x1="370" y1="175" x2="650" y2="175" stroke="#27272a" stroke-width="2" />
-      <line x1="370" y1="195" x2="650" y2="195" stroke="#000000" stroke-width="3" />
-      <line x1="370" y1="215" x2="650" y2="215" stroke="#27272a" stroke-width="2" />
-      <line x1="370" y1="235" x2="650" y2="235" stroke="#27272a" stroke-width="2" />
-      <line x1="370" y1="255" x2="650" y2="255" stroke="#000000" stroke-width="3" />
+      <!-- Visor -->
+      <rect x="-8" y="-4" width="16" height="8" rx="2" fill="#06b6d4" />
+      <circle cx="0" cy="0" r="1.8" fill="#ffffff" />
 
-      <!-- Seismic Chevron & X-Bracing Trusses -->
-      <path d="M 385 75 L 440 95 M 440 75 L 385 95
-               M 440 75 L 510 95 M 510 75 L 440 95
-               M 510 75 L 580 95 M 580 75 L 510 95
-               M 580 75 L 635 95 M 635 75 L 580 95
-               M 385 115 L 440 135 M 440 115 L 385 135
-               M 580 115 L 635 135 M 635 115 L 580 135
-               M 385 155 L 510 195 M 510 155 L 385 195
-               M 510 155 L 635 195 M 635 155 L 510 195
-               M 385 195 L 510 235 M 510 195 L 385 235
-               M 510 195 L 635 235 M 635 195 L 510 235" stroke="#3f3f46" stroke-width="2" />
-    </g>
+      <!-- Agent Pod Badge -->
+      <rect x="-28" y="22" width="56" height="14" rx="3" fill="#09090b" />
+      <text x="0" y="32" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="900" text-anchor="middle">
+        CLAUDE 3.7
+      </text>
 
-    <!-- Corrugated Metal Floor Decking -->
-    <g stroke="#000000" stroke-width="1.2" opacity="0.6">
-      <line x1="385" y1="133" x2="635" y2="133" stroke-dasharray="2 2" />
-      <line x1="385" y1="173" x2="635" y2="173" stroke-dasharray="2 2" />
-      <line x1="385" y1="213" x2="635" y2="213" stroke-dasharray="2 2" />
-    </g>
-
-    <!-- High-Rise Construction Safety Netting (Floors 16 - 22: y=175 to y=235) -->
-    <g opacity="0.6">
-      <rect x="372" y="177" width="276" height="16" fill="#e4e4e7" stroke="#000000" stroke-width="1.5" stroke-dasharray="3 3" />
-      <rect x="372" y="217" width="276" height="16" fill="#e4e4e7" stroke="#000000" stroke-width="1.5" stroke-dasharray="3 3" />
-    </g>
-
-    <!-- Mid-Level Active Curtain Wall Glazing (Floors 11 - 16: y=255 to y=345) -->
-    <g>
-      <rect x="380" y="258" width="80" height="18" rx="1" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="470" y="258" width="90" height="18" rx="1" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="380" y="280" width="130" height="18" rx="1" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="520" y="280" width="120" height="18" rx="1" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="380" y="302" width="260" height="18" rx="1" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="380" y="324" width="260" height="18" rx="1" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-    </g>
-
-    <!-- Completed Commercial Base Floors (Floors 1 - 10: y=346 to y=480) -->
-    <g>
-      <rect x="378" y="346" width="264" height="19" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="378" y="368" width="264" height="19" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="378" y="390" width="264" height="19" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="378" y="412" width="264" height="19" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="378" y="434" width="264" height="19" fill="url(#inkGlass)" stroke="#000000" stroke-width="1.8" />
-      <rect x="378" y="456" width="264" height="24" fill="url(#inkGlass)" stroke="#000000" stroke-width="2" />
-
-      <!-- Vertical Exterior Structural Fins in Solid Black -->
-      <g stroke="#000000" stroke-width="2">
-        <line x1="415" y1="346" x2="415" y2="480" />
-        <line x1="465" y1="346" x2="465" y2="480" />
-        <line x1="510" y1="346" x2="510" y2="480" />
-        <line x1="555" y1="346" x2="555" y2="480" />
-        <line x1="605" y1="346" x2="605" y2="480" />
-      </g>
-    </g>
-
-    <!-- Technical Floor Level Markers -->
-    <g font-family="'JetBrains Mono', Courier, monospace" font-size="7.5" font-weight="900" fill="#000000">
-      <text x="372" y="93" text-anchor="end">L-30</text>
-      <text x="372" y="153" text-anchor="end">L-24</text>
-      <text x="372" y="233" text-anchor="end">L-18</text>
-      <text x="372" y="323" text-anchor="end">L-12</text>
-      <text x="372" y="413" text-anchor="end">L-06</text>
-      <text x="372" y="473" text-anchor="end">L-01</text>
-    </g>
-
-    <!-- Ironworker Crew on L-26 Girder -->
-    <g transform="translate(460, 95)">
-      <circle cx="0" cy="-6" r="3.2" fill="#000000" />
-      <circle cx="0" cy="-7" r="2" fill="#ffffff" /> <!-- Hardhat -->
-      <rect x="-3" y="-2" width="6" height="10" fill="#000000" />
-      <line x1="0" y1="2" x2="0" y2="-12" stroke="#000000" stroke-width="1.2" />
-      <line x1="-30" y1="-12" x2="40" y2="-12" stroke="#000000" stroke-width="1" stroke-dasharray="2 2" />
-    </g>
-
-    <!-- Cantilevered Rigger Platform with RAPID ARM WAVING (x=635, y=175) -->
-    <g transform="translate(635, 175)">
-      <line x1="0" y1="0" x2="25" y2="0" stroke="#000000" stroke-width="3" />
-      <line x1="15" y1="0" x2="0" y2="-15" stroke="#000000" stroke-width="2" />
-      <rect x="15" y="-12" width="10" height="12" fill="none" stroke="#000000" stroke-width="1.5" />
-      <!-- Signalman Worker -->
-      <circle cx="20" cy="-16" r="3" fill="#000000" />
-      <rect x="18" y="-13" width="5" height="11" fill="#000000" />
-      <!-- PROMINENT MOVEMENT: Waving Baton Arm -->
-      <g class="anim-rigger-wave">
-        <line x1="20" y1="-10" x2="30" y2="-20" stroke="#000000" stroke-width="2.5" />
-        <circle cx="30" cy="-20" r="2.5" fill="#000000" />
+      <!-- Articulated Mechanical Drafting Arm (Reaching down to terminal) -->
+      <g stroke="#09090b" stroke-width="2" fill="none">
+        <polyline points="0,15 12,32 8,48" />
+        <circle cx="8" cy="48" r="2.5" fill="#09090b" />
       </g>
     </g>
   </g>
 
-  <!-- ======================================================================
-       6. PROMINENT MOVEMENT: DUAL-CAR CLIMBING ALIMAK HOIST (Full-Height Run)
-       ====================================================================== -->
-  <g id="dual-climbing-hoist">
-    <!-- Vertical Mast Tower -->
-    <g stroke="#000000" stroke-width="2" fill="none">
-      <line x1="662" y1="75" x2="662" y2="480" stroke-width="3" />
-      <line x1="676" y1="75" x2="676" y2="480" stroke-width="3" />
-      <path d="M 662 85 L 676 85 M 662 100 L 676 100 M 662 115 L 676 115
-               M 662 130 L 676 130 M 662 145 L 676 145 M 662 160 L 676 160
-               M 662 175 L 676 175 M 662 190 L 676 190 M 662 205 L 676 205
-               M 662 220 L 676 220 M 662 235 L 676 235 M 662 250 L 676 250
-               M 662 265 L 676 265 M 662 280 L 676 280 M 662 295 L 676 295
-               M 662 310 L 676 310 M 662 325 L 676 325 M 662 340 L 676 340
-               M 662 355 L 676 355 M 662 370 L 676 370 M 662 385 L 676 385
-               M 662 400 L 676 400 M 662 415 L 676 415 M 662 430 L 676 430
-               M 662 445 L 676 445 M 662 460 L 676 460 M 662 475 L 676 475" stroke="#3f3f46" stroke-width="1.2" />
-    </g>
+  <!-- AGENT 3: "CURSOR / GEMINI" (Code Synthesis & Token Diet Pod) -->
+  <g transform="translate(295, 125)">
+    <g class="anim-agent-3">
+      <!-- Hovering Thruster Field -->
+      <line x1="0" y1="28" x2="0" y2="44" stroke="#09090b" stroke-width="2" stroke-dasharray="3 2" />
+      <circle cx="0" cy="46" r="2.5" fill="#09090b" class="anim-strobe" />
 
-    <!-- Wall Ties to Building -->
-    <line x1="650" y1="135" x2="662" y2="135" stroke="#000000" stroke-width="2.5" />
-    <line x1="650" y1="235" x2="662" y2="235" stroke="#000000" stroke-width="2.5" />
-    <line x1="650" y1="335" x2="662" y2="335" stroke="#000000" stroke-width="2.5" />
-    <line x1="650" y1="435" x2="662" y2="435" stroke="#000000" stroke-width="2.5" />
-
-    <!-- ALIMAK CAR A: ASCENDING 310px FROM GROUND TO FLOOR 28 -->
-    <g transform="translate(0, 440)" class="anim-alimak-up">
-      <rect x="642" y="0" width="18" height="32" rx="2" fill="#ffffff" stroke="#000000" stroke-width="2.5" />
-      <rect x="644" y="4" width="14" height="14" fill="#e4e4e7" stroke="#000000" stroke-width="1" stroke-dasharray="2 2" />
-      <rect x="642" y="24" width="18" height="8" fill="url(#hazardStripeWhite)" />
-      <circle cx="651" cy="-3" r="3" fill="#000000" class="anim-strobe" />
-    </g>
-
-    <!-- ALIMAK CAR B: DESCENDING 310px FROM FLOOR 28 TO GROUND -->
-    <g transform="translate(0, 440)" class="anim-alimak-down">
-      <rect x="678" y="0" width="18" height="32" rx="2" fill="#ffffff" stroke="#000000" stroke-width="2.5" />
-      <rect x="680" y="4" width="14" height="14" fill="#e4e4e7" stroke="#000000" stroke-width="1" stroke-dasharray="2 2" />
-      <rect x="678" y="24" width="18" height="8" fill="url(#hazardStripeWhite)" />
-      <circle cx="687" cy="-3" r="3" fill="#000000" class="anim-strobe" />
-    </g>
-  </g>
-
-  <!-- ======================================================================
-       7. PROMINENT MOVEMENT: PRIMARY TOWER CRANE #1 (Centerpiece: x=315)
-       ====================================================================== -->
-  <g id="heavy-tower-crane-1">
-    <!-- Crane Vertical Lattice Mast -->
-    <g stroke="url(#craneInk)" stroke-width="2" fill="none">
-      <line x1="305" y1="30" x2="305" y2="480" stroke-width="4" />
-      <line x1="325" y1="30" x2="325" y2="480" stroke-width="4" />
-      <path d="M 305 30 L 325 50 M 325 30 L 305 50
-               M 305 50 L 325 70 M 325 50 L 305 70
-               M 305 70 L 325 90 M 325 70 L 305 90
-               M 305 90 L 325 110 M 325 90 L 305 110
-               M 305 110 L 325 130 M 325 110 L 305 130
-               M 305 130 L 325 150 M 325 130 L 305 150
-               M 305 150 L 325 170 M 325 150 L 305 170
-               M 305 170 L 325 190 M 325 170 L 305 190
-               M 305 190 L 325 210 M 325 190 L 305 210
-               M 305 210 L 325 230 M 325 210 L 305 230
-               M 305 230 L 325 250 M 325 230 L 305 250
-               M 305 250 L 325 270 M 325 250 L 305 270
-               M 305 270 L 325 290 M 325 270 L 305 290
-               M 305 290 L 325 310 M 325 290 L 305 310
-               M 305 310 L 325 330 M 325 310 L 305 330
-               M 305 330 L 325 350 M 325 330 L 305 350
-               M 305 350 L 325 370 M 325 350 L 305 370
-               M 305 370 L 325 390 M 325 370 L 305 390
-               M 305 390 L 325 410 M 325 390 L 305 410
-               M 305 410 L 325 430 M 325 410 L 305 430
-               M 305 430 L 325 450 M 325 430 L 305 450
-               M 305 450 L 325 470 M 325 450 L 305 470
-               M 305 470 L 325 480 M 325 470 L 305 480" stroke="#3f3f46" stroke-width="1.8" />
-    </g>
-
-    <!-- Collar Ties to Building -->
-    <g stroke="#000000" stroke-width="3.5">
-      <line x1="325" y1="135" x2="370" y2="135" />
-      <line x1="325" y1="235" x2="370" y2="235" />
-      <line x1="325" y1="345" x2="370" y2="345" />
-    </g>
-
-    <!-- Turntable and Operator Cab -->
-    <rect x="298" y="24" width="34" height="8" rx="2" fill="#000000" />
-    <rect x="318" y="18" width="22" height="20" rx="3" fill="#18181b" stroke="#000000" stroke-width="2" />
-    <rect x="323" y="21" width="14" height="13" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-
-    <!-- A-Frame Peak -->
-    <polygon points="305,24 325,24 315,3" fill="#000000" stroke="#000000" stroke-width="3" />
-    <circle cx="315" cy="2" r="5" fill="#000000" class="anim-strobe" />
-
-    <!-- Counter-Jib -->
-    <g stroke="#000000" stroke-width="2.5">
-      <line x1="315" y1="22" x2="205" y2="22" stroke-width="4" />
-      <line x1="315" y1="14" x2="215" y2="22" stroke-width="2.5" />
-      <rect x="210" y="16" width="36" height="22" rx="2" fill="#27272a" stroke="#000000" stroke-width="2" />
-      <line x1="222" y1="16" x2="222" y2="38" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="234" y1="16" x2="234" y2="38" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="315" y1="3" x2="215" y2="18" stroke="#000000" stroke-width="2.5" />
-    </g>
-
-    <!-- Working Jib Truss -->
-    <g stroke="#000000" stroke-width="2.5" fill="none">
-      <line x1="315" y1="22" x2="705" y2="22" stroke-width="4" />
-      <line x1="315" y1="10" x2="695" y2="22" stroke-width="2.5" />
-      <path d="M 315 22 L 335 11 L 355 22 L 375 12 L 395 22 L 415 13 L 435 22
-               L 455 14 L 475 22 L 495 15 L 515 22 L 535 16 L 555 22
-               L 575 17 L 595 22 L 615 18 L 635 22 L 655 19 L 675 22 L 695 22" stroke="#3f3f46" stroke-width="1.8" />
-      <line x1="315" y1="3" x2="490" y2="18" stroke="#000000" stroke-width="2.8" />
-      <line x1="315" y1="3" x2="640" y2="20" stroke="#000000" stroke-width="2" />
-    </g>
-    <circle cx="705" cy="22" r="4" fill="#000000" class="anim-strobe" />
-
-    <!-- PROMINENT MOVEMENT: 230px Traveling Trolley + Dynamic 65px Vertical Hoist Lift -->
-    <g transform="translate(360, 0)">
-      <g class="anim-crane1-trolley">
-        <!-- Traveling Trolley on Track -->
-        <rect x="-14" y="20" width="28" height="9" rx="2" fill="#000000" />
-        <circle cx="-6" cy="24" r="3" fill="#ffffff" />
-        <circle cx="6" cy="24" r="3" fill="#ffffff" />
-
-        <!-- Actual Dynamic Vertical Lift & Pendulum Sway of Suspended Girder -->
-        <g class="anim-crane1-hoist">
-          <line x1="-6" y1="29" x2="-5" y2="120" stroke="#000000" stroke-width="2" />
-          <line x1="6" y1="29" x2="5" y2="120" stroke="#000000" stroke-width="2" />
-
-          <!-- Hook Sheave Block -->
-          <rect x="-9" y="120" width="18" height="14" rx="2" fill="#18181b" stroke="#000000" stroke-width="2" />
-          <path d="M 0 134 C -5 136 -6 143 0 145 C 6 146 7 141 3 137" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" />
-
-          <!-- Rigging Slings -->
-          <line x1="0" y1="145" x2="-60" y2="175" stroke="#000000" stroke-width="1.8" />
-          <line x1="0" y1="145" x2="60" y2="175" stroke="#000000" stroke-width="1.8" />
-
-          <!-- Suspended Heavy Commercial I-Beam Girder in Crisp Black -->
-          <g transform="translate(0, 175)">
-            <rect x="-70" y="-5" width="140" height="5" rx="1" fill="#000000" />
-            <rect x="-65" y="0" width="130" height="7" fill="#27272a" />
-            <rect x="-70" y="7" width="140" height="5" rx="1" fill="#000000" />
-            <text x="0" y="6" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="6.5" font-weight="900" text-anchor="middle" letter-spacing="1">GIRDER #W24x162 • SWL 25T</text>
-            <circle cx="-60" cy="-3" r="2.5" fill="#000000" />
-            <circle cx="60" cy="-3" r="2.5" fill="#000000" />
-          </g>
-        </g>
+      <!-- Outer Rotating Ring -->
+      <g class="anim-ring-ccw">
+        <circle cx="0" cy="0" r="24" fill="none" stroke="#09090b" stroke-width="1.5" stroke-dasharray="8 6" />
+        <circle cx="16" cy="16" r="3" fill="#09090b" />
+        <circle cx="-16" cy="-16" r="3" fill="#09090b" />
       </g>
+
+      <!-- Chassis Core -->
+      <rect x="-15" y="-15" width="30" height="30" rx="6" fill="#ffffff" stroke="#09090b" stroke-width="2.5" filter="url(#softShadow)" />
+      <rect x="-11" y="-11" width="22" height="22" rx="4" fill="#27272a" />
+
+      <!-- Visor -->
+      <rect x="-8" y="-4" width="16" height="8" rx="2" fill="#06b6d4" />
+      <circle cx="0" cy="0" r="1.8" fill="#ffffff" />
+
+      <!-- Agent Pod Badge -->
+      <rect x="-28" y="22" width="56" height="14" rx="3" fill="#09090b" />
+      <text x="0" y="32" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="900" text-anchor="middle">
+        TOKEN GOV
+      </text>
     </g>
   </g>
 
-  <!-- ======================================================================
-       8. PROMINENT MOVEMENT: WELDING STATIONS & CASCADING SPARK RAIN
-       ====================================================================== -->
-  <!-- Welding Station 1: Joint at (440, 135) on Level 24 -->
-  <g transform="translate(440, 135)">
-    <!-- High-Contrast Arc Welding Flare (Black Glow / White Core) -->
-    <circle cx="0" cy="0" r="18" fill="#000000" opacity="0.3" filter="url(#arcFlashFilter)" class="anim-weld-flash1" />
-    <circle cx="0" cy="0" r="7" fill="#000000" class="anim-weld-flash1" />
-    <!-- Falling Dark Molten Sparks (Cascading 58px Downward) -->
-    <circle cx="-3" cy="0" r="2.2" fill="#000000" class="anim-spark1" />
-    <circle cx="3" cy="0" r="2.5" fill="#000000" class="anim-spark2" />
-    <circle cx="0" cy="0" r="2" fill="#000000" class="anim-spark3" />
-    <!-- Ironworker -->
-    <circle cx="12" cy="-6" r="3.5" fill="#000000" />
-    <circle cx="12" cy="-7" r="2" fill="#ffffff" /> <!-- Helmet -->
-    <rect x="8" y="-2" width="8" height="13" rx="1" fill="#000000" />
-  </g>
-
-  <!-- Welding Station 2: Joint at (580, 195) on Level 18 -->
-  <g transform="translate(580, 195)">
-    <circle cx="0" cy="0" r="16" fill="#000000" opacity="0.3" filter="url(#arcFlashFilter)" class="anim-weld-flash2" />
-    <circle cx="0" cy="0" r="6" fill="#000000" class="anim-weld-flash2" />
-    <circle cx="-2" cy="0" r="2.2" fill="#000000" class="anim-spark2" />
-    <circle cx="2" cy="0" r="1.8" fill="#000000" class="anim-spark3" />
-    <circle cx="-12" cy="-6" r="3.5" fill="#000000" />
-    <rect x="-16" y="-2" width="8" height="13" rx="1" fill="#000000" />
-  </g>
-
-  <!-- Welding Station 3: Joint at (510, 75) on Level 30 -->
-  <g transform="translate(510, 75)">
-    <circle cx="0" cy="0" r="15" fill="#000000" opacity="0.3" filter="url(#arcFlashFilter)" class="anim-weld-flash3" />
-    <circle cx="0" cy="0" r="6" fill="#000000" class="anim-weld-flash3" />
-    <circle cx="1" cy="0" r="2" fill="#000000" class="anim-spark1" />
-    <circle cx="-2" cy="0" r="1.8" fill="#000000" class="anim-spark2" />
-  </g>
-
-  <!-- ======================================================================
-       9. PROMINENT MOVEMENT: CAD LASER LEVELING ELEVATION SCANNER
-       ====================================================================== -->
-  <!-- Sweeps across entire skyscraper (320px vertical sweep!) -->
-  <g class="anim-laser-sweep" transform="translate(0, 120)">
-    <line x1="340" y1="0" x2="670" y2="0" stroke="#000000" stroke-width="2.5" />
-    <circle cx="340" cy="0" r="4" fill="#000000" />
-    <rect x="675" y="-10" width="90" height="20" rx="3" fill="#000000" />
-    <text x="720" y="4" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="8" font-weight="900" text-anchor="middle">DATUM ±0.01mm</text>
-  </g>
-
-  <!-- ======================================================================
-       10. PROMINENT MOVEMENT: AUTONOMOUS BIM INSPECTION DRONE (Active Patrol)
-       ====================================================================== -->
-  <g transform="translate(710, 190)" class="anim-drone-patrol">
-    <line x1="-16" y1="-8" x2="16" y2="8" stroke="#000000" stroke-width="2.5" />
-    <line x1="-16" y1="8" x2="16" y2="-8" stroke="#000000" stroke-width="2.5" />
-    <ellipse cx="-16" cy="-8" rx="8" ry="2.5" fill="#000000" opacity="0.6" />
-    <ellipse cx="16" cy="8" rx="8" ry="2.5" fill="#000000" opacity="0.6" />
-    <ellipse cx="-16" cy="8" rx="8" ry="2.5" fill="#000000" opacity="0.6" />
-    <ellipse cx="16" cy="-8" rx="8" ry="2.5" fill="#000000" opacity="0.6" />
-    <rect x="-8" y="-6" width="16" height="12" rx="3" fill="#000000" />
-    <circle cx="0" cy="2" r="3" fill="#ffffff" />
-    <!-- Dynamic target sensor beam -->
-    <line x1="-8" y1="2" x2="-65" y2="8" stroke="#000000" stroke-width="1.5" stroke-dasharray="3 3" />
-  </g>
-
-  <!-- ======================================================================
-       11. PROMINENT MOVEMENT: ACTIVE GROUND EXCAVATION, TRUCKS & MACHINERY
-       ====================================================================== -->
-  <!-- Concrete Ground Grade Base -->
-  <rect x="0" y="480" width="1200" height="60" fill="#f4f4f5" stroke="#000000" stroke-width="2.5" />
-
-  <!-- Foundation Piling Caps in Solid Black -->
-  <g stroke="#000000" stroke-width="4">
-    <line x1="280" y1="480" x2="350" y2="480" stroke-width="7" />
-    <line x1="630" y1="480" x2="760" y2="480" stroke-width="7" />
-  </g>
-
-  <!-- Perimeter Safety Barrier (Black & White Chevrons) -->
-  <rect x="0" y="473" width="1200" height="8" fill="url(#hazardStripeWhite)" stroke="#000000" stroke-width="1" />
-
-  <!-- A. ACTIVE EXCAVATION PIT: HYDRAULIC EXCAVATOR + TILTING DUMP TRUCK -->
-  <g id="excavator-pit-zone" transform="translate(15, 435)">
-    <!-- Earth Trench Bank -->
-    <path d="M 0 45 L 35 45 L 50 35 L 140 35" fill="none" stroke="#27272a" stroke-width="2.5" />
-
-    <!-- 1. ACTUAL DIGGING HYDRAULIC EXCAVATOR -->
-    <g id="hydraulic-excavator">
-      <rect x="45" y="32" width="60" height="14" rx="4" fill="#000000" stroke="#000000" stroke-width="2" />
-      <circle cx="53" cy="39" r="4" fill="#ffffff" stroke="#000000" stroke-width="1.8" />
-      <circle cx="65" cy="39" r="4" fill="#ffffff" stroke="#000000" stroke-width="1.8" />
-      <circle cx="77" cy="39" r="4" fill="#ffffff" stroke="#000000" stroke-width="1.8" />
-      <circle cx="89" cy="39" r="4" fill="#ffffff" stroke="#000000" stroke-width="1.8" />
-      <circle cx="99" cy="39" r="4" fill="#ffffff" stroke="#000000" stroke-width="1.8" />
-      <!-- Cab -->
-      <rect x="60" y="14" width="45" height="20" rx="3" fill="#18181b" stroke="#000000" stroke-width="2" />
-      <rect x="63" y="17" width="16" height="12" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-      <rect x="98" y="16" width="12" height="18" rx="2" fill="#000000" />
-
-      <!-- PROMINENT MOVEMENT: Articulated Boom Dips into Trench and Scoops -->
-      <g class="anim-excavator-arm">
-        <polygon points="70,20 45,-12 35,-6 65,24" fill="#000000" stroke="#000000" stroke-width="2" />
-        <circle cx="70" cy="22" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-        <line x1="75" y1="20" x2="53" y2="4" stroke="#000000" stroke-width="3" />
-
-        <!-- Stick and Bucket Scooping -->
-        <g class="anim-excavator-bucket">
-          <polygon points="40,-12 10,15 17,18 45,-6" fill="#27272a" stroke="#000000" stroke-width="2" />
-          <circle cx="40" cy="-9" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-          <path d="M 10 15 L -6 32 L 8 38 L 17 18 Z" fill="#000000" stroke="#000000" stroke-width="2" />
-          <polygon points="-6,32 -11,36 -2,35" fill="#ffffff" stroke="#000000" stroke-width="1" />
-          <polygon points="-2,35 -6,40 2,37" fill="#ffffff" stroke="#000000" stroke-width="1" />
-        </g>
-      </g>
-    </g>
-
-    <!-- 2. ACTUAL MOVEMENT: Heavy Dump Truck with Tilting Cargo Bed at x=115 -->
-    <g id="dump-truck" transform="translate(112, 10)">
-      <rect x="35" y="10" width="25" height="24" rx="2" fill="#000000" />
-      <rect x="42" y="13" width="16" height="10" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-      <!-- PROMINENT MOVEMENT: Tilting Bed -->
-      <g class="anim-dump-bed">
-        <polygon points="0,6 32,6 30,26 0,26" fill="#18181b" stroke="#000000" stroke-width="2" />
-        <rect x="0" y="20" width="10" height="6" fill="url(#hazardStripeWhite)" />
-      </g>
-      <circle cx="8" cy="34" r="6" fill="#000000" />
-      <circle cx="8" cy="34" r="2.5" fill="#ffffff" />
-      <circle cx="22" cy="34" r="6" fill="#000000" />
-      <circle cx="22" cy="34" r="2.5" fill="#ffffff" />
-      <circle cx="48" cy="34" r="6" fill="#000000" />
-      <circle cx="48" cy="34" r="2.5" fill="#ffffff" />
-    </g>
-  </g>
-
-  <!-- B. ACTIVE CONCRETE BOOM PUMP TRUCK (Spinning Mixer Drum + Flowing Slurry) -->
-  <g id="concrete-boom-truck" transform="translate(195, 445)">
-    <rect x="0" y="10" width="75" height="24" rx="3" fill="#000000" />
-    <rect x="52" y="13" width="18" height="12" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-    <circle cx="15" cy="34" r="7" fill="#000000" />
-    <circle cx="15" cy="34" r="3" fill="#ffffff" />
-    <circle cx="35" cy="34" r="7" fill="#000000" />
-    <circle cx="35" cy="34" r="3" fill="#ffffff" />
-    <circle cx="62" cy="34" r="7" fill="#000000" />
-    <circle cx="62" cy="34" r="3" fill="#ffffff" />
-
-    <!-- PROMINENT MOVEMENT: Spinning Drum with Bold Spirals -->
-    <ellipse cx="28" cy="8" rx="22" ry="13" fill="#ffffff" stroke="#000000" stroke-width="2.5" />
-    <path d="M 12 8 Q 28 -2 44 8" fill="none" stroke="#000000" stroke-width="2.5" class="anim-mixer-drum" />
-
-    <line x1="5" y1="28" x2="-8" y2="36" stroke="#000000" stroke-width="3.5" />
-    <line x1="70" y1="28" x2="82" y2="36" stroke="#000000" stroke-width="3.5" />
-
-    <!-- PROMINENT MOVEMENT: Hydraulic Boom with Pulsing Slurry Flow -->
-    <g stroke="#000000" stroke-width="4" fill="none">
-      <polyline points="40,8 75,-60 120,-80 215,-45" />
-      <polyline points="40,8 75,-60 120,-80 215,-45" stroke="#ffffff" stroke-width="2" class="anim-concrete-slurry" />
-    </g>
-    <line x1="410" y1="400" x2="410" y2="430" stroke="#000000" stroke-width="3.5" stroke-dasharray="4 2" />
-  </g>
-
-  <!-- C. LAND SURVEYOR & THEODOLITE -->
-  <g id="surveyor-station" transform="translate(345, 475)">
-    <line x1="0" y1="-18" x2="-8" y2="5" stroke="#000000" stroke-width="2" />
-    <line x1="0" y1="-18" x2="8" y2="5" stroke="#000000" stroke-width="2" />
-    <line x1="0" y1="-18" x2="0" y2="5" stroke="#000000" stroke-width="2" />
-    <rect x="-4" y="-24" width="8" height="6" rx="1" fill="#000000" />
-    <circle cx="12" cy="-22" r="3.5" fill="#000000" />
-    <circle cx="12" cy="-23" r="2" fill="#ffffff" />
-    <rect x="8" y="-18" width="8" height="14" rx="1" fill="#000000" />
-    <line x1="10" y1="-4" x2="8" y2="5" stroke="#000000" stroke-width="2" />
-    <line x1="14" y1="-4" x2="16" y2="5" stroke="#000000" stroke-width="2" />
-    <line x1="0" y1="-21" x2="-25" y2="-170" stroke="#000000" stroke-width="1.2" stroke-dasharray="2 3" opacity="0.75" />
-  </g>
-
-  <!-- D. RIGGING CREW & SUPERINTENDENT -->
-  <g id="ground-crew" transform="translate(480, 475)">
-    <circle cx="0" cy="-20" r="3.5" fill="#000000" />
-    <circle cx="0" cy="-21" r="2.2" fill="#ffffff" />
-    <rect x="-4" y="-16" width="8" height="14" fill="#000000" />
-    <line x1="-2" y1="-2" x2="-2" y2="5" stroke="#000000" stroke-width="2.5" />
-    <line x1="2" y1="-2" x2="2" y2="5" stroke="#000000" stroke-width="2.5" />
-    <rect x="4" y="-14" width="8" height="6" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-
-    <g transform="translate(25, 0)">
-      <circle cx="0" cy="-20" r="3.5" fill="#000000" />
-      <circle cx="0" cy="-21" r="2.2" fill="#ffffff" />
-      <rect x="-4" y="-16" width="8" height="14" fill="#27272a" />
-      <line x1="-2" y1="-2" x2="-2" y2="5" stroke="#000000" stroke-width="2.5" />
-      <line x1="2" y1="-2" x2="2" y2="5" stroke="#000000" stroke-width="2.5" />
-      <line x1="-4" y1="-12" x2="-10" y2="-22" stroke="#000000" stroke-width="2.5" />
-      <line x1="4" y1="-12" x2="10" y2="-22" stroke="#000000" stroke-width="2.5" />
-    </g>
-  </g>
-
-  <!-- E. PROMINENT MOVEMENT: MOBILE CRAWLER CRANE HOISTING CARGO HIGH -->
-  <g id="mobile-crawler-crane" transform="translate(710, 440)">
-    <rect x="0" y="28" width="48" height="12" rx="3" fill="#000000" />
-    <circle cx="7" cy="34" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-    <circle cx="18" cy="34" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-    <circle cx="30" cy="34" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-    <circle cx="41" cy="34" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.2" />
-    <rect x="8" y="14" width="32" height="15" rx="2" fill="#18181b" stroke="#000000" stroke-width="2" />
-    <rect x="24" y="16" width="12" height="9" fill="#ffffff" stroke="#000000" stroke-width="1" />
-    <rect x="2" y="16" width="8" height="12" fill="#000000" />
-
-    <!-- Angled Boom -->
-    <line x1="32" y1="18" x2="72" y2="-45" stroke="#000000" stroke-width="3" />
-    <line x1="32" y1="24" x2="72" y2="-45" stroke="#000000" stroke-width="2" />
-    <path d="M 32 24 L 42 0 L 52 10 L 62 -18 L 72 -45" stroke="#000000" stroke-width="1.2" fill="none" />
-    <circle cx="72" cy="-45" r="3" fill="#000000" class="anim-strobe" />
-
-    <!-- PROMINENT MOVEMENT: Cable Hoists Cargo 38px Up and Down -->
-    <g transform="translate(72, -45)">
-      <g class="anim-crawler-cargo">
-        <line x1="0" y1="0" x2="0" y2="42" stroke="#000000" stroke-width="1.5" />
-        <rect x="-5" y="42" width="10" height="7" rx="1" fill="#000000" />
-        <!-- Suspended Pipes -->
-        <g transform="translate(-16, 49)">
-          <circle cx="4" cy="4" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-          <circle cx="11" cy="4" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-          <circle cx="18" cy="4" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-          <circle cx="7.5" cy="9.5" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-          <circle cx="14.5" cy="9.5" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-        </g>
-      </g>
-    </g>
-  </g>
-
-  <!-- F. MATERIAL STAGING YARD -->
-  <g id="material-staging" transform="translate(775, 472)">
-    <rect x="0" y="-12" width="35" height="4" fill="#000000" />
-    <rect x="0" y="-8" width="35" height="4" fill="#52525b" />
-    <rect x="0" y="-4" width="35" height="4" fill="#000000" />
-    <line x1="42" y1="-10" x2="68" y2="-10" stroke="#000000" stroke-width="2.5" />
-    <line x1="42" y1="-7" x2="68" y2="-7" stroke="#000000" stroke-width="2.5" />
-    <line x1="42" y1="-4" x2="68" y2="-4" stroke="#000000" stroke-width="2.5" />
-  </g>
-
-  <!-- G. GROUND FLOODLIGHT STANCHIONS -->
-  <g transform="translate(270, 480)">
-    <line x1="0" y1="0" x2="0" y2="-40" stroke="#000000" stroke-width="3.5" />
-    <polygon points="-12,0 12,0 0,-18" fill="none" stroke="#000000" stroke-width="2" />
-    <rect x="-8" y="-46" width="16" height="10" rx="2" fill="#000000" transform="rotate(32)" />
-    <circle cx="3" cy="-42" r="5" fill="#000000" />
-  </g>
-
-  <g transform="translate(760, 480)">
-    <line x1="0" y1="0" x2="0" y2="-40" stroke="#000000" stroke-width="3.5" />
-    <polygon points="-12,0 12,0 0,-18" fill="none" stroke="#000000" stroke-width="2" />
-    <rect x="-8" y="-46" width="16" height="10" rx="2" fill="#000000" transform="rotate(-32)" />
-    <circle cx="-3" cy="-42" r="5" fill="#000000" />
-  </g>
-
-  <!-- ======================================================================
-       12. REAL-TIME TECHNICAL HUD CARDS (Architectural Drafting Style)
-       ====================================================================== -->
-  <!-- Top-Left Site Command Status Card -->
-  <g transform="translate(25, 20)" filter="url(#draftingShadow)">
-    <rect width="275" height="105" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2.5" />
-    <rect width="275" height="28" rx="6" fill="#000000" />
+  <!-- THE LIVE SKILL COMPILER & DEFINITION TERMINAL (x=30, y=190 to y=490) -->
+  <g transform="translate(30, 195)" filter="url(#softShadow)">
+    <!-- Terminal Outer Frame -->
+    <rect width="325" height="300" rx="8" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
     
-    <circle cx="16" cy="14" r="4" fill="#ffffff" />
-    <circle cx="16" cy="14" r="4" fill="none" stroke="#ffffff" stroke-width="1.5">
-      <animate attributeName="r" values="4;13" dur="1.8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-    <text x="28" y="18" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="10" font-weight="900" letter-spacing="1">
-      COMMERCIAL SITE • TOWER ALPHA
+    <!-- Title Bar -->
+    <rect width="325" height="30" rx="8" fill="#09090b" />
+    <circle cx="16" cy="15" r="4.5" fill="#ef4444" />
+    <circle cx="30" cy="15" r="4.5" fill="#f59e0b" />
+    <circle cx="44" cy="15" r="4.5" fill="#10b981" />
+    
+    <text x="180" y="19" fill="#ffffff" font-family="'JetBrains Mono', Courier, monospace" font-size="8.5" font-weight="900" text-anchor="middle" letter-spacing="0.5">
+      SKILL DEFINITION &amp; COMPILER ENGINE
     </text>
 
-    <g font-family="'JetBrains Mono', Courier" font-size="8.5" fill="#18181b" transform="translate(14, 46)">
-      <text x="0" y="0">STRUCTURAL CORE : <tspan font-weight="900">LEVEL 34 [ACTIVE JUMP]</tspan></text>
-      <text x="0" y="16">STEEL SUPERSTRUCTURE: <tspan font-weight="900">LEVEL 26 (94% RIGID)</tspan></text>
-      <text x="0" y="32">CURTAIN WALL GLZ : <tspan font-weight="900">LEVEL 18 [IN PROGRESS]</tspan></text>
-      <text x="0" y="48">BIM TOLERANCE COMPLIANCE: <tspan font-weight="900">±0.01mm [VERIFIED]</tspan></text>
+    <!-- Terminal Code Text Stream -->
+    <g font-family="'JetBrains Mono', Courier, monospace" font-size="9.5" fill="#18181b" transform="translate(15, 52)">
+      <text x="0" y="0"><tspan fill="#71717a">$</tspan> <tspan fill="#09090b" font-weight="800">define-skill</tspan> --track <tspan fill="#0284c7" font-weight="700">"Token Optimization"</tspan></text>
+      
+      <text x="0" y="22" fill="#52525b">
+        [PARSE] <tspan fill="#09090b" font-weight="700">101-prompt-caching.md</tspan>
+      </text>
+      <text x="0" y="40" fill="#52525b">
+        [RULE] <tspan fill="#09090b">Byte prefix invariance (89% KV hit)</tspan>
+      </text>
+      
+      <text x="0" y="62">
+        <tspan fill="#71717a">$</tspan> <tspan fill="#09090b" font-weight="800">audit-slop</tspan> --target <tspan fill="#0284c7" font-weight="700">"91-de-slopping"</tspan>
+      </text>
+      <text x="0" y="80" fill="#16a34a" font-weight="700">
+        ✓ Purged 0 phantom dependencies
+      </text>
+      <text x="0" y="98" fill="#16a34a" font-weight="700">
+        ✓ Zero placebo retries • 100% contracts
+      </text>
+      
+      <text x="0" y="120">
+        <tspan fill="#71717a">$</tspan> <tspan fill="#09090b" font-weight="800">register-catalog</tspan> --into <tspan fill="#0284c7" font-weight="700">"All Tracks"</tspan>
+      </text>
+      <text x="0" y="138" fill="#52525b">
+        [INDEX] Track 21: <tspan fill="#09090b" font-weight="700">Token Economics [10/10]</tspan>
+      </text>
+      <text x="0" y="156" fill="#52525b">
+        [INDEX] Track 18: <tspan fill="#09090b" font-weight="700">Software Design (SDA) [3/3]</tspan>
+      </text>
+      <text x="0" y="174" fill="#52525b">
+        [INDEX] Track 19: <tspan fill="#09090b" font-weight="700">QA &amp; ISTQB Testing [7/7]</tspan>
+      </text>
+      
+      <!-- Active Live Prompt Line -->
+      <text x="0" y="202">
+        <tspan fill="#71717a">$</tspan> <tspan fill="#09090b" font-weight="900">status: 115 skills compiled &amp; listed</tspan>
+        <tspan class="anim-cursor" fill="#0284c7" font-weight="900"> █</tspan>
+      </text>
+    </g>
+
+    <!-- Bottom Status Badges inside Terminal -->
+    <g transform="translate(14, 262)">
+      <rect width="90" height="22" rx="4" fill="#09090b" />
+      <text x="45" y="14.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" text-anchor="middle">115 RUNBOOKS</text>
+
+      <rect x="98" width="95" height="22" rx="4" fill="#09090b" />
+      <text x="145" y="14.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" text-anchor="middle">22 ORG TRACKS</text>
+
+      <rect x="201" width="95" height="22" rx="4" fill="#09090b" />
+      <text x="248" y="14.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" text-anchor="middle">ZERO PLACEHOLDERS</text>
     </g>
   </g>
 
-  <!-- Top-Right Crane Operations and Safety Card -->
-  <g transform="translate(895, 20)" filter="url(#draftingShadow)">
-    <rect width="280" height="105" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2.5" />
-    <rect width="280" height="28" rx="6" fill="#000000" />
+  <!-- ======================================================================
+       4. ZONE 2 (CENTER: x=385 to x=825):
+          DYNAMIC SKILL CONVEYOR PIPELINE & 22-TRACK LISTING MATRIX
+       ====================================================================== -->
+  <!-- Header Label for Ingestion & Listing Pipeline -->
+  <g transform="translate(385, 48)">
+    <rect width="250" height="20" rx="3" fill="#09090b" />
+    <circle cx="12" cy="10" r="3.5" fill="#ffffff" class="anim-strobe" />
+    <text x="22" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="0.5">
+      SKILL INGESTION &amp; LISTING PIPELINE
+    </text>
+  </g>
+
+  <!-- A. THE CONTINUOUS HORIZONTAL SKILL CONVEYOR (x=385 to x=825, y=75 to y=145) -->
+  <g id="skill-conveyor-system" transform="translate(385, 75)" filter="url(#softShadow)">
+    <!-- Conveyor Track Bed -->
+    <rect width="440" height="68" rx="6" fill="#ffffff" stroke="#09090b" stroke-width="2" />
+    <rect x="0" y="60" width="440" height="8" fill="url(#techStripe)" />
+
+    <!-- Conveyor Mechanical Rollers -->
+    <g fill="#09090b" opacity="0.15">
+      <circle cx="20" cy="34" r="16" />
+      <circle cx="75" cy="34" r="16" />
+      <circle cx="130" cy="34" r="16" />
+      <circle cx="185" cy="34" r="16" />
+      <circle cx="240" cy="34" r="16" />
+      <circle cx="295" cy="34" r="16" />
+      <circle cx="350" cy="34" r="16" />
+      <circle cx="405" cy="34" r="16" />
+    </g>
+
+    <!-- CLIP PATH TO MASK MOVING SKILL CARDS ON CONVEYOR -->
+    <clipPath id="conveyorClip">
+      <rect x="4" y="4" width="432" height="56" rx="4" />
+    </clipPath>
+
+    <!-- CONTINUOUS STREAM OF MOVING SKILL CARDS BEING DEFINED & LISTED -->
+    <g clip-path="url(#conveyorClip)">
+      <g class="anim-conveyor">
+        <!-- Repeatable set of 6 Skill Cards sliding left -->
+        <!-- Card 1 -->
+        <g transform="translate(10, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 01: PRD SPEC</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">Strategy &amp; Scope</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+
+        <!-- Card 2 -->
+        <g transform="translate(135, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 51: tRPC v11</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">Type-Safe Fullstack</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+
+        <!-- Card 3 -->
+        <g transform="translate(260, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 86: PACT QA</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">Contract Testing</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+
+        <!-- Card 4 -->
+        <g transform="translate(385, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 91: ANTI-SLOP</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">Code Simplification</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+
+        <!-- Card 5 -->
+        <g transform="translate(510, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 101: PROMPT CACHE</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">KV Invariance</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+
+        <!-- Card 6 -->
+        <g transform="translate(635, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 110: TOKEN BUDGET</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">Cost Telemetry</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+
+        <!-- Card 7 (seamless loop duplicate) -->
+        <g transform="translate(760, 8)">
+          <rect width="115" height="48" rx="4" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+          <rect width="115" height="14" rx="4" fill="#09090b" />
+          <text x="6" y="10.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900">SKILL 01: PRD SPEC</text>
+          <text x="6" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700">Strategy &amp; Scope</text>
+          <text x="6" y="40" fill="#16a34a" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800">✓ [LISTED]</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Inspection Scanner Gantry Mounted Over Conveyor (at x=220) -->
+    <g transform="translate(210, 0)">
+      <line x1="0" y1="0" x2="0" y2="68" stroke="#09090b" stroke-width="3" />
+      <line x1="20" y1="0" x2="20" y2="68" stroke="#09090b" stroke-width="3" />
+      <rect x="-4" y="-6" width="28" height="10" rx="2" fill="#09090b" />
+      <circle cx="10" cy="-1" r="3" fill="#ffffff" class="anim-strobe" />
+      
+      <!-- Central Scanning Laser Beam -->
+      <line x1="10" y1="4" x2="10" y2="64" stroke="#0284c7" stroke-width="2.5" class="anim-stamp" />
+      <text x="10" y="77" fill="#0284c7" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="900" text-anchor="middle">
+        VERIFYING [LOD-400]
+      </text>
+    </g>
+  </g>
+
+  <!-- B. THE 22-TRACK ORGANIZATIONAL SKILL CATALOG MATRIX (x=385, y=160 to y=500) -->
+  <g id="skill-catalog-matrix" transform="translate(385, 160)" filter="url(#softShadow)">
+    <rect width="440" height="335" rx="8" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
     
-    <circle cx="16" cy="14" r="4" fill="#ffffff" />
-    <circle cx="16" cy="14" r="4" fill="none" stroke="#ffffff" stroke-width="1.5">
-      <animate attributeName="r" values="4;13" dur="1.5s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite" />
-    </circle>
-    <text x="28" y="18" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="10" font-weight="900" letter-spacing="1">
-      CRANE OPERATIONS &amp; SAFETY
+    <!-- Matrix Header Bar -->
+    <rect width="440" height="28" rx="8" fill="#09090b" />
+    <text x="14" y="18" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="1">
+      ENTERPRISE SKILL REGISTRY • 22 ORG TRACKS LISTED
+    </text>
+    <text x="426" y="18" fill="#06b6d4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" text-anchor="end">
+      115/115 ACTIVE
     </text>
 
-    <g font-family="'JetBrains Mono', Courier" font-size="8.5" fill="#18181b" transform="translate(14, 46)">
-      <text x="0" y="0">CRANE-01 (HAMMERHEAD): <tspan font-weight="900">18.4t [GIRDER HOIST]</tspan></text>
-      <text x="0" y="16">CRANE-02 (EAST JIB)  : <tspan font-weight="900">9.1t  [CONCRETE SKIP]</tspan></text>
-      <text x="0" y="32">CRANE-03 (CORE LUFF) : <tspan font-weight="900">6.2t  [REBAR CAGE]</tspan></text>
-      <text x="0" y="48">ANEMOMETER GUST      : <tspan font-weight="900">11 KNOTS [SAFE HOIST]</tspan></text>
+    <!-- 6 PRIMARY ORG TRACK DISPLAY TILES -->
+    <!-- Tile 1: Track 01 - Strategy, BA & UXR -->
+    <g transform="translate(14, 40)">
+      <rect width="198" height="80" rx="6" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+      <rect width="198" height="18" rx="6" fill="#18181b" />
+      <circle cx="10" cy="9" r="3" fill="#10b981" />
+      <text x="18" y="12.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800">
+        TRACK 01: STRATEGY &amp; UXR
+      </text>
+      <!-- Skill Pills -->
+      <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#09090b" transform="translate(8, 30)">
+        <text x="0" y="0">● 27: Market Sizing &amp; 7 Powers</text>
+        <text x="0" y="14">● 40: "The Mom Test" User Research</text>
+        <text x="0" y="28">● 26: BABOK Business Processes</text>
+        <text x="0" y="42">● 32: Executive BLUF 1-Page Memos</text>
+      </g>
+    </g>
+
+    <!-- Tile 2: Track 03 - Architecture & DDD -->
+    <g transform="translate(228, 40)">
+      <rect width="198" height="80" rx="6" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+      <rect width="198" height="18" rx="6" fill="#18181b" />
+      <circle cx="10" cy="9" r="3" fill="#10b981" />
+      <text x="18" y="12.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800">
+        TRACK 03: SYSTEM ARCH &amp; DDD
+      </text>
+      <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#09090b" transform="translate(8, 30)">
+        <text x="0" y="0">● 01: Requirements &amp; PRD Specs</text>
+        <text x="0" y="14">● 02: Strategic &amp; Tactical DDD</text>
+        <text x="0" y="28">● 03: C4 System Architecture</text>
+        <text x="0" y="42">● 04: Architecture Decision Records</text>
+      </g>
+    </g>
+
+    <!-- Tile 3: Track 07 - Full-Stack Type Safety & Performance -->
+    <g transform="translate(14, 130)">
+      <rect width="198" height="80" rx="6" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+      <rect width="198" height="18" rx="6" fill="#18181b" />
+      <circle cx="10" cy="9" r="3" fill="#10b981" />
+      <text x="18" y="12.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800">
+        TRACK 07: FULL-STACK &amp; WEB
+      </text>
+      <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#09090b" transform="translate(8, 30)">
+        <text x="0" y="0">● 51: End-to-End Type Safety (tRPC)</text>
+        <text x="0" y="14">● 52: React Server Components (RSC)</text>
+        <text x="0" y="28">● 54: Real-time WebSockets &amp; CRDTs</text>
+        <text x="0" y="42">● 57: WebAuthn Passkeys &amp; Sessions</text>
+      </g>
+    </g>
+
+    <!-- Tile 4: Track 10 - Cyber Defense & Zero Trust -->
+    <g transform="translate(228, 130)">
+      <rect width="198" height="80" rx="6" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+      <rect width="198" height="18" rx="6" fill="#18181b" />
+      <circle cx="10" cy="9" r="3" fill="#10b981" />
+      <text x="18" y="12.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800">
+        TRACK 10: CYBER DEFENSE
+      </text>
+      <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#09090b" transform="translate(8, 30)">
+        <text x="0" y="0">● 61: OWASP API Security &amp; BOLA</text>
+        <text x="0" y="14">● 62: WAF &amp; L7 DDoS Defense</text>
+        <text x="0" y="28">● 66: NIST Zero Trust &amp; OPA Rego</text>
+        <text x="0" y="42">● 70: EPSS &amp; CVSS Vulnerability</text>
+      </g>
+    </g>
+
+    <!-- Tile 5: Track 19 - Testing & QA Automation (ISTQB) -->
+    <g transform="translate(14, 220)">
+      <rect width="198" height="80" rx="6" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+      <rect width="198" height="18" rx="6" fill="#18181b" />
+      <circle cx="10" cy="9" r="3" fill="#10b981" />
+      <text x="18" y="12.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800">
+        TRACK 19: QA &amp; TEST ARCH
+      </text>
+      <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#09090b" transform="translate(8, 30)">
+        <text x="0" y="0">● 84: ISO 29119 &amp; ISTQB Design</text>
+        <text x="0" y="14">● 85: BDD Cucumber &amp; Gherkin</text>
+        <text x="0" y="28">● 86: Pact API Contract Testing</text>
+        <text x="0" y="42">● 88: Stryker Mutation Testing</text>
+      </g>
+    </g>
+
+    <!-- Tile 6: Track 21 - Token Optimization Economics -->
+    <g transform="translate(228, 220)">
+      <rect width="198" height="80" rx="6" fill="#fafafa" stroke="#09090b" stroke-width="1.8" />
+      <rect width="198" height="18" rx="6" fill="#18181b" />
+      <circle cx="10" cy="9" r="3" fill="#10b981" />
+      <text x="18" y="12.5" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800">
+        TRACK 21: TOKEN ECONOMICS
+      </text>
+      <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#09090b" transform="translate(8, 30)">
+        <text x="0" y="0">● 101: Prompt Caching &amp; Prefix</text>
+        <text x="0" y="14">● 102: AST Repository Map (95%)</text>
+        <text x="0" y="28">● 104: Trajectory Compaction</text>
+        <text x="0" y="42">● 110: Token Budget Telemetry</text>
+      </g>
+    </g>
+
+    <!-- Bottom Indicator Strip inside Registry -->
+    <g transform="translate(14, 308)">
+      <text x="0" y="12" fill="#52525b" font-family="'JetBrains Mono', monospace" font-size="7.5">
+        TRACKS 01-22 ALL LOADED • REVISION 11.0 • SHA256 VERIFIED
+      </text>
+      <text x="412" y="12" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="900" text-anchor="end">
+        SYNC STATUS: 100% OK
+      </text>
+    </g>
+
+    <!-- VERTICAL SWEEPING LASER BAR OVER THE MATRIX (Physical movement) -->
+    <g transform="translate(10, 35)">
+      <g class="anim-vert-laser">
+        <line x1="0" y1="0" x2="420" y2="0" stroke="#0284c7" stroke-width="2" />
+        <circle cx="0" cy="0" r="3" fill="#0284c7" />
+        <circle cx="420" cy="0" r="3" fill="#0284c7" />
+      </g>
     </g>
   </g>
 
-  <!-- Bottom Coordinate and Telemetry Banner Strip -->
-  <g transform="translate(0, 516)">
-    <rect width="1200" height="24" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
-    <g font-family="'JetBrains Mono', Courier" font-size="8.2" fill="#52525b" transform="translate(25, 16)">
-      <text x="0" y="0">BIM MODEL: REVIT-LOD400 • SITE GPS: 40°42'46"N 74°00'21"W • TOTAL REBAR: 14,200t • CONCRETE: C60/75 • SENSORS: 642 NODES</text>
-      <text x="1150" y="0" text-anchor="end" fill="#000000" font-weight="900">COMMERCIAL BUILDING SITE ACTIVE [WHITE BLUEPRINT CAD] ⚡</text>
+  <!-- ======================================================================
+       5. ZONE 3 (RIGHT: x=845 to x=1170):
+          TELEMETRY, TOKEN DIET GAUGES & VERIFICATION SEAL
+       ====================================================================== -->
+  <!-- Header Label for Telemetry Zone -->
+  <g transform="translate(845, 48)">
+    <rect width="210" height="20" rx="3" fill="#09090b" />
+    <circle cx="12" cy="10" r="3.5" fill="#ffffff" class="anim-strobe" />
+    <text x="22" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="0.5">
+      SWARM TELEMETRY &amp; GAUGES
+    </text>
+  </g>
+
+  <!-- HUD CARD 1: SWARM METRICS OVERVIEW (x=845, y=75 to y=190) -->
+  <g transform="translate(845, 75)" filter="url(#softShadow)">
+    <rect width="325" height="115" rx="8" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
+    <rect width="325" height="26" rx="8" fill="#09090b" />
+    <text x="14" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="0.5">
+      SKILL COVERAGE &amp; CERTIFICATION
+    </text>
+
+    <g font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#18181b" transform="translate(14, 44)">
+      <text x="0" y="0">TOTAL SKILLS DEFINED : <tspan font-weight="900">115 / 115 [100%]</tspan></text>
+      <text x="0" y="18">ORGANIZATIONAL TRACKS: <tspan font-weight="900">22 ACTIVE TRACKS</tspan></text>
+      <text x="0" y="36">SLOP DETECTION RATE  : <tspan font-weight="900" fill="#16a34a">0.00% [ZERO SLOP]</tspan></text>
+      <text x="0" y="54">TEST MUTATION SCORE  : <tspan font-weight="900" fill="#16a34a">98.4% [RESILIENT]</tspan></text>
     </g>
   </g>
 
-  <!-- Outer Structural Framing Borders -->
-  <line x1="0" y1="0" x2="1200" y2="0" stroke="#000000" stroke-width="3" />
-  <line x1="0" y1="540" x2="1200" y2="540" stroke="#000000" stroke-width="3" />
-  <line x1="0" y1="0" x2="0" y2="540" stroke="#000000" stroke-width="3" />
-  <line x1="1200" y1="0" x2="1200" y2="540" stroke="#000000" stroke-width="3" />
+  <!-- HUD CARD 2: TOKEN ECONOMICS & REAL-TIME GAUGES (x=845, y=205 to y=345) -->
+  <g transform="translate(845, 205)" filter="url(#softShadow)">
+    <rect width="325" height="135" rx="8" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
+    <rect width="325" height="26" rx="8" fill="#09090b" />
+    <text x="14" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="900" letter-spacing="0.5">
+      AGENT CONTEXT &amp; TOKEN DIET
+    </text>
+
+    <!-- Metric Bar: KV-Cache Hit Rate -->
+    <g transform="translate(14, 40)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="8" fill="#52525b" font-weight="700">
+        PROMPT CACHING HIT RATE: <tspan fill="#09090b" font-weight="900">89.4%</tspan>
+      </text>
+      <rect y="6" width="190" height="8" rx="2" fill="#e4e4e7" stroke="#09090b" stroke-width="1" />
+      <rect y="6" class="anim-progress" height="8" rx="2" fill="#09090b" />
+    </g>
+
+    <!-- Metric Bar: Context Window Compression -->
+    <g transform="translate(14, 70)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="8" fill="#52525b" font-weight="700">
+        AST CODE COMPRESSION: <tspan fill="#09090b" font-weight="900">-94.2% TOKENS</tspan>
+      </text>
+      <rect y="6" width="190" height="8" rx="2" fill="#e4e4e7" stroke="#09090b" stroke-width="1" />
+      <rect y="6" width="179" height="8" rx="2" fill="#0284c7" />
+    </g>
+
+    <!-- Dial Gauge Needle Simulation (at x=255, y=65) -->
+    <g transform="translate(255, 65)">
+      <!-- Dial Face -->
+      <path d="M -35,15 A 38 38 0 1 1 35,15" fill="none" stroke="#09090b" stroke-width="3" />
+      <path d="M -30,12 A 32 32 0 1 1 30,12" fill="none" stroke="#e4e4e7" stroke-width="5" />
+      <path d="M -30,12 A 32 32 0 0 1 15,-28" fill="none" stroke="#0284c7" stroke-width="5" />
+      <circle cx="0" cy="15" r="4" fill="#09090b" />
+      <!-- Needle with dynamic oscillation -->
+      <g class="anim-needle">
+        <line x1="0" y1="15" x2="0" y2="-22" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="0" cy="15" r="2" fill="#ffffff" />
+      </g>
+      <text x="0" y="27" fill="#09090b" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="900" text-anchor="middle">
+        EFFICIENCY
+      </text>
+    </g>
+
+    <!-- Small footer line -->
+    <text x="14" y="118" fill="#52525b" font-family="'JetBrains Mono', monospace" font-size="7.5">
+      BUDGET GOVERNOR: ENFORCED • CIR-BREAK: ARMED
+    </text>
+  </g>
+
+  <!-- HUD CARD 3: VERIFIED CERTIFICATION SEAL (x=845, y=355 to y=495) -->
+  <g transform="translate(845, 355)" filter="url(#softShadow)">
+    <rect width="325" height="140" rx="8" fill="#ffffff" stroke="#09090b" stroke-width="2.5" />
+    
+    <!-- ROTATING GEAR SEAL (Physical visual centerpiece) -->
+    <g transform="translate(75, 70)">
+      <!-- Outer rotating cog teeth -->
+      <g class="anim-seal-spin">
+        <circle cx="0" cy="0" r="44" fill="none" stroke="#09090b" stroke-width="2" stroke-dasharray="10 4" />
+        <circle cx="0" cy="0" r="38" fill="none" stroke="#09090b" stroke-width="1.2" />
+        <text font-family="'JetBrains Mono', monospace" font-size="5.8" font-weight="900" fill="#09090b">
+          <textPath href="#sealCirclePath" startOffset="5%">
+            ★ 115 ENTERPRISE SKILLS ★ VERIFIED PRODUCTION READY
+          </textPath>
+        </text>
+      </g>
+      <!-- Hidden path for text rotation -->
+      <path id="sealCirclePath" d="M -32,0 A 32 32 0 1,1 32,0 A 32 32 0 1,1 -32,0" fill="none" />
+
+      <!-- Center Seal Core -->
+      <circle cx="0" cy="0" r="28" fill="#09090b" />
+      <text x="0" y="-4" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="900" text-anchor="middle">
+        115
+      </text>
+      <text x="0" y="8" fill="#06b6d4" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="900" text-anchor="middle">
+        SKILLS
+      </text>
+      <text x="0" y="18" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="5.5" font-weight="700" text-anchor="middle">
+        VERIFIED
+      </text>
+    </g>
+
+    <!-- Certification Info Text beside the seal -->
+    <g font-family="'JetBrains Mono', Courier, monospace" font-size="8" fill="#18181b" transform="translate(160, 32)">
+      <text x="0" y="0" font-weight="900" font-size="9">AI AGENT SPEC v11.0</text>
+      <text x="0" y="16" fill="#52525b">COMPATIBLE WITH:</text>
+      <text x="0" y="32">● Antigravity IDE</text>
+      <text x="0" y="46">● Claude Code / Cursor</text>
+      <text x="0" y="60">● Gemini CLI / Copilot</text>
+      <text x="0" y="74">● Windsurf / Cline</text>
+      <text x="0" y="94" font-weight="900" fill="#16a34a">✓ 100% PRODUCTION READY</text>
+    </g>
+  </g>
+
+  <!-- ======================================================================
+       6. BOTTOM STATUS RIBBON (y=514 to y=538)
+       ====================================================================== -->
+  <g transform="translate(15, 514)">
+    <rect width="1170" height="24" fill="#ffffff" stroke="#09090b" stroke-width="1.5" />
+    <g font-family="'JetBrains Mono', Courier" font-size="8" fill="#52525b" transform="translate(20, 16)">
+      <text x="0" y="0">
+        REPO: <tspan fill="#09090b" font-weight="900">angkon101/All-AI-SKILLS</tspan> • DEFINITION ENGINE: ACTIVE • 115 SKILLS LISTED ACROSS 22 ORG TRACKS • ZERO PLACEHOLDERS
+      </text>
+      <text x="1130" y="0" text-anchor="end" fill="#09090b" font-weight="900">
+        AI AGENT RUNBOOKS: ONLINE ⚡
+      </text>
+    </g>
+  </g>
 </svg>
