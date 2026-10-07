@@ -190,15 +190,11 @@ flowchart TD
 
 ---
 
-## 🏗️ Commercial Building Architecture & Swarm Construction Site
 
 <p align="center">
   <img src="./assets/commercial-building-site.svg" alt="Autonomous Commercial Building Construction Site - BIM CAD High-Rise Erection" width="100%">
 </p>
 
-> 🏢 **Software Architecture as a High-Rise Construction Site**: Just as a commercial skyscraper requires foundational pilings (storage engines & distributed consensus), high-capacity tower cranes (CI/CD release pipelines), floor-by-floor structural steel erection (microservices, type-safe APIs & tRPC), double-glazed curtain wall cladding (frontend design tokens & RSC), and real-time BIM telemetry (observability, SLIs & GenAI cost governance), enterprise software engineering demands structured discipline across every layer.
-
----
 
 ## 🏛️ The 22 Functional Organizational Tracks
 
