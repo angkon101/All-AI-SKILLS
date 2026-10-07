@@ -4,104 +4,64 @@ const path = require('path');
 const filePath = path.join(__dirname, '..', 'skills.json');
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-data.version = '11.0.0';
-data.description = 'Comprehensive suite of 110 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, Principal Cybersecurity Architect, Mobile Application Engineer, Software Design Authority (SDA), Professional QA/SDET Test Architect, Principal Anti-Slop Code Simplifier, and AI Agent Token Optimization Specialist: spanning executive strategy, UXR, full-stack type safety, microservices, mobile, zero-trust security, ISTQB testing, anti-slop code de-bloating, KV-cache prompt caching, AST repository mapping, tool distillation, trajectory compaction, frugal model cascades, compact tool schemas, scoped diff context, semantic hybrid RAG, attention hygiene, and GenAI cost governance.';
+data.version = '12.0.0';
+data.description = 'Comprehensive suite of 115 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, Principal Cybersecurity Architect, Mobile Application Engineer, Software Design Authority (SDA), Professional QA/SDET Test Architect, Principal Anti-Slop Code Simplifier, AI Agent Token Optimization Specialist, and Architectural Vector Graphics & SVG Motion Specialist: spanning executive strategy, UXR, full-stack type safety, microservices, mobile, zero-trust security, ISTQB testing, anti-slop code de-bloating, KV-cache prompt caching, AST repository mapping, tool distillation, trajectory compaction, frugal model cascades, compact tool schemas, scoped diff context, semantic hybrid RAG, attention hygiene, GenAI cost governance, pure CSS vector motion physics, CAD/BIM technical drafting, monochrome noir high-contrast design, vector particle simulation, and parametric SVG optimization.';
 
-// Track U: AI Agent Token Optimization, Context Compression & Token Economics
-const trackU = {
-  id: 'track-ai-agent-token-optimization',
-  name: 'Track U: AI Agent Token Optimization, Context Compression & Token Economics',
+// Track V: Architectural SVG Animation, CAD/BIM Motion Systems & Technical Vector Graphics
+const trackV = {
+  id: 'track-architectural-svg-and-motion-graphics',
+  name: 'Track V: Architectural SVG Animation, CAD/BIM Motion Systems & Technical Vector Graphics',
   skills: [
-    '101-prompt-caching-and-prefix-alignment',
-    '102-ast-repository-mapping-and-code-compression',
-    '103-tool-output-distillation-and-truncation',
-    '104-multi-turn-agent-trajectory-compaction',
-    '105-model-cascades-and-frugal-agent-routing',
-    '106-schema-minification-and-compact-tool-calling',
-    '107-scoped-line-range-and-diff-anchored-context',
-    '108-semantic-embedding-rag-and-vector-pre-filtering',
-    '109-attention-de-poisoning-and-scratchpad-pruning',
-    '110-agent-token-budgeting-and-cost-telemetry'
+    '111-svg-motion-engineering-and-css-vector-physics',
+    '112-architectural-cad-bim-technical-drafting-and-vector-modeling',
+    '113-monochrome-noir-visual-design-and-high-contrast-systems',
+    '114-vector-particle-emitters-and-volumetric-lighting-effects',
+    '115-parametric-svg-generation-and-asset-optimization'
   ]
 };
 
-const existingTrackIdx = data.tracks.findIndex(t => t.id === trackU.id);
+const existingTrackIdx = data.tracks.findIndex(t => t.id === trackV.id);
 if (existingTrackIdx >= 0) {
-  data.tracks[existingTrackIdx] = trackU;
+  data.tracks[existingTrackIdx] = trackV;
 } else {
-  data.tracks.push(trackU);
+  data.tracks.push(trackV);
 }
 
 const newSkills = [
   {
-    id: '101-prompt-caching-and-prefix-alignment',
-    name: 'prompt-caching-and-prefix-alignment',
-    path: 'skills/101-prompt-caching-and-prefix-alignment/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Optimize LLM prompt caching (Anthropic, OpenAI, Gemini), enforce prefix invariance to prevent cache-busting, engineer KV-cache volatility layers, and achieve up to 90% token cost reduction.'
+    id: '111-svg-motion-engineering-and-css-vector-physics',
+    name: 'svg-motion-engineering-and-css-vector-physics',
+    path: 'skills/111-svg-motion-engineering-and-css-vector-physics/SKILL.md',
+    category: 'Architectural SVG & Motion Graphics',
+    summary: 'Pure CSS vector motion engineering in SVG, kinematics simulation (pendulum sway, harmonic oscillation, cable tension, traveling trolleys), co-prime loop synchronization, GPU-composited 60 FPS performance, and zero-JS GitHub markdown compatibility.'
   },
   {
-    id: '102-ast-repository-mapping-and-code-compression',
-    name: 'ast-repository-mapping-and-code-compression',
-    path: 'skills/102-ast-repository-mapping-and-code-compression/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Extract Tree-sitter AST symbol graphs, generate PageRank-ranked repository maps, strip implementation bodies, and compress entire codebases by 90-95% for token-efficient agent context.'
+    id: '112-architectural-cad-bim-technical-drafting-and-vector-modeling',
+    name: 'architectural-cad-bim-technical-drafting-and-vector-modeling',
+    path: 'skills/112-architectural-cad-bim-technical-drafting-and-vector-modeling/SKILL.md',
+    category: 'Architectural SVG & Motion Graphics',
+    summary: 'Translating structural engineering and architectural BIM schematics into technical SVG vector diagrams: steel superstructures (I-beams, moment connections, cross-braces), core slipforms, curtain walls, tower cranes, construction hoists, and LOD-400 HUD telemetry.'
   },
   {
-    id: '103-tool-output-distillation-and-truncation',
-    name: 'tool-output-distillation-and-truncation',
-    path: 'skills/103-tool-output-distillation-and-truncation/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Intercept verbose agent tool outputs (test runners, linter logs, grep results, build dumps), apply intelligent truncation and error-delta distillation, and prevent context window exhaustion.'
+    id: '113-monochrome-noir-visual-design-and-high-contrast-systems',
+    name: 'monochrome-noir-visual-design-and-high-contrast-systems',
+    path: 'skills/113-monochrome-noir-visual-design-and-high-contrast-systems/SKILL.md',
+    category: 'Architectural SVG & Motion Graphics',
+    summary: 'Design high-contrast architectural monochrome (black and white) vector graphics, tonal grayscale hierarchy, silhouette readability, volumetric floodlight cones, pattern fills (hazard chevrons, CAD grids), and stark visual depth.'
   },
   {
-    id: '104-multi-turn-agent-trajectory-compaction',
-    name: 'multi-turn-agent-trajectory-compaction',
-    path: 'skills/104-multi-turn-agent-trajectory-compaction/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Eliminate quadratic O(N^2) multi-turn token explosion through sliding window history pruning, anchored state delta summarization, thought-trail pruning, and episodic compaction.'
+    id: '114-vector-particle-emitters-and-volumetric-lighting-effects',
+    name: 'vector-particle-emitters-and-volumetric-lighting-effects',
+    path: 'skills/114-vector-particle-emitters-and-volumetric-lighting-effects/SKILL.md',
+    category: 'Architectural SVG & Motion Graphics',
+    summary: 'Engineer pure SVG/CSS particle simulation systems and volumetric lighting: high-frequency electric arc welding flares, gravity-accelerated falling spark streams, volumetric light stanchions, and glowing laser datum scanlines without JS.'
   },
   {
-    id: '105-model-cascades-and-frugal-agent-routing',
-    name: 'model-cascades-and-frugal-agent-routing',
-    path: 'skills/105-model-cascades-and-frugal-agent-routing/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Implement tiered model cascades and frugal agent routing (RouteLLM, FrugalGPT), assigning low-cost models (Haiku, Flash) to exploration/git/linting tasks and frontier models (Opus, Sonnet) to complex reasoning.'
-  },
-  {
-    id: '106-schema-minification-and-compact-tool-calling',
-    name: 'schema-minification-and-compact-tool-calling',
-    path: 'skills/106-schema-minification-and-compact-tool-calling/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Minify LLM tool definitions and function-calling schemas, strip verbose JSON schema bloat, adopt compact TypeScript interfaces (TypeChat), and reduce per-turn tool overhead by up to 70%.'
-  },
-  {
-    id: '107-scoped-line-range-and-diff-anchored-context',
-    name: 'scoped-line-range-and-diff-anchored-context',
-    path: 'skills/107-scoped-line-range-and-diff-anchored-context/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Enforce scoped line-range reading, extract localized AST node slices, anchor edits to targeted diffs, and eliminate massive multi-thousand-line whole-file context dumps.'
-  },
-  {
-    id: '108-semantic-embedding-rag-and-vector-pre-filtering',
-    name: 'semantic-embedding-rag-and-vector-pre-filtering',
-    path: 'skills/108-semantic-embedding-rag-and-vector-pre-filtering/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Implement token-capped hybrid code retrieval (BM25 + dense vector embeddings), cross-encoder reranking, and sub-500-token contextual chunk injection to eliminate massive doc dumps.'
-  },
-  {
-    id: '109-attention-de-poisoning-and-scratchpad-pruning',
-    name: 'attention-de-poisoning-and-scratchpad-pruning',
-    path: 'skills/109-attention-de-poisoning-and-scratchpad-pruning/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Prune historical reasoning scratchpads, strip verbose internal thought traces, eliminate dead conversation branches, and prevent cross-attention degradation and token compounding.'
-  },
-  {
-    id: '110-agent-token-budgeting-and-cost-telemetry',
-    name: 'agent-token-budgeting-and-cost-telemetry',
-    path: 'skills/110-agent-token-budgeting-and-cost-telemetry/SKILL.md',
-    category: 'AI Agent Token Optimization',
-    summary: 'Implement per-task token budgets, automated loop circuit breakers, OpenTelemetry GenAI cost telemetry, burn rate alerting, and enterprise LLM spend governance.'
+    id: '115-parametric-svg-generation-and-asset-optimization',
+    name: 'parametric-svg-generation-and-asset-optimization',
+    path: 'skills/115-parametric-svg-generation-and-asset-optimization/SKILL.md',
+    category: 'Architectural SVG & Motion Graphics',
+    summary: 'Procedural and programmatic SVG generation with Node.js/Python, strict XML entity and CDATA validation, security sanitization for GitHub markdown/Camo proxy compatibility, and payload budget optimization (<60KB).'
   }
 ];
 

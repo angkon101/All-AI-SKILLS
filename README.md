@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-110%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="110 Skills"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-21%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="21 Tracks"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-115%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="110 Skills"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-22%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="21 Tracks"></a>
   <a href="#"><img src="https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Cursor%20%7C%20Claude-10b981?style=for-the-badge&logo=openai&logoColor=white" alt="Agent Ready"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge" alt="License"></a>
 </p>
@@ -13,7 +13,7 @@
 
 > 🌐 **Interactive Animated Showcase Site**: Visit the live single-page web app in [`docs/index.html`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/docs/index.html) with 60 FPS interactive particle constellation animations, instant search, track filters, and 1-click prompt copies! Easily deployed to **GitHub Pages** via the `/docs` folder.
 
-A comprehensive, production-grade suite of **110 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, **Professional QA & SDET Test Architect**, **Principal Anti-Slop Code Simplifier**, and **AI Agent Token Optimization & Context Economics Specialist** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, Session-Based Test Management (SBTM), ruthless elimination of AI code slop and phantom dependencies, and advanced AI agent token optimization (KV-cache prompt caching, AST repository maps, tool output distillation, multi-turn trajectory compaction, frugal model cascades, schema minification, line-range chunking, semantic RAG, scratchpad pruning, and token budget governance).
+A comprehensive, production-grade suite of **115 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, **Professional QA & SDET Test Architect**, **Principal Anti-Slop Code Simplifier**, **AI Agent Token Optimization & Context Economics Specialist**, and **Architectural Vector Graphics & SVG Motion Specialist** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, Session-Based Test Management (SBTM), ruthless elimination of AI code slop and phantom dependencies, and advanced AI agent token optimization (KV-cache prompt caching, AST repository maps, tool output distillation, multi-turn trajectory compaction, frugal model cascades, schema minification, line-range chunking, semantic RAG, scratchpad pruning, and token budget governance), and pure CSS vector motion engineering (pendulum kinematics, CAD/BIM architectural drafting, monochrome noir high-contrast design, vector particle simulation, and parametric SVG optimization).
 
 Designed for modern AI coding agents (**Antigravity**, **Gemini CLI**, **Cursor**, **Claude Code**, **Copilot Workspace**, and **Windsurf**), this repository provides modular, standardized runbooks (`SKILL.md`) that instruct AI agents how to think and operate as domain experts across every organizational role.
 
@@ -177,7 +177,15 @@ flowchart TD
         S109 --> S110["110: Token Budgeting & Cost Telemetry"]
     end
 
-    S80 & S90 & S100 & S110 & S22 -.->|Continuous Feedback Loop| S27
+    subgraph S16["16. Architectural Vector Motion & CAD/BIM Graphics"]
+        S110 --> S111["111: SVG Motion & CSS Vector Physics"]
+        S111 --> S112["112: Architectural CAD/BIM Drafting"]
+        S112 --> S113["113: Monochrome Noir & High-Contrast Design"]
+        S113 --> S114["114: Vector Particle Emitters & Volumetric Light"]
+        S114 --> S115["115: Parametric SVG Generation & Optimization"]
+    end
+
+    S80 & S90 & S100 & S110 & S115 & S22 -.->|Continuous Feedback Loop| S27
 ```
 
 ---
@@ -185,16 +193,16 @@ flowchart TD
 ## 🏗️ Commercial Building Architecture & Swarm Construction Site
 
 <p align="center">
-  <img src="./assets/commercial-building-site.svg" alt="Autonomous Commercial Building Construction Site - Monochrome BIM CAD High-Rise Erection" width="100%">
+  <img src="./assets/commercial-building-site.svg" alt="Autonomous Commercial Building Construction Site - BIM CAD High-Rise Erection" width="100%">
 </p>
 
-> 🏢 **Software Architecture as a High-Rise Construction Site (Monochrome CAD/BIM)**: Rendered in a high-contrast architectural black-and-white drafting aesthetic, this dynamic visualization maps the physical lifecycle of a commercial skyscraper to software engineering. Active site operations illustrate the entire system in motion: deep foundation pilings (storage engines & distributed consensus), dual tower cranes hoisting structural steel and concrete skips (CI/CD release pipelines & packaging), multi-tier external Alimak climber hoists (data streaming & worker pipelines), high-altitude ironworkers with electric arc welding showers (code refactoring & contract integration), hydraulic boom pumps and earthmoving excavators (data ingestion & mutations), and precision CAD laser leveling scans (continuous testing, telemetry & GenAI context economics).
+> 🏢 **Software Architecture as a High-Rise Construction Site**: Just as a commercial skyscraper requires foundational pilings (storage engines & distributed consensus), high-capacity tower cranes (CI/CD release pipelines), floor-by-floor structural steel erection (microservices, type-safe APIs & tRPC), double-glazed curtain wall cladding (frontend design tokens & RSC), and real-time BIM telemetry (observability, SLIs & GenAI cost governance), enterprise software engineering demands structured discipline across every layer.
 
 ---
 
-## 🏛️ The 21 Functional Organizational Tracks
+## 🏛️ The 22 Functional Organizational Tracks
 
-The 110 skills are organized into 21 distinct professional disciplines:
+The 115 skills are organized into 22 distinct professional disciplines:
 
 | Track | Focus Area | Skills Included |
 | :--- | :--- | :--- |
@@ -219,10 +227,12 @@ The 110 skills are organized into 21 distinct professional disciplines:
 | **Track S** | Professional Software Testing, QA & SDET Excellence | `84`, `85`, `86`, `87`, `88`, `89`, `90` |
 | **Track T** | AI Slop Removal, Code De-Bloating & LLM Output Sanitization | `91`, `92`, `93`, `94`, `95`, `96`, `97`, `98`, `99`, `100` |
 | **Track U** | AI Agent Token Optimization, Context Compression & Token Economics | `101`, `102`, `103`, `104`, `105`, `106`, `107`, `108`, `109`, `110` |
+| **Track V** | Architectural SVG Animation, CAD/BIM Motion Systems & Technical Vector Graphics | `111`, `112`, `113`, `114`, `115` |
+| **Track V** | Architectural SVG Animation, CAD/BIM Motion Systems & Technical Vector Graphics | `111`, `112`, `113`, `114`, `115` |
 
 ---
 
-## 📚 Master Skills Directory & Catalog (110 Skills)
+## 📚 Master Skills Directory & Catalog (115 Skills)
 
 | # | Skill Directory | Track | Role & Capabilities | Key Deliverables |
 | :-: | :--- | :--- | :--- | :--- |
@@ -336,6 +346,16 @@ The 110 skills are organized into 21 distinct professional disciplines:
 | `108` | [`108-semantic-embedding-rag-and-vector-pre-filtering`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/108-semantic-embedding-rag-and-vector-pre-filtering/SKILL.md) | Token Optimization | **Contextual RAG Architect**: Hybrid lexical (BM25) + dense vector pre-filtering, cross-encoder reranking, sub-500-token context clamping. | Token-Clamped Hybrid Retrievers, RRF Indices |
 | `109` | [`109-attention-de-poisoning-and-scratchpad-pruning`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/109-attention-de-poisoning-and-scratchpad-pruning/SKILL.md) | Token Optimization | **Attention Hygiene Specialist**: Prune historical reasoning chains, tombstone consumed tool results, replace thoughts with declarative state commits. | Attention De-Poisoners, Result Tombstones |
 | `110` | [`110-agent-token-budgeting-and-cost-telemetry`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/110-agent-token-budgeting-and-cost-telemetry/SKILL.md) | Token Optimization | **Token Governance Architect**: Hard token/spend ceilings per task, loop circuit breakers, OpenTelemetry GenAI telemetry, spend attribution. | Budget Governors, Loop Circuit Breakers |
+| `111` | [`111-svg-motion-engineering-and-css-vector-physics`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/111-svg-motion-engineering-and-css-vector-physics/SKILL.md) | Vector Motion & CAD | **SVG Motion Specialist**: Pure CSS vector motion, pendulum sway, cable tension, traveling trolleys, co-prime loop sync, GPU 60 FPS performance. | Kinematic Vector Engines, Pendulum Keyframes |
+| `112` | [`112-architectural-cad-bim-technical-drafting-and-vector-modeling`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/112-architectural-cad-bim-technical-drafting-and-vector-modeling/SKILL.md) | Vector Motion & CAD | **BIM Systems Modeler**: High-rise structural steel detailing (I-beams, K-bracing), slipforms, curtain walls, tower cranes, construction hoists, LOD-400 HUDs. | Structural CAD Blueprints, Heavy Plant Schematics |
+| `113` | [`113-monochrome-noir-visual-design-and-high-contrast-systems`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/113-monochrome-noir-visual-design-and-high-contrast-systems/SKILL.md) | Vector Motion & CAD | **High-Contrast Visual Architect**: 5-zone grayscale tonal hierarchy, obsidian blacks, stark white luminances, hazard chevrons, silhouette depth. | Monochrome Design Systems, Contrast Matrices |
+| `114` | [`114-vector-particle-emitters-and-volumetric-lighting-effects`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/114-vector-particle-emitters-and-volumetric-lighting-effects/SKILL.md) | Vector Motion & CAD | **Vector Particle Specialist**: Electric arc welding flares, gravity-accelerated spark streams, volumetric floodlight cones, sweeping laser leveling scans. | CSS Particle Generators, Atmospheric Shaders |
+| `115` | [`115-parametric-svg-generation-and-asset-optimization`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/115-parametric-svg-generation-and-asset-optimization/SKILL.md) | Vector Motion & CAD | **SVG Asset Engineer**: Parametric truss generation (Node/Python), CDATA shielding, entity escaping (&amp;), GitHub Camo compliance, sub-60KB payloads. | Parametric Vector Builders, XML CI Test Suites |
+| `111` | [`111-svg-motion-engineering-and-css-vector-physics`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/111-svg-motion-engineering-and-css-vector-physics/SKILL.md) | Vector Motion & CAD | **SVG Motion Specialist**: Pure CSS vector motion, pendulum sway, cable tension, traveling trolleys, co-prime loop sync, GPU 60 FPS performance. | Kinematic Vector Engines, Pendulum Keyframes |
+| `112` | [`112-architectural-cad-bim-technical-drafting-and-vector-modeling`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/112-architectural-cad-bim-technical-drafting-and-vector-modeling/SKILL.md) | Vector Motion & CAD | **BIM Systems Modeler**: High-rise structural steel detailing (I-beams, K-bracing), slipforms, curtain walls, tower cranes, construction hoists, LOD-400 HUDs. | Structural CAD Blueprints, Heavy Plant Schematics |
+| `113` | [`113-monochrome-noir-visual-design-and-high-contrast-systems`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/113-monochrome-noir-visual-design-and-high-contrast-systems/SKILL.md) | Vector Motion & CAD | **High-Contrast Visual Architect**: 5-zone grayscale tonal hierarchy, obsidian blacks, stark white luminances, hazard chevrons, silhouette depth. | Monochrome Design Systems, Contrast Matrices |
+| `114` | [`114-vector-particle-emitters-and-volumetric-lighting-effects`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/114-vector-particle-emitters-and-volumetric-lighting-effects/SKILL.md) | Vector Motion & CAD | **Vector Particle Specialist**: Electric arc welding flares, gravity-accelerated spark streams, volumetric floodlight cones, sweeping laser leveling scans. | CSS Particle Generators, Atmospheric Shaders |
+| `115` | [`115-parametric-svg-generation-and-asset-optimization`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/115-parametric-svg-generation-and-asset-optimization/SKILL.md) | Vector Motion & CAD | **SVG Asset Engineer**: Parametric truss generation (Node/Python), CDATA shielding, entity escaping (&amp;), GitHub Camo compliance, sub-60KB payloads. | Parametric Vector Builders, XML CI Test Suites |
 
 ---
 
@@ -345,7 +365,7 @@ The 110 skills are organized into 21 distinct professional disciplines:
 
 #### On Windows (PowerShell):
 ```powershell
-# Copy all 110 skills to a target project:
+# Copy all 115 skills to a target project:
 .\install-skills.ps1 -Destination "C:\Path\To\MyProject"
 
 # Or install globally for all projects on your machine:
@@ -359,7 +379,7 @@ The 110 skills are organized into 21 distinct professional disciplines:
 ```bash
 chmod +x install-skills.sh
 
-# Copy all 110 skills:
+# Copy all 115 skills:
 ./install-skills.sh /path/to/my-project
 
 # Or install globally:
@@ -590,6 +610,22 @@ chmod +x install-skills.sh
 "Enforce task-level financial guardrails using agent-token-budgeting-and-cost-telemetry to stop runaway tool loops and export OpenTelemetry GenAI spend metrics."
 ```
 
+```text
+"Architect a 60 FPS pure CSS vector animation using svg-motion-engineering-and-css-vector-physics to simulate crane hoist trolley travel and pendulum cable sway with co-prime loop timing."
+```
+```text
+"Draft a technical high-rise structural schematic using architectural-cad-bim-technical-drafting-and-vector-modeling with exposed columns, K-bracing, climbing hoists, and LOD-400 telemetry."
+```
+```text
+"Design an architectural black-and-white visual system using monochrome-noir-visual-design-and-high-contrast-systems featuring obsidian night skies, volumetric floodlight cones, and stark white highlights."
+```
+```text
+"Simulate electric arc welding flashes and falling molten sparks using vector-particle-emitters-and-volumetric-lighting-effects entirely via CSS keyframes and multi-stage Gaussian bloom filters."
+```
+```text
+"Build an automated parametric vector pipeline using parametric-svg-generation-and-asset-optimization with strict CDATA shielding, entity validation, and sub-60KB payload budgeting for GitHub README display."
+```
+
 ---
 
 ## 🚀 How to Push to GitHub & Enable Animated GitHub Pages
@@ -630,7 +666,7 @@ git push -u origin main
 
 Your live site features:
 - **Interactive 60 FPS Particle Constellation Canvas** with mouse gravity.
-- **Dynamic Search & Instant Filtering** across all 110 skills.
+- **Dynamic Search & Instant Filtering** across all 115 skills.
 - **Interactive Skill Runbook Drawer** with 1-click prompt copying.
 - **Native Animated SVG Header** rendering directly in GitHub's markdown view.
 

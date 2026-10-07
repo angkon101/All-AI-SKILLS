@@ -3,51 +3,51 @@
     <!-- Monochrome Deep Black Sky Gradient -->
     <linearGradient id="bwSky" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#000000" />
-      <stop offset="35%" stop-color="#050505" />
-      <stop offset="70%" stop-color="#0c0c0c" />
+      <stop offset="35%" stop-color="#040404" />
+      <stop offset="70%" stop-color="#0a0a0a" />
       <stop offset="100%" stop-color="#020202" />
     </linearGradient>
 
     <!-- High-Contrast Structural Steel Grayscale Gradient -->
     <linearGradient id="bwSteel" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#262626" />
-      <stop offset="25%" stop-color="#525252" />
-      <stop offset="50%" stop-color="#8a8a8a" />
-      <stop offset="75%" stop-color="#525252" />
-      <stop offset="100%" stop-color="#1f1f1f" />
+      <stop offset="0%" stop-color="#222222" />
+      <stop offset="25%" stop-color="#555555" />
+      <stop offset="50%" stop-color="#999999" />
+      <stop offset="75%" stop-color="#555555" />
+      <stop offset="100%" stop-color="#1e1e1e" />
     </linearGradient>
 
     <!-- Heavy Crane Steel Gradient -->
     <linearGradient id="bwCrane" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" />
       <stop offset="40%" stop-color="#d4d4d4" />
-      <stop offset="80%" stop-color="#8c8c8c" />
-      <stop offset="100%" stop-color="#555555" />
+      <stop offset="80%" stop-color="#888888" />
+      <stop offset="100%" stop-color="#505050" />
     </linearGradient>
 
     <!-- Suspended I-Beam Luminous Pure White Gradient -->
     <linearGradient id="bwBeam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#888888" />
+      <stop offset="0%" stop-color="#777777" />
       <stop offset="30%" stop-color="#ffffff" />
       <stop offset="70%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#888888" />
+      <stop offset="100%" stop-color="#777777" />
     </linearGradient>
 
     <!-- Commercial Glass Curtain Wall Facade Gradient -->
     <linearGradient id="bwGlass" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2a2a2a" stop-opacity="0.9" />
-      <stop offset="30%" stop-color="#404040" stop-opacity="0.8" />
-      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#141414" stop-opacity="0.95" />
+      <stop offset="0%" stop-color="#242424" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#3d3d3d" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#121212" stop-opacity="0.95" />
     </linearGradient>
 
     <!-- Interior Window Illumination -->
     <linearGradient id="bwOfficeLight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#888888" stop-opacity="0.2" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#888888" stop-opacity="0.25" />
     </linearGradient>
 
-    <!-- Volumetric Ground Floodlight Beam (Stark White Cone) -->
+    <!-- Volumetric Ground Floodlight Beams (Stark White Cones) -->
     <linearGradient id="bwFloodlight1" x1="50%" y1="100%" x2="50%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
       <stop offset="40%" stop-color="#ffffff" stop-opacity="0.18" />
@@ -56,7 +56,7 @@
 
     <linearGradient id="bwFloodlight2" x1="50%" y1="100%" x2="50%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.14" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
@@ -135,7 +135,17 @@
         92%, 100% { transform: translateY(-290px); }
       }
 
-      /* 7. High-Intensity Electric Arc Welding Flash Pulses */
+      /* 7. Crane 3: Luffing Jib Boom Angle Articulation atop Core */
+      @keyframes crane3LuffingJib {
+        0%, 100% { transform: rotate(-35deg); }
+        50% { transform: rotate(-62deg); }
+      }
+      @keyframes crane3RebarHoist {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-22px) rotate(1.8deg); }
+      }
+
+      /* 8. High-Intensity Electric Arc Welding Flash Pulses */
       @keyframes weldArcFlash {
         0%, 100% { opacity: 0; transform: scale(0.6); }
         10% { opacity: 1; transform: scale(1.6); }
@@ -146,7 +156,7 @@
         45%, 95% { opacity: 0; }
       }
 
-      /* 8. Falling Molten Welding Sparks (High Contrast White) */
+      /* 9. Falling Molten Welding Sparks (High Contrast White) */
       @keyframes sparkDrop1 {
         0% { transform: translate(0, 0) scale(1); opacity: 1; }
         100% { transform: translate(-22px, 55px) scale(0.2); opacity: 0; }
@@ -160,38 +170,38 @@
         100% { transform: translate(-8px, 46px) scale(0.2); opacity: 0; }
       }
 
-      /* 9. Hydraulic Excavator Articulated Digging Boom Motion */
+      /* 10. Hydraulic Excavator Articulated Digging Boom Motion */
       @keyframes excavatorArmDig {
         0%, 100% { transform: rotate(0deg); }
-        35% { transform: rotate(-8deg); }
-        70% { transform: rotate(5deg); }
+        35% { transform: rotate(-9deg); }
+        70% { transform: rotate(6deg); }
       }
       @keyframes excavatorBucketScoop {
         0%, 100% { transform: rotate(0deg); }
-        40% { transform: rotate(-24deg); }
-        80% { transform: rotate(18deg); }
+        40% { transform: rotate(-26deg); }
+        80% { transform: rotate(20deg); }
       }
 
-      /* 10. Concrete Mixer Truck Drum Spiral Rotation */
+      /* 11. Concrete Mixer Truck Drum Spiral Rotation */
       @keyframes drumSpin {
         0% { stroke-dashoffset: 0; }
         100% { stroke-dashoffset: 60; }
       }
 
-      /* 11. Concrete Pumping Pulse Flow */
+      /* 12. Concrete Pumping Pulse Flow */
       @keyframes concretePulse {
         0% { stroke-dashoffset: 80; }
         100% { stroke-dashoffset: 0; }
       }
 
-      /* 12. Laser Leveling Elevation Scanner Line */
+      /* 13. Laser Leveling Elevation Scanner Line */
       @keyframes laserScanVertical {
         0% { transform: translateY(0px); opacity: 0.85; }
         50% { transform: translateY(300px); opacity: 1; }
         100% { transform: translateY(0px); opacity: 0.85; }
       }
 
-      /* 13. FAA and Safety Stark White Strobe Obstruction Beacons */
+      /* 14. FAA and Safety Stark White Strobe Obstruction Beacons */
       @keyframes whiteStrobeFast {
         0%, 100% { opacity: 0.15; }
         50% { opacity: 1; filter: drop-shadow(0 0 8px #ffffff); }
@@ -201,17 +211,36 @@
         50% { opacity: 1; filter: drop-shadow(0 0 10px #ffffff); }
       }
 
-      /* 14. Autonomous Site Drone Hover and Survey */
-      @keyframes droneFlight {
+      /* 15. Autonomous Site Drone 1 Flight Path */
+      @keyframes drone1Flight {
         0%, 100% { transform: translate(0, 0); }
         30% { transform: translate(12px, -14px); }
         70% { transform: translate(-10px, 8px); }
       }
 
-      /* 15. Distant Crane Hoist Slewing Motion */
+      /* 16. Autonomous Site Drone 2 Flight Path (East Wing) */
+      @keyframes drone2Flight {
+        0%, 100% { transform: translate(0, 0); }
+        40% { transform: translate(-14px, -18px); }
+        80% { transform: translate(10px, 6px); }
+      }
+
+      /* 17. Distant Crane Hoist Slewing Motion */
       @keyframes distantCraneSlew {
         0%, 100% { transform: rotate(0deg); }
         50% { transform: rotate(-6deg); }
+      }
+
+      /* 18. Mobile Crawler Crane Hoist Sway on Ground */
+      @keyframes crawlerHoistSway {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(-1.5deg); }
+      }
+
+      /* 19. Rigger Signal Baton Wave */
+      @keyframes riggerWave {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-35deg); }
       }
 
       /* Animation Utility Classes */
@@ -221,6 +250,8 @@
       .anim-bucket-lift { animation: bucketLift 9s ease-in-out infinite; }
       .anim-hoist-car1 { animation: hoistAscent 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; }
       .anim-hoist-car2 { animation: hoistDescent 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; }
+      .anim-crane3-boom { animation: crane3LuffingJib 12s ease-in-out infinite; transform-origin: 483px 26px; }
+      .anim-crane3-rebar { animation: crane3RebarHoist 12s ease-in-out infinite; }
       .anim-weld-flash1 { animation: weldArcFlash 4.2s ease-in-out infinite; transform-origin: center; }
       .anim-weld-flash2 { animation: weldArcFlash 3.8s ease-in-out 1.6s infinite; transform-origin: center; }
       .anim-weld-flash3 { animation: weldArcFlash 4.6s ease-in-out 2.8s infinite; transform-origin: center; }
@@ -230,13 +261,16 @@
       .anim-strobe-fast { animation: whiteStrobeFast 0.9s ease-in-out infinite; }
       .anim-strobe-slow { animation: whiteStrobeSlow 1.4s ease-in-out infinite; }
       .anim-laser-scan { animation: laserScanVertical 7.5s ease-in-out infinite; }
-      .anim-excavator-arm { animation: excavatorArmDig 8s ease-in-out infinite; transform-origin: 110px 455px; }
+      .anim-excavator-arm { animation: excavatorArmDig 8s ease-in-out infinite; transform-origin: 105px 455px; }
       .anim-excavator-bucket { animation: excavatorBucketScoop 8s ease-in-out infinite; transform-origin: 65px 440px; }
       .anim-mixer-drum { stroke-dasharray: 8 12; animation: drumSpin 2.5s linear infinite; }
       .anim-concrete-pump { stroke-dasharray: 8 14; animation: concretePulse 1.6s linear infinite; }
-      .anim-drone { animation: droneFlight 6.5s ease-in-out infinite; }
+      .anim-drone1 { animation: drone1Flight 6.5s ease-in-out infinite; }
+      .anim-drone2 { animation: drone2Flight 7.5s ease-in-out 1.2s infinite; }
       .anim-distant-crane { animation: distantCraneSlew 14s ease-in-out infinite; transform-origin: 220px 240px; }
-        ]]>
+      .anim-crawler-hoist { animation: crawlerHoistSway 10s ease-in-out infinite; }
+      .anim-rigger-arm { animation: riggerWave 2s ease-in-out infinite; transform-origin: center; }
+    ]]>
     </style>
   </defs>
 
@@ -251,14 +285,16 @@
 
   <!-- Elevation Ruler Calibration Lines (Left Technical Margin) -->
   <g font-family="'JetBrains Mono', Courier, monospace" font-size="8.5" fill="#a3a3a3" opacity="0.75">
-    <line x1="20" y1="50" x2="32" y2="50" stroke="#ffffff" stroke-width="1" />
-    <text x="36" y="53">+210.0m [TOWER APEX CRANE]</text>
-    <line x1="20" y1="120" x2="32" y2="120" stroke="#888888" stroke-width="1" />
-    <text x="36" y="123">+160.0m [CORE SLIPFORM]</text>
-    <line x1="20" y1="210" x2="32" y2="210" stroke="#888888" stroke-width="1" />
-    <text x="36" y="213">+110.0m [STEEL ERECTION]</text>
-    <line x1="20" y1="320" x2="32" y2="320" stroke="#888888" stroke-width="1" />
-    <text x="36" y="323">+55.0m  [CURTAIN WALL GLZ]</text>
+    <line x1="20" y1="35" x2="32" y2="35" stroke="#ffffff" stroke-width="1" />
+    <text x="36" y="38">+225.0m [CORE LUFFING CRANE]</text>
+    <line x1="20" y1="80" x2="32" y2="80" stroke="#888888" stroke-width="1" />
+    <text x="36" y="83">+185.0m [TOWER APEX JIB]</text>
+    <line x1="20" y1="140" x2="32" y2="140" stroke="#888888" stroke-width="1" />
+    <text x="36" y="143">+140.0m [CORE SLIPFORM L-34]</text>
+    <line x1="20" y1="230" x2="32" y2="230" stroke="#888888" stroke-width="1" />
+    <text x="36" y="233">+95.0m  [STEEL ERECTION L-24]</text>
+    <line x1="20" y1="330" x2="32" y2="330" stroke="#888888" stroke-width="1" />
+    <text x="36" y="333">+50.0m  [CURTAIN WALL GLZ]</text>
     <line x1="20" y1="480" x2="32" y2="480" stroke="#ffffff" stroke-width="1" />
     <text x="36" y="483">±0.0m   [GROUND LEVEL DATUM]</text>
   </g>
@@ -266,71 +302,66 @@
   <!-- ======================================================================
        2. DISTANT BACKGROUND MEGA-CONSTRUCTION SKYLINE (Scale and Perspective)
        ====================================================================== -->
-  <!-- Distant City Skyscrapers Under Active Construction (Layer 1: Farthest, Silhouetted) -->
-  <g fill="#080808" stroke="#1c1c1c" stroke-width="1">
-    <!-- Distant Skyscraper A (Far Left: x=60 to 140) -->
-    <rect x="60" y="310" width="80" height="170" />
-    <!-- Distant Tower Crane on Roof of Skyscraper A -->
-    <line x1="100" y1="310" x2="100" y2="260" stroke="#333333" stroke-width="1.2" />
-    <line x1="75" y1="265" x2="135" y2="265" stroke="#333333" stroke-width="1" />
-    <circle cx="100" cy="260" r="1.5" fill="#ffffff" class="anim-strobe-slow" />
+  <!-- Distant City Skyscrapers Under Active Construction -->
+  <g fill="#070707" stroke="#1a1a1a" stroke-width="1">
+    <!-- Distant Skyscraper A (Far Left: x=50 to 135) -->
+    <rect x="50" y="310" width="85" height="170" />
+    <line x1="95" y1="310" x2="95" y2="255" stroke="#333333" stroke-width="1.2" />
+    <line x1="70" y1="260" x2="130" y2="260" stroke="#333333" stroke-width="1" />
+    <circle cx="95" cy="255" r="1.5" fill="#ffffff" class="anim-strobe-slow" />
 
-    <!-- Distant Skyscraper B (Mid Left: x=170 to 280) with Slewing Crane -->
-    <rect x="170" y="260" width="105" height="220" />
+    <!-- Distant Skyscraper B (Mid Left: x=165 to 275) with Slewing Crane -->
+    <rect x="165" y="255" width="110" height="225" />
     <g class="anim-distant-crane">
-      <line x1="220" y1="260" x2="220" y2="215" stroke="#444444" stroke-width="1.5" />
-      <line x1="180" y1="220" x2="265" y2="220" stroke="#444444" stroke-width="1.2" />
-      <line x1="220" y1="208" x2="255" y2="220" stroke="#2b2b2b" stroke-width="0.8" />
-      <circle cx="220" cy="208" r="2" fill="#ffffff" class="anim-strobe-fast" />
-      <circle cx="265" cy="220" r="1.5" fill="#ffffff" class="anim-strobe-fast" />
+      <line x1="220" y1="255" x2="220" y2="210" stroke="#444444" stroke-width="1.5" />
+      <line x1="175" y1="215" x2="265" y2="215" stroke="#444444" stroke-width="1.2" />
+      <line x1="220" y1="202" x2="255" y2="215" stroke="#2b2b2b" stroke-width="0.8" />
+      <circle cx="220" cy="202" r="2" fill="#ffffff" class="anim-strobe-fast" />
+      <circle cx="265" cy="215" r="1.5" fill="#ffffff" class="anim-strobe-fast" />
     </g>
 
-    <!-- Distant Skyscraper C (Mid-Right: x=720 to 820) -->
-    <rect x="715" y="280" width="95" height="200" />
-    <line x1="760" y1="280" x2="760" y2="235" stroke="#333333" stroke-width="1.2" />
-    <line x1="730" y1="240" x2="800" y2="240" stroke="#333333" stroke-width="1" />
-    <circle cx="760" cy="235" r="1.5" fill="#ffffff" class="anim-strobe-slow" />
+    <!-- Distant Skyscraper C (Mid-Right: x=715 to 815) -->
+    <rect x="715" y="275" width="95" height="205" />
+    <line x1="760" y1="275" x2="760" y2="230" stroke="#333333" stroke-width="1.2" />
+    <line x1="730" y1="235" x2="800" y2="235" stroke="#333333" stroke-width="1" />
+    <circle cx="760" cy="230" r="1.5" fill="#ffffff" class="anim-strobe-slow" />
 
     <!-- Distant Skyscraper D (Far Right: x=1050 to 1180) with Twin Cranes -->
-    <rect x="1050" y="240" width="125" height="240" />
-    <line x1="1090" y1="240" x2="1090" y2="195" stroke="#444444" stroke-width="1.5" />
-    <line x1="1060" y1="200" x2="1135" y2="200" stroke="#444444" stroke-width="1.2" />
-    <circle cx="1090" cy="195" r="2" fill="#ffffff" class="anim-strobe-fast" />
-    <line x1="1145" y1="240" x2="1145" y2="210" stroke="#333333" stroke-width="1.2" />
-    <line x1="1125" y1="214" x2="1170" y2="214" stroke="#333333" stroke-width="1" />
-    <circle cx="1145" cy="210" r="1.5" fill="#ffffff" class="anim-strobe-slow" />
+    <rect x="1050" y="235" width="125" height="245" />
+    <line x1="1090" y1="235" x2="1090" y2="190" stroke="#444444" stroke-width="1.5" />
+    <line x1="1060" y1="195" x2="1135" y2="195" stroke="#444444" stroke-width="1.2" />
+    <circle cx="1090" cy="190" r="2" fill="#ffffff" class="anim-strobe-fast" />
+    <line x1="1145" y1="235" x2="1145" y2="205" stroke="#333333" stroke-width="1.2" />
+    <line x1="1125" y1="210" x2="1170" y2="210" stroke="#333333" stroke-width="1" />
+    <circle cx="1145" cy="205" r="1.5" fill="#ffffff" class="anim-strobe-slow" />
   </g>
 
-  <!-- Distant Windows Grid on background towers -->
-  <g fill="#ffffff" opacity="0.12">
-    <rect x="185" y="275" width="75" height="2" />
-    <rect x="185" y="290" width="75" height="2" />
-    <rect x="185" y="305" width="75" height="2" />
-    <rect x="185" y="320" width="75" height="2" />
-    <rect x="185" y="335" width="75" height="2" />
-    <rect x="1065" y="255" width="95" height="2" />
-    <rect x="1065" y="270" width="95" height="2" />
-    <rect x="1065" y="285" width="95" height="2" />
-    <rect x="1065" y="300" width="95" height="2" />
+  <!-- Distant Window Array Matrix on background towers -->
+  <g fill="#ffffff" opacity="0.1">
+    <rect x="180" y="270" width="80" height="2" />
+    <rect x="180" y="285" width="80" height="2" />
+    <rect x="180" y="300" width="80" height="2" />
+    <rect x="180" y="315" width="80" height="2" />
+    <rect x="180" y="330" width="80" height="2" />
+    <rect x="1065" y="250" width="95" height="2" />
+    <rect x="1065" y="265" width="95" height="2" />
+    <rect x="1065" y="280" width="95" height="2" />
+    <rect x="1065" y="295" width="95" height="2" />
   </g>
 
-  <!-- High-Power Volumetric Night Floodlights (Illuminating the Main Tower) -->
-  <!-- Floodlight 1: Ground Left, sweeping up onto the skeletal crane -->
-  <polygon points="270,480 340,80 470,70 290,480" fill="url(#bwFloodlight1)" />
-  <!-- Floodlight 2: Ground Right, throwing light up the eastern core -->
-  <polygon points="760,480 610,90 730,80 780,480" fill="url(#bwFloodlight2)" />
-  <!-- Floodlight 3: Center Ground, illuminating steel grid -->
-  <polygon points="500,480 460,180 540,180 520,480" fill="url(#bwFloodlight1)" opacity="0.6" />
+  <!-- High-Power Volumetric Night Floodlights (Illuminating the Main High-Rise) -->
+  <polygon points="270,480 340,70 470,60 290,480" fill="url(#bwFloodlight1)" />
+  <polygon points="760,480 610,80 730,70 780,480" fill="url(#bwFloodlight2)" />
+  <polygon points="500,480 455,160 545,160 520,480" fill="url(#bwFloodlight1)" opacity="0.5" />
 
   <!-- ======================================================================
        3. EAST COMMERCIAL TOWER WING (Midground: x=780 to x=980)
        ====================================================================== -->
   <g id="east-commercial-wing">
-    <!-- Solid Core Structure -->
-    <rect x="780" y="160" width="200" height="320" fill="#0d0d0d" stroke="#262626" stroke-width="2" />
+    <rect x="780" y="160" width="200" height="320" fill="#0c0c0c" stroke="#242424" stroke-width="2" />
 
     <!-- Ribbon Glazing Window Arrays (Levels 1 to 14) -->
-    <g fill="#1a1a1a" stroke="#333333" stroke-width="1">
+    <g fill="#181818" stroke="#303030" stroke-width="1">
       <rect x="795" y="180" width="170" height="13" fill="url(#bwGlass)" />
       <rect x="795" y="202" width="170" height="13" fill="url(#bwGlass)" />
       <rect x="795" y="224" width="170" height="13" fill="url(#bwGlass)" />
@@ -346,7 +377,7 @@
       <rect x="795" y="444" width="170" height="13" fill="url(#bwGlass)" />
     </g>
 
-    <!-- Interior Illuminated Office Slabs (Night Shifts in Black and White) -->
+    <!-- Interior Illuminated Office Slabs -->
     <g fill="url(#bwOfficeLight)">
       <rect x="810" y="226" width="55" height="9" />
       <rect x="890" y="248" width="60" height="9" />
@@ -355,21 +386,33 @@
       <rect x="805" y="424" width="85" height="9" />
     </g>
 
-    <!-- Vertical Architectural Mullions / Grids -->
+    <!-- Vertical Architectural Mullions -->
     <g stroke="#ffffff" stroke-width="1.2" opacity="0.3">
       <line x1="835" y1="160" x2="835" y2="480" />
       <line x1="880" y1="160" x2="880" y2="480" />
       <line x1="925" y1="160" x2="925" y2="480" />
     </g>
 
-    <!-- Rooftop Mechanical Chiller Enclosure and HVAC Stanchions -->
-    <rect x="805" y="138" width="150" height="22" fill="#171717" stroke="#404040" stroke-width="1.5" />
-    <circle cx="840" cy="149" r="6" fill="#262626" stroke="#ffffff" stroke-width="1" />
-    <circle cx="870" cy="149" r="6" fill="#262626" stroke="#ffffff" stroke-width="1" />
-    <circle cx="900" cy="149" r="6" fill="#262626" stroke="#ffffff" stroke-width="1" />
+    <!-- Rooftop Mechanical Chiller Enclosure -->
+    <rect x="805" y="138" width="150" height="22" fill="#151515" stroke="#3d3d3d" stroke-width="1.5" />
+    <circle cx="840" cy="149" r="6" fill="#242424" stroke="#ffffff" stroke-width="1" />
+    <circle cx="870" cy="149" r="6" fill="#242424" stroke="#ffffff" stroke-width="1" />
+    <circle cx="900" cy="149" r="6" fill="#242424" stroke="#ffffff" stroke-width="1" />
     <!-- Rooftop Obstruction Beacons -->
     <circle cx="805" cy="136" r="3" fill="#ffffff" class="anim-strobe-fast" />
     <circle cx="955" cy="136" r="3" fill="#ffffff" class="anim-strobe-fast" />
+
+    <!-- Exterior Modular Scaffolding System with Ladder and Climbing Workers (x=760 to x=780) -->
+    <g id="east-scaffolding">
+      <line x1="765" y1="280" x2="765" y2="480" stroke="#777777" stroke-width="1.5" />
+      <line x1="778" y1="280" x2="778" y2="480" stroke="#777777" stroke-width="1.5" />
+      <path d="M 765 295 L 778 295 M 765 315 L 778 315 M 765 335 L 778 335
+               M 765 355 L 778 355 M 765 375 L 778 375 M 765 395 L 778 395
+               M 765 415 L 778 415 M 765 435 L 778 435 M 765 455 L 778 455" stroke="#555555" stroke-width="1" />
+      <!-- Worker on scaffolding platform at y=355 -->
+      <circle cx="771" cy="350" r="3" fill="#ffffff" />
+      <rect x="768" y="353" width="6" height="10" fill="#222222" stroke="#ffffff" stroke-width="0.8" />
+    </g>
   </g>
 
   <!-- ======================================================================
@@ -380,7 +423,6 @@
     <g stroke="#ffffff" stroke-width="1.8" fill="none">
       <line x1="990" y1="95" x2="990" y2="480" stroke-width="2.5" />
       <line x1="1010" y1="95" x2="1010" y2="480" stroke-width="2.5" />
-      <!-- X-Bracing Lattice Pattern -->
       <path d="M 990 95 L 1010 115 M 1010 95 L 990 115
                M 990 115 L 1010 135 M 1010 115 L 990 135
                M 990 135 L 1010 155 M 1010 135 L 990 155
@@ -394,70 +436,101 @@
     </g>
 
     <!-- Turntable and Operator Cab -->
-    <rect x="985" y="85" width="30" height="12" rx="2" fill="#171717" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="985" y="85" width="30" height="12" rx="2" fill="#151515" stroke="#ffffff" stroke-width="1.5" />
     <rect x="988" y="87" width="10" height="8" fill="#ffffff" opacity="0.8" />
 
     <!-- A-Frame Tower Apex -->
     <polygon points="990,85 1010,85 1000,60" fill="none" stroke="#ffffff" stroke-width="2" />
     <circle cx="1000" cy="58" r="3.5" fill="#ffffff" class="anim-strobe-fast" />
 
-    <!-- Jib Arm (Lattice Spanning over the East Wing) -->
+    <!-- Jib Arm Spanning over East Wing -->
     <g stroke="#ffffff" stroke-width="1.5" fill="none">
-      <!-- Working Jib extending left -->
       <line x1="1000" y1="80" x2="790" y2="80" stroke-width="2.5" />
       <line x1="1000" y1="70" x2="800" y2="80" stroke-width="1.5" />
-      <!-- Counter-Jib extending right -->
       <line x1="1000" y1="80" x2="1060" y2="80" stroke-width="2.5" />
-      <rect x="1040" y="76" width="22" height="14" rx="1" fill="#262626" stroke="#ffffff" stroke-width="1.5" />
-      <!-- Pendant Stays -->
+      <rect x="1040" y="76" width="22" height="14" rx="1" fill="#242424" stroke="#ffffff" stroke-width="1.5" />
       <line x1="1000" y1="60" x2="850" y2="80" stroke="#a3a3a3" stroke-width="1.2" />
       <line x1="1000" y1="60" x2="1055" y2="80" stroke="#a3a3a3" stroke-width="1.2" />
-      <!-- Jib Lattice Web -->
       <path d="M 1000 80 L 980 72 L 960 80 L 940 73 L 920 80 L 900 74 L 880 80 L 860 75 L 840 80 L 820 76 L 800 80" stroke="#a3a3a3" />
     </g>
 
     <!-- Animated Trolley and Concrete Pouring Bucket Hoist -->
     <g class="anim-crane2-trolley">
       <rect x="910" y="80" width="14" height="6" fill="#000000" stroke="#ffffff" stroke-width="1.2" />
-      <!-- Suspended Cable Hoisting Down -->
       <g class="anim-bucket-lift">
         <line x1="917" y1="86" x2="917" y2="135" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="3 1" />
-        <!-- Concrete Pouring Bucket / Skip -->
-        <polygon points="911,135 923,135 921,150 913,150" fill="#262626" stroke="#ffffff" stroke-width="1.5" />
-        <rect x="913" y="150" width="8" height="5" fill="#525252" stroke="#ffffff" stroke-width="1" />
-        <!-- Guide Rope and Rigger Tag -->
+        <polygon points="911,135 923,135 921,150 913,150" fill="#242424" stroke="#ffffff" stroke-width="1.5" />
+        <rect x="913" y="150" width="8" height="5" fill="#505050" stroke="#ffffff" stroke-width="1" />
         <line x1="917" y1="155" x2="925" y2="180" stroke="#737373" stroke-width="0.8" />
       </g>
     </g>
   </g>
 
   <!-- ======================================================================
-       5. MAIN COMMERCIAL HIGH-RISE SUPERSTRUCTURE (Center: x=340 to x=680)
+       5. MAIN COMMERCIAL HIGH-RISE SUPERSTRUCTURE (Center: x=370 to x=650)
        ====================================================================== -->
   <g id="main-commercial-skyscraper">
     <!-- Skyscraper Solid Central Shear Core (Full Height from Grade to Roof Crown) -->
-    <rect x="370" y="55" width="280" height="425" fill="#090909" stroke="#262626" stroke-width="2" />
+    <rect x="370" y="55" width="280" height="425" fill="#080808" stroke="#222222" stroke-width="2" />
 
-    <!-- Recessed Crown Penthouse and Structural Parapet (Floors 28 - 34) -->
-    <polygon points="415,55 605,55 605,130 415,130" fill="#121212" stroke="#404040" stroke-width="1.5" />
+    <!-- Recessed Crown Parapet (Floors 28 - 34) -->
+    <polygon points="415,55 605,55 605,130 415,130" fill="#101010" stroke="#3d3d3d" stroke-width="1.5" />
 
-    <!-- Self-Climbing Slipform Core Jump Rig (Atop the Concrete Core: y=38) -->
+    <!-- Self-Climbing Slipform Core Jump Rig (Atop the Concrete Core: y=36) -->
     <g id="slipform-jump-rig">
-      <rect x="465" y="36" width="90" height="22" fill="#e5e5e5" stroke="#000000" stroke-width="2" />
-      <rect x="470" y="40" width="80" height="5" fill="#000000" />
-      <text x="510" y="52" fill="#000000" font-family="'JetBrains Mono', Courier" font-size="7.5" font-weight="900" text-anchor="middle">SLIPFORM L-34</text>
+      <rect x="465" y="34" width="90" height="24" fill="#e0e0e0" stroke="#000000" stroke-width="2" />
+      <rect x="470" y="38" width="80" height="5" fill="#000000" />
+      <text x="510" y="51" fill="#000000" font-family="'JetBrains Mono', Courier" font-size="7.5" font-weight="900" text-anchor="middle">SLIPFORM L-34</text>
       <!-- Rebar dowel rods protruding from fresh pour -->
-      <line x1="475" y1="36" x2="475" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="485" y1="36" x2="485" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="495" y1="36" x2="495" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="505" y1="36" x2="505" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="515" y1="36" x2="515" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="525" y1="36" x2="525" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="535" y1="36" x2="535" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <line x1="545" y1="36" x2="545" y2="28" stroke="#ffffff" stroke-width="1.5" />
-      <!-- Obstruction Beacons on Slipform Mast -->
-      <line x1="510" y1="36" x2="510" y2="18" stroke="#ffffff" stroke-width="2" />
-      <circle cx="510" cy="16" r="4.5" fill="#ffffff" class="anim-strobe-fast" />
+      <line x1="475" y1="34" x2="475" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="485" y1="34" x2="485" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="495" y1="34" x2="495" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="505" y1="34" x2="505" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="515" y1="34" x2="515" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="525" y1="34" x2="525" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="535" y1="34" x2="535" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="545" y1="34" x2="545" y2="26" stroke="#ffffff" stroke-width="1.5" />
+      <!-- Core Obstruction Beacon -->
+      <line x1="545" y1="34" x2="545" y2="18" stroke="#ffffff" stroke-width="2" />
+      <circle cx="545" cy="16" r="4" fill="#ffffff" class="anim-strobe-fast" />
+
+      <!-- ================================================================
+           TOWER CRANE #3: CORE-MOUNTED INTERNAL CLIMBING LUFFING JIB CRANE
+           ================================================================ -->
+      <g id="climbing-crane-3">
+        <!-- Crane 3 Internal Climbing Mast pinned in core opening -->
+        <rect x="476" y="16" width="14" height="20" fill="#111111" stroke="#ffffff" stroke-width="1.5" />
+        <rect x="473" y="10" width="20" height="8" rx="1.5" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+        <!-- A-Frame Head -->
+        <polygon points="475,10 491,10 483,-2" fill="#1c1c1c" stroke="#ffffff" stroke-width="1.8" />
+        <circle cx="483" cy="-3" r="3.5" fill="#ffffff" class="anim-strobe-fast" />
+
+        <!-- Dynamic Luffing Jib Arm (Pivoting up and down) -->
+        <g class="anim-crane3-boom">
+          <!-- Heavy Lattice Luffing Boom (Length 65px) -->
+          <line x1="483" y1="24" x2="540" y2="-12" stroke="#ffffff" stroke-width="2.5" />
+          <line x1="483" y1="18" x2="536" y2="-12" stroke="#ffffff" stroke-width="1.5" />
+          <path d="M 483 24 L 495 18 L 507 22 L 519 14 L 531 18 L 540 -12" stroke="#888888" stroke-width="1" fill="none" />
+          <circle cx="540" cy="-12" r="3" fill="#ffffff" class="anim-strobe-fast" />
+
+          <!-- Suspended Cable and Heavy Rebar Cage Assembly -->
+          <g transform="translate(540, -12)">
+            <g class="anim-crane3-rebar">
+              <line x1="0" y1="0" x2="0" y2="40" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="2 1" />
+              <!-- Suspended Structural Rebar Cage -->
+              <g transform="translate(-10, 40)">
+                <rect width="20" height="22" fill="#141414" stroke="#ffffff" stroke-width="1.2" />
+                <line x1="5" y1="0" x2="5" y2="22" stroke="#ffffff" stroke-width="1" />
+                <line x1="10" y1="0" x2="10" y2="22" stroke="#ffffff" stroke-width="1" />
+                <line x1="15" y1="0" x2="15" y2="22" stroke="#ffffff" stroke-width="1" />
+                <line x1="0" y1="6" x2="20" y2="6" stroke="#ffffff" stroke-width="1" />
+                <line x1="0" y1="12" x2="20" y2="12" stroke="#ffffff" stroke-width="1" />
+                <line x1="0" y1="18" x2="20" y2="18" stroke="#ffffff" stroke-width="1" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
     </g>
 
     <!-- Structural High-Rise Heavy Steel Framework (Floors 18 - 32: y=60 to y=250) -->
@@ -469,7 +542,7 @@
       <line x1="580" y1="55" x2="580" y2="260" stroke="#cccccc" stroke-width="2" />
       <line x1="635" y1="55" x2="635" y2="260" stroke="#ffffff" stroke-width="2.5" />
 
-      <!-- Horizontal Steel Floor Girders (Every 20px) -->
+      <!-- Horizontal Steel Floor Girders -->
       <line x1="370" y1="75" x2="650" y2="75" stroke="#ffffff" stroke-width="2" />
       <line x1="370" y1="95" x2="650" y2="95" stroke="#a3a3a3" stroke-width="2" />
       <line x1="370" y1="115" x2="650" y2="115" stroke="#a3a3a3" stroke-width="2" />
@@ -494,7 +567,7 @@
                M 510 195 L 635 235 M 635 195 L 510 235" stroke="#737373" stroke-width="1.8" />
     </g>
 
-    <!-- Corrugated Metal Floor Decking (Visible on exposed floors) -->
+    <!-- Corrugated Metal Floor Decking -->
     <g stroke="#ffffff" stroke-width="1" opacity="0.4">
       <line x1="385" y1="133" x2="635" y2="133" stroke-dasharray="2 2" />
       <line x1="385" y1="173" x2="635" y2="173" stroke-dasharray="2 2" />
@@ -503,12 +576,11 @@
 
     <!-- High-Rise Construction Safety Netting (Floors 16 - 22: y=175 to y=235) -->
     <g opacity="0.5">
-      <rect x="372" y="177" width="276" height="16" fill="#262626" stroke="#ffffff" stroke-width="1" stroke-dasharray="3 3" />
-      <rect x="372" y="217" width="276" height="16" fill="#262626" stroke="#ffffff" stroke-width="1" stroke-dasharray="3 3" />
+      <rect x="372" y="177" width="276" height="16" fill="#242424" stroke="#ffffff" stroke-width="1" stroke-dasharray="3 3" />
+      <rect x="372" y="217" width="276" height="16" fill="#242424" stroke="#ffffff" stroke-width="1" stroke-dasharray="3 3" />
     </g>
 
     <!-- Mid-Level Active Curtain Wall Glazing (Floors 11 - 16: y=255 to y=345) -->
-    <!-- Transition from raw steel framing to glazed commercial curtain panels -->
     <g>
       <rect x="380" y="258" width="80" height="18" rx="1" fill="url(#bwGlass)" stroke="#ffffff" stroke-width="1.2" />
       <rect x="470" y="258" width="90" height="18" rx="1" fill="url(#bwGlass)" stroke="#ffffff" stroke-width="1.2" />
@@ -519,7 +591,6 @@
     </g>
 
     <!-- Completed Commercial Base Floors (Floors 1 - 10: y=346 to y=480) -->
-    <!-- Full High-Contrast Monochromatic Architectural Glazing and Illuminated Offices -->
     <g>
       <rect x="378" y="346" width="264" height="19" fill="url(#bwGlass)" stroke="#ffffff" stroke-width="1.2" />
       <rect x="378" y="368" width="264" height="19" fill="url(#bwGlass)" stroke="#ffffff" stroke-width="1.2" />
@@ -555,6 +626,31 @@
       <text x="372" y="413" text-anchor="end">L-06</text>
       <text x="372" y="473" text-anchor="end">L-01</text>
     </g>
+
+    <!-- High-Altitude Ironworker Crew walking on steel girder at L-26 (y=95) -->
+    <g transform="translate(460, 95)">
+      <circle cx="0" cy="-6" r="3.2" fill="#ffffff" />
+      <rect x="-3" y="-2" width="6" height="10" fill="#222222" stroke="#ffffff" stroke-width="0.8" />
+      <!-- Safety Lanyard connecting worker to lifeline wire -->
+      <line x1="0" y1="2" x2="0" y2="-12" stroke="#ffffff" stroke-width="1" />
+      <line x1="-30" y1="-12" x2="40" y2="-12" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
+    </g>
+
+    <!-- Cantilevered Staging Platform with Signalman Rigger at Level 22 (x=640, y=175) -->
+    <g transform="translate(635, 175)">
+      <!-- Cantilever Outrigger Steel Beam -->
+      <line x1="0" y1="0" x2="25" y2="0" stroke="#ffffff" stroke-width="2.5" />
+      <line x1="15" y1="0" x2="0" y2="-15" stroke="#ffffff" stroke-width="1.5" />
+      <!-- Safety Railing -->
+      <rect x="15" y="-12" width="10" height="12" fill="none" stroke="#ffffff" stroke-width="1" />
+      <!-- Signalman with Animated Signal Arm -->
+      <circle cx="20" cy="-16" r="3" fill="#ffffff" />
+      <rect x="18" y="-13" width="5" height="11" fill="#242424" stroke="#ffffff" stroke-width="0.8" />
+      <g class="anim-rigger-arm">
+        <line x1="20" y1="-10" x2="28" y2="-18" stroke="#ffffff" stroke-width="1.8" />
+        <circle cx="28" cy="-18" r="1.5" fill="#ffffff" /> <!-- High-vis wand -->
+      </g>
+    </g>
   </g>
 
   <!-- ======================================================================
@@ -565,7 +661,6 @@
     <g stroke="#ffffff" stroke-width="1.5" fill="none">
       <line x1="662" y1="75" x2="662" y2="480" stroke-width="2.5" />
       <line x1="676" y1="75" x2="676" y2="480" stroke-width="2.5" />
-      <!-- Rack and Pinion Drive Teeth / Rungs -->
       <path d="M 662 85 L 676 85 M 662 100 L 676 100 M 662 115 L 676 115
                M 662 130 L 676 130 M 662 145 L 676 145 M 662 160 L 676 160
                M 662 175 L 676 175 M 662 190 L 676 190 M 662 205 L 676 205
@@ -586,10 +681,8 @@
     <!-- HOIST CAR A: ASCENDING UPWARD (Climbing Cage on Left Track) -->
     <g transform="translate(0, 440)" class="anim-hoist-car1">
       <rect x="642" y="0" width="18" height="32" rx="2" fill="#141414" stroke="#ffffff" stroke-width="2" />
-      <!-- Wire mesh cage window -->
       <rect x="644" y="4" width="14" height="14" fill="#2b2b2b" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2" />
       <rect x="642" y="24" width="18" height="8" fill="url(#bwHazard)" />
-      <!-- Motion Flasher on Roof -->
       <circle cx="651" cy="-2" r="3" fill="#ffffff" class="anim-strobe-fast" />
     </g>
 
@@ -611,7 +704,6 @@
       <line x1="305" y1="30" x2="305" y2="480" stroke-width="3.5" />
       <line x1="325" y1="30" x2="325" y2="480" stroke-width="3.5" />
 
-      <!-- High-Density Diagonal X-Braces -->
       <path d="M 305 30 L 325 50 M 325 30 L 305 50
                M 305 50 L 325 70 M 325 50 L 305 70
                M 305 70 L 325 90 M 325 70 L 305 90
@@ -637,7 +729,7 @@
                M 305 470 L 325 480 M 325 470 L 305 480" stroke="#a3a3a3" />
     </g>
 
-    <!-- Structural Building Collar Tie Struts (Rigidly securing mast to skyscraper) -->
+    <!-- Structural Building Collar Tie Struts -->
     <g stroke="#ffffff" stroke-width="3">
       <line x1="325" y1="135" x2="370" y2="135" />
       <line x1="325" y1="235" x2="370" y2="235" />
@@ -647,38 +739,31 @@
     <!-- Slewing Ring and Turntable at (315, 30) -->
     <rect x="298" y="24" width="34" height="8" rx="2" fill="#000000" stroke="#ffffff" stroke-width="2" />
 
-    <!-- Operator Cab (Suspended under slewing unit) -->
+    <!-- Operator Cab -->
     <rect x="318" y="20" width="22" height="18" rx="3" fill="#171717" stroke="#ffffff" stroke-width="2" />
     <rect x="323" y="22" width="14" height="12" fill="#ffffff" opacity="0.85" />
 
-    <!-- Apex Tower Head / A-Frame (Center: 315, Peak: y=5) -->
+    <!-- Apex Tower Head / A-Frame -->
     <polygon points="305,24 325,24 315,3" fill="#121212" stroke="#ffffff" stroke-width="3" />
-    <!-- White Aviation Strobe atop crane apex -->
     <circle cx="315" cy="2" r="5" fill="#ffffff" class="anim-strobe-fast" />
 
-    <!-- Counter-Jib (Left: 315 -> 210) -->
+    <!-- Counter-Jib (Left) -->
     <g stroke="#ffffff" stroke-width="2">
       <line x1="315" y1="22" x2="205" y2="22" stroke-width="3.5" />
       <line x1="315" y1="14" x2="215" y2="22" stroke-width="2" />
-      <!-- Counterweight Concrete Ballast Blocks -->
-      <rect x="210" y="16" width="36" height="22" rx="2" fill="#262626" stroke="#ffffff" stroke-width="2" />
+      <rect x="210" y="16" width="36" height="22" rx="2" fill="#242424" stroke="#ffffff" stroke-width="2" />
       <line x1="222" y1="16" x2="222" y2="38" stroke="#ffffff" stroke-width="1.5" />
       <line x1="234" y1="16" x2="234" y2="38" stroke="#ffffff" stroke-width="1.5" />
-      <!-- Counter-Jib Tension Tie Cable -->
       <line x1="315" y1="3" x2="215" y2="18" stroke="#cccccc" stroke-width="2" />
     </g>
 
-    <!-- Working Jib (Main Truss Arm: length 390px extending over skyscraper) -->
+    <!-- Working Jib (Main Truss Arm spanning over skyscraper) -->
     <g stroke="#ffffff" stroke-width="2" fill="none">
-      <!-- Bottom Chord (Heavy Trolley Running Track) -->
       <line x1="315" y1="22" x2="705" y2="22" stroke-width="3.5" />
-      <!-- Top Chord -->
       <line x1="315" y1="10" x2="695" y2="22" stroke-width="2" />
-      <!-- Jib Lattice Web Diagonals -->
       <path d="M 315 22 L 335 11 L 355 22 L 375 12 L 395 22 L 415 13 L 435 22
                L 455 14 L 475 22 L 495 15 L 515 22 L 535 16 L 555 22
                L 575 17 L 595 22 L 615 18 L 635 22 L 655 19 L 675 22 L 695 22" stroke="#a3a3a3" />
-      <!-- Primary Suspension Pendant Cables from A-Frame Peak -->
       <line x1="315" y1="3" x2="490" y2="18" stroke="#cccccc" stroke-width="2.5" />
       <line x1="315" y1="3" x2="640" y2="20" stroke="#cccccc" stroke-width="1.8" />
     </g>
@@ -686,43 +771,31 @@
     <!-- Obstruction Strobe at Jib Tip -->
     <circle cx="705" cy="22" r="4" fill="#ffffff" class="anim-strobe-fast" />
 
-    <!-- ==================================================================
-         ANIMATED HOIST TROLLEY and SUSPENDED STEEL GIRDER (Black and White)
-         ================================================================== -->
+    <!-- Animated Hoist Trolley and Suspended Steel Girder -->
     <g transform="translate(420, 0)">
       <g class="anim-crane1-trolley">
-        <!-- Crane Trolley Traveling on Jib Chord at y=22 -->
         <rect x="-14" y="20" width="28" height="9" rx="2" fill="#000000" stroke="#ffffff" stroke-width="2" />
         <circle cx="-6" cy="24" r="3" fill="#ffffff" />
         <circle cx="6" cy="24" r="3" fill="#ffffff" />
 
-        <!-- Cable Hoist and Sway Physics Assembly -->
         <g class="anim-hoist-sway">
-          <!-- Heavy Steel Wire Rope Hoist Cables -->
           <line x1="-6" y1="29" x2="-5" y2="125" stroke="#ffffff" stroke-width="1.8" />
           <line x1="6" y1="29" x2="5" y2="125" stroke="#ffffff" stroke-width="1.8" />
 
-          <!-- Crane Hook Sheave Block -->
           <rect x="-9" y="125" width="18" height="14" rx="2" fill="#171717" stroke="#ffffff" stroke-width="2" />
           <path d="M 0 139 C -5 141 -6 148 0 150 C 6 151 7 146 3 142" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
 
-          <!-- 4-Leg Steel Wire Rope Rigging Sling -->
           <line x1="0" y1="150" x2="-60" y2="178" stroke="#ffffff" stroke-width="1.5" />
           <line x1="0" y1="150" x2="60" y2="178" stroke="#ffffff" stroke-width="1.5" />
           <line x1="0" y1="150" x2="-22" y2="178" stroke="#ffffff" stroke-width="1.5" />
           <line x1="0" y1="150" x2="22" y2="178" stroke="#ffffff" stroke-width="1.5" />
 
-          <!-- Suspended Heavy Commercial Steel I-Beam Girder (Luminous White Contrast) -->
+          <!-- Suspended Heavy Commercial Steel I-Beam Girder -->
           <g transform="translate(0, 180)">
-            <!-- Top Flange -->
             <rect x="-70" y="-5" width="140" height="5" rx="1" fill="#ffffff" stroke="#ffffff" stroke-width="1" />
-            <!-- Web -->
             <rect x="-65" y="0" width="130" height="7" fill="#404040" stroke="#ffffff" stroke-width="1" />
-            <!-- Bottom Flange -->
             <rect x="-70" y="7" width="140" height="5" rx="1" fill="#ffffff" stroke="#ffffff" stroke-width="1" />
-            <!-- Stenciled Steel Girder Identification -->
             <text x="0" y="6" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="6.5" font-weight="900" text-anchor="middle" letter-spacing="1">GIRDER #W24x162 • SWL 25T</text>
-            <!-- Heavy Rigging Shackles -->
             <circle cx="-60" cy="-3" r="2.5" fill="#ffffff" />
             <circle cx="60" cy="-3" r="2.5" fill="#ffffff" />
           </g>
@@ -736,32 +809,26 @@
        ====================================================================== -->
   <!-- Welding Station 1: Joint at (440, 135) on Level 24 -->
   <g transform="translate(440, 135)">
-    <!-- Blinding Stark White Electric Arc Flare -->
     <circle cx="0" cy="0" r="16" fill="#ffffff" filter="url(#whiteFlare)" class="anim-weld-flash1" />
     <circle cx="0" cy="0" r="6" fill="#ffffff" class="anim-weld-flash1" />
-    <!-- Cascading Molten White Sparks -->
     <circle cx="-3" cy="0" r="1.8" fill="#ffffff" class="anim-spark1" />
     <circle cx="3" cy="0" r="2" fill="#ffffff" class="anim-spark2" />
     <circle cx="0" cy="0" r="1.5" fill="#ffffff" class="anim-spark3" />
-    <!-- Ironworker Silhouette with White Hardhat -->
     <circle cx="12" cy="-6" r="3.5" fill="#ffffff" />
-    <rect x="8" y="-2" width="8" height="13" rx="1" fill="#262626" stroke="#ffffff" stroke-width="1" />
+    <rect x="8" y="-2" width="8" height="13" rx="1" fill="#242424" stroke="#ffffff" stroke-width="1" />
   </g>
 
   <!-- Welding Station 2: Joint at (580, 195) on Level 18 -->
   <g transform="translate(580, 195)">
-    <!-- Electric Arc Flare -->
     <circle cx="0" cy="0" r="15" fill="#ffffff" filter="url(#whiteFlare)" class="anim-weld-flash2" />
     <circle cx="0" cy="0" r="5" fill="#ffffff" class="anim-weld-flash2" />
-    <!-- Cascading Sparks -->
     <circle cx="-2" cy="0" r="1.8" fill="#ffffff" class="anim-spark2" />
     <circle cx="2" cy="0" r="1.5" fill="#ffffff" class="anim-spark3" />
-    <!-- Ironworker Silhouette -->
     <circle cx="-12" cy="-6" r="3.5" fill="#ffffff" />
-    <rect x="-16" y="-2" width="8" height="13" rx="1" fill="#262626" stroke="#ffffff" stroke-width="1" />
+    <rect x="-16" y="-2" width="8" height="13" rx="1" fill="#242424" stroke="#ffffff" stroke-width="1" />
   </g>
 
-  <!-- Welding Station 3: Column Splice at (510, 75) on Level 30 -->
+  <!-- Welding Station 3: Joint at (510, 75) on Level 30 -->
   <g transform="translate(510, 75)">
     <circle cx="0" cy="0" r="14" fill="#ffffff" filter="url(#whiteFlare)" class="anim-weld-flash3" />
     <circle cx="0" cy="0" r="5" fill="#ffffff" class="anim-weld-flash3" />
@@ -769,49 +836,47 @@
     <circle cx="-2" cy="0" r="1.5" fill="#ffffff" class="anim-spark2" />
   </g>
 
-  <!-- Catwalk Ironworker Riggers on High-Level Catwalks -->
-  <g transform="translate(635, 135)">
-    <circle cx="0" cy="-6" r="3.5" fill="#ffffff" />
-    <rect x="-4" y="-2" width="8" height="13" rx="1" fill="#262626" stroke="#ffffff" stroke-width="1" />
-    <!-- Signaling Arm Gesturing to Crane Operator -->
-    <line x1="-4" y1="2" x2="-14" y2="-4" stroke="#ffffff" stroke-width="2" />
-  </g>
-
   <!-- ======================================================================
-       9. CAD LASER LEVELING ELEVATION SCANNER BEAM (Stark Technical Sweep)
+       9. CAD LASER LEVELING ELEVATION SCANNER BEAM
        ====================================================================== -->
   <g class="anim-laser-scan" transform="translate(0, 130)">
-    <!-- Luminous Stark White Laser Line traversing floor slabs -->
     <line x1="340" y1="0" x2="670" y2="0" stroke="#ffffff" stroke-width="2" filter="url(#laserLineGlow)" opacity="0.9" />
-    <!-- Elevation Calibration Flag -->
     <rect x="675" y="-9" width="85" height="18" rx="2" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
     <text x="717" y="3" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="7.5" font-weight="900" text-anchor="middle">DATUM ±0.01mm</text>
   </g>
 
   <!-- ======================================================================
-       10. AUTONOMOUS BIM INSPECTION DRONE (Surveying at x=725, y=200)
+       10. AUTONOMOUS BIM INSPECTION DRONES
        ====================================================================== -->
-  <g transform="translate(720, 195)" class="anim-drone">
-    <!-- Quadcopter Rotor Arms -->
+  <!-- Drone 1: Surveying main tower at x=720, y=195 -->
+  <g transform="translate(720, 195)" class="anim-drone1">
     <line x1="-16" y1="-8" x2="16" y2="8" stroke="#ffffff" stroke-width="2" />
     <line x1="-16" y1="8" x2="16" y2="-8" stroke="#ffffff" stroke-width="2" />
-    <!-- Spinning Rotor Discs -->
     <ellipse cx="-16" cy="-8" rx="8" ry="2" fill="#ffffff" opacity="0.7" />
     <ellipse cx="16" cy="8" rx="8" ry="2" fill="#ffffff" opacity="0.7" />
     <ellipse cx="-16" cy="8" rx="8" ry="2" fill="#ffffff" opacity="0.7" />
     <ellipse cx="16" cy="-8" rx="8" ry="2" fill="#ffffff" opacity="0.7" />
-    <!-- Drone Fuselage -->
     <rect x="-8" y="-6" width="16" height="12" rx="3" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
     <circle cx="0" cy="2" r="3" fill="#ffffff" />
-    <!-- Laser Alignment Scan Pulse emitted to Building -->
     <line x1="-8" y1="2" x2="-65" y2="5" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.9" />
+  </g>
+
+  <!-- Drone 2: Surveying east wing crown at x=1040, y=130 -->
+  <g transform="translate(1040, 130)" class="anim-drone2">
+    <line x1="-14" y1="-6" x2="14" y2="6" stroke="#ffffff" stroke-width="1.8" />
+    <line x1="-14" y1="6" x2="14" y2="-6" stroke="#ffffff" stroke-width="1.8" />
+    <ellipse cx="-14" cy="-6" rx="6" ry="1.8" fill="#ffffff" opacity="0.6" />
+    <ellipse cx="14" cy="6" rx="6" ry="1.8" fill="#ffffff" opacity="0.6" />
+    <rect x="-6" y="-5" width="12" height="10" rx="2" fill="#181818" stroke="#ffffff" stroke-width="1.5" />
+    <circle cx="0" cy="1" r="2.5" fill="#ffffff" />
+    <line x1="-6" y1="1" x2="-55" y2="10" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2" opacity="0.8" />
   </g>
 
   <!-- ======================================================================
        11. ACTIVE GROUND CONSTRUCTION SITE OPERATIONS (Grade Level y=480)
        ====================================================================== -->
-  <!-- Massive Reinforced Concrete Ground Grade Slab -->
-  <rect x="0" y="480" width="1200" height="60" fill="#080808" stroke="#262626" stroke-width="2" />
+  <!-- Ground Grade Slab -->
+  <rect x="0" y="480" width="1200" height="60" fill="#060606" stroke="#222222" stroke-width="2" />
 
   <!-- Foundation Piling Caps and Grade Beams -->
   <g stroke="#ffffff" stroke-width="3">
@@ -819,113 +884,160 @@
     <line x1="630" y1="480" x2="760" y2="480" stroke-width="6" />
   </g>
 
-  <!-- Continuous Black and White Perimeter Safety Barrier (Caution Chevrons) -->
+  <!-- Continuous Black and White Perimeter Safety Barrier -->
   <rect x="0" y="474" width="1200" height="7" fill="url(#bwHazard)" stroke="#ffffff" stroke-width="0.5" />
 
-  <!-- A. HYDRAULIC HEAVY EXCAVATOR (Active Digging and Earthmoving: x=40 to x=140) -->
-  <g id="hydraulic-excavator" transform="translate(30, 435)">
-    <!-- Tracked Undercarriage / Crawlers -->
-    <rect x="60" y="32" width="65" height="14" rx="4" fill="#1c1c1c" stroke="#ffffff" stroke-width="2" />
-    <!-- Track Rollers -->
-    <circle cx="68" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
-    <circle cx="82" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
-    <circle cx="96" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
-    <circle cx="110" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+  <!-- A. EXCAVATION PIT ZONE: HYDRAULIC EXCAVATOR + HEAVY DUMP TRUCK (x=20 to x=165) -->
+  <g id="excavator-pit-zone" transform="translate(15, 435)">
+    <!-- Earth excavation trench profile -->
+    <path d="M 0 45 L 35 45 L 50 35 L 140 35" fill="none" stroke="#444444" stroke-width="2" />
 
-    <!-- Revolving Operator House / Cab -->
-    <rect x="75" y="14" width="45" height="20" rx="3" fill="#2b2b2b" stroke="#ffffff" stroke-width="2" />
-    <rect x="78" y="17" width="16" height="12" fill="#ffffff" opacity="0.85" />
-    <!-- Counterweight Rear Block -->
-    <rect x="115" y="16" width="14" height="18" rx="2" fill="#0d0d0d" stroke="#ffffff" stroke-width="1.5" />
+    <!-- 1. Hydraulic Crawler Excavator (Actively Digging) -->
+    <g id="hydraulic-excavator">
+      <!-- Crawlers -->
+      <rect x="45" y="32" width="60" height="14" rx="4" fill="#1a1a1a" stroke="#ffffff" stroke-width="2" />
+      <circle cx="53" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+      <circle cx="65" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+      <circle cx="77" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+      <circle cx="89" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+      <circle cx="99" cy="39" r="4" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+      <!-- Cab -->
+      <rect x="60" y="14" width="45" height="20" rx="3" fill="#242424" stroke="#ffffff" stroke-width="2" />
+      <rect x="63" y="17" width="16" height="12" fill="#ffffff" opacity="0.85" />
+      <rect x="98" y="16" width="12" height="18" rx="2" fill="#0d0d0d" stroke="#ffffff" stroke-width="1.5" />
 
-    <!-- Articulated Main Boom and Stick Assembly (Animated Digging Motion) -->
-    <g class="anim-excavator-arm">
-      <!-- Main Boom -->
-      <polygon points="85,20 60,-10 50,-5 80,24" fill="#262626" stroke="#ffffff" stroke-width="2" />
-      <circle cx="85" cy="22" r="3" fill="#ffffff" />
-      <!-- Hydraulic Lift Cylinder -->
-      <line x1="90" y1="20" x2="68" y2="4" stroke="#ffffff" stroke-width="2.5" />
+      <!-- Articulated Boom and Bucket -->
+      <g class="anim-excavator-arm">
+        <polygon points="70,20 45,-10 35,-5 65,24" fill="#222222" stroke="#ffffff" stroke-width="2" />
+        <circle cx="70" cy="22" r="3" fill="#ffffff" />
+        <line x1="75" y1="20" x2="53" y2="4" stroke="#ffffff" stroke-width="2.5" />
 
-      <!-- Dipper Stick and Bucket (Sub-assembly) -->
-      <g class="anim-excavator-bucket">
-        <polygon points="55,-10 25,15 32,18 60,-5" fill="#383838" stroke="#ffffff" stroke-width="2" />
-        <circle cx="55" cy="-8" r="3" fill="#ffffff" />
-        <!-- Digging Bucket with Teeth -->
-        <path d="M 25 15 L 10 30 L 22 36 L 32 18 Z" fill="#141414" stroke="#ffffff" stroke-width="2" />
-        <polygon points="10,30 6,34 14,33" fill="#ffffff" />
-        <polygon points="14,33 11,37 18,35" fill="#ffffff" />
+        <g class="anim-excavator-bucket">
+          <polygon points="40,-10 10,15 17,18 45,-5" fill="#333333" stroke="#ffffff" stroke-width="2" />
+          <circle cx="40" cy="-8" r="3" fill="#ffffff" />
+          <!-- Bucket with Teeth -->
+          <path d="M 10 15 L -5 30 L 7 36 L 17 18 Z" fill="#141414" stroke="#ffffff" stroke-width="2" />
+          <polygon points="-5,30 -9,34 -1,33" fill="#ffffff" />
+          <polygon points="-1,33 -4,37 3,35" fill="#ffffff" />
+        </g>
       </g>
+    </g>
+
+    <!-- 2. Heavy 10-Wheel Dump Truck receiving earth at x=115 -->
+    <g id="dump-truck" transform="translate(112, 10)">
+      <!-- Truck Cab -->
+      <rect x="35" y="10" width="25" height="24" rx="2" fill="#1c1c1c" stroke="#ffffff" stroke-width="1.8" />
+      <rect x="42" y="13" width="16" height="10" fill="#ffffff" opacity="0.85" />
+      <!-- Dump Bed (Tilted slightly under loading) -->
+      <polygon points="0,6 32,6 30,26 0,26" fill="#252525" stroke="#ffffff" stroke-width="2" />
+      <!-- High-Vis Chevron Stripe on Tailgate -->
+      <rect x="0" y="20" width="10" height="6" fill="url(#bwHazard)" />
+      <!-- Wheels -->
+      <circle cx="8" cy="34" r="5.5" fill="#000000" stroke="#ffffff" stroke-width="1.8" />
+      <circle cx="22" cy="34" r="5.5" fill="#000000" stroke="#ffffff" stroke-width="1.8" />
+      <circle cx="48" cy="34" r="5.5" fill="#000000" stroke="#ffffff" stroke-width="1.8" />
     </g>
   </g>
 
-  <!-- B. HEAVY CONCRETE BOOM PUMP TRUCK (Active Concrete Placement: x=170 to x=280) -->
-  <g id="concrete-boom-truck" transform="translate(170, 445)">
-    <!-- Truck Chassis and Cab -->
-    <rect x="0" y="10" width="75" height="24" rx="3" fill="#1c1c1c" stroke="#ffffff" stroke-width="2" />
-    <!-- Operator Windshield -->
+  <!-- B. HEAVY CONCRETE BOOM PUMP TRUCK (Active Concrete Placement: x=195 to x=280) -->
+  <g id="concrete-boom-truck" transform="translate(195, 445)">
+    <rect x="0" y="10" width="75" height="24" rx="3" fill="#1a1a1a" stroke="#ffffff" stroke-width="2" />
     <rect x="52" y="13" width="18" height="12" fill="#ffffff" opacity="0.85" />
-    <!-- Wheels -->
     <circle cx="15" cy="34" r="7" fill="#000000" stroke="#ffffff" stroke-width="2" />
     <circle cx="35" cy="34" r="7" fill="#000000" stroke="#ffffff" stroke-width="2" />
     <circle cx="62" cy="34" r="7" fill="#000000" stroke="#ffffff" stroke-width="2" />
 
-    <!-- Rotating Concrete Mixer Drum with Animated Spiral Markings -->
-    <ellipse cx="28" cy="8" rx="22" ry="13" fill="#2b2b2b" stroke="#ffffff" stroke-width="2" />
+    <!-- Rotating Drum with Spirals -->
+    <ellipse cx="28" cy="8" rx="22" ry="13" fill="#272727" stroke="#ffffff" stroke-width="2" />
     <path d="M 12 8 Q 28 -2 44 8" fill="none" stroke="#ffffff" stroke-width="2" class="anim-mixer-drum" />
 
-    <!-- Outrigger Hydraulic Stabilizers Deployed to Grade -->
+    <!-- Outriggers -->
     <line x1="5" y1="28" x2="-8" y2="36" stroke="#ffffff" stroke-width="3" />
     <line x1="70" y1="28" x2="82" y2="36" stroke="#ffffff" stroke-width="3" />
 
-    <!-- Articulated High-Rise Concrete Placing Boom Arm -->
+    <!-- Hydraulic Boom Arm -->
     <g stroke="#ffffff" stroke-width="3.5" fill="none">
-      <polyline points="40,8 80,-60 130,-80 230,-45" />
-      <!-- Pulsing Slurry Delivery Hose -->
-      <polyline points="40,8 80,-60 130,-80 230,-45" stroke="#ffffff" stroke-width="1.8" class="anim-concrete-pump" />
+      <polyline points="40,8 75,-60 120,-80 215,-45" />
+      <polyline points="40,8 75,-60 120,-80 215,-45" stroke="#ffffff" stroke-width="1.8" class="anim-concrete-pump" />
     </g>
-    <!-- Discharge Tremie Pipe pouring into Foundation Deck -->
-    <line x1="400" y1="400" x2="400" y2="430" stroke="#ffffff" stroke-width="3" stroke-dasharray="4 2" />
+    <!-- Discharge Pipe pouring onto deck -->
+    <line x1="410" y1="400" x2="410" y2="430" stroke="#ffffff" stroke-width="3" stroke-dasharray="4 2" />
   </g>
 
-  <!-- C. LAND SURVEYOR and PRECISION THEODOLITE (Site Activity at x=340) -->
+  <!-- C. LAND SURVEYOR and PRECISION THEODOLITE (Site Activity at x=345) -->
   <g id="surveyor-station" transform="translate(345, 475)">
-    <!-- Tripod Legs -->
     <line x1="0" y1="-18" x2="-8" y2="5" stroke="#ffffff" stroke-width="1.5" />
     <line x1="0" y1="-18" x2="8" y2="5" stroke="#ffffff" stroke-width="1.5" />
     <line x1="0" y1="-18" x2="0" y2="5" stroke="#ffffff" stroke-width="1.5" />
-    <!-- Theodolite / Total Station Unit -->
-    <rect x="-4" y="-24" width="8" height="6" rx="1" fill="#171717" stroke="#ffffff" stroke-width="1.5" />
-    <!-- Surveyor Engineer Silhouette -->
+    <rect x="-4" y="-24" width="8" height="6" rx="1" fill="#151515" stroke="#ffffff" stroke-width="1.5" />
+    <!-- Surveyor Engineer -->
     <circle cx="12" cy="-22" r="3.5" fill="#ffffff" />
-    <rect x="8" y="-18" width="8" height="14" rx="1" fill="#2b2b2b" stroke="#ffffff" stroke-width="1.2" />
+    <rect x="8" y="-18" width="8" height="14" rx="1" fill="#242424" stroke="#ffffff" stroke-width="1.2" />
     <line x1="10" y1="-4" x2="8" y2="5" stroke="#ffffff" stroke-width="2" />
     <line x1="14" y1="-4" x2="16" y2="5" stroke="#ffffff" stroke-width="2" />
+    <!-- Geodetic Azimuth Targeting Beam pointing upward to crane mast -->
+    <line x1="0" y1="-21" x2="-25" y2="-170" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 3" opacity="0.75" />
   </g>
 
-  <!-- D. RIGGING CREW and SITE SUPERINTENDENT (Ground Activity at x=480) -->
+  <!-- D. RIGGING CREW and SUPERINTENDENT (Ground Activity at x=480) -->
   <g id="ground-crew" transform="translate(480, 475)">
-    <!-- Site Superintendent with Tablet/Blueprint -->
-    <circle cx="0" cy="-20" r="3.5" fill="#ffffff" /> <!-- White Hardhat -->
-    <rect x="-4" y="-16" width="8" height="14" fill="#ffffff" /> <!-- High-Vis Stark White -->
+    <!-- Superintendent with Plan Tablet -->
+    <circle cx="0" cy="-20" r="3.5" fill="#ffffff" />
+    <rect x="-4" y="-16" width="8" height="14" fill="#ffffff" />
     <line x1="-2" y1="-2" x2="-2" y2="5" stroke="#ffffff" stroke-width="2" />
     <line x1="2" y1="-2" x2="2" y2="5" stroke="#ffffff" stroke-width="2" />
-    <!-- Holding Blueprint -->
     <rect x="4" y="-14" width="8" height="6" fill="#141414" stroke="#ffffff" stroke-width="1" />
 
-    <!-- Rigger Signaling with Orange Baton Silhouettes -->
+    <!-- Rigger Signaling -->
     <g transform="translate(25, 0)">
       <circle cx="0" cy="-20" r="3.5" fill="#ffffff" />
       <rect x="-4" y="-16" width="8" height="14" fill="#a3a3a3" stroke="#ffffff" stroke-width="1" />
       <line x1="-2" y1="-2" x2="-2" y2="5" stroke="#ffffff" stroke-width="2" />
       <line x1="2" y1="-2" x2="2" y2="5" stroke="#ffffff" stroke-width="2" />
-      <!-- Raised Signaling Arms -->
       <line x1="-4" y1="-12" x2="-10" y2="-22" stroke="#ffffff" stroke-width="2" />
       <line x1="4" y1="-12" x2="10" y2="-22" stroke="#ffffff" stroke-width="2" />
     </g>
   </g>
 
-  <!-- E. GROUND MATERIAL STAGING YARD (x=730 to x=775) -->
-  <g id="material-staging" transform="translate(735, 472)">
+  <!-- E. MOBILE CRAWLER CRANE HOISTING REBAR BUNDLE (Ground Right: x=705 to x=760) -->
+  <g id="mobile-crawler-crane" transform="translate(710, 440)">
+    <!-- Crawlers -->
+    <rect x="0" y="28" width="48" height="12" rx="3" fill="#171717" stroke="#ffffff" stroke-width="1.8" />
+    <circle cx="7" cy="34" r="3.5" fill="#000000" stroke="#ffffff" stroke-width="1" />
+    <circle cx="18" cy="34" r="3.5" fill="#000000" stroke="#ffffff" stroke-width="1" />
+    <circle cx="30" cy="34" r="3.5" fill="#000000" stroke="#ffffff" stroke-width="1" />
+    <circle cx="41" cy="34" r="3.5" fill="#000000" stroke="#ffffff" stroke-width="1" />
+    <!-- Revolving Upper Cab -->
+    <rect x="8" y="14" width="32" height="15" rx="2" fill="#252525" stroke="#ffffff" stroke-width="1.8" />
+    <rect x="24" y="16" width="12" height="9" fill="#ffffff" opacity="0.8" />
+    <!-- Counterweight -->
+    <rect x="2" y="16" width="8" height="12" fill="#0a0a0a" stroke="#ffffff" stroke-width="1" />
+
+    <!-- Angled Lattice Boom (Length 75px) -->
+    <line x1="32" y1="18" x2="72" y2="-45" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="32" y1="24" x2="72" y2="-45" stroke="#ffffff" stroke-width="1.5" />
+    <path d="M 32 24 L 42 0 L 52 10 L 62 -18 L 72 -45" stroke="#888888" stroke-width="1" fill="none" />
+    <circle cx="72" cy="-45" r="2.5" fill="#ffffff" class="anim-strobe-fast" />
+
+    <!-- Animated Hoist Cable and Pipe Bundle -->
+    <g transform="translate(72, -45)">
+      <g class="anim-crawler-hoist">
+        <line x1="0" y1="0" x2="0" y2="40" stroke="#ffffff" stroke-width="1.2" />
+        <rect x="-5" y="40" width="10" height="7" rx="1" fill="#141414" stroke="#ffffff" stroke-width="1.2" />
+        <!-- Suspended Bundle of Pipes -->
+        <g transform="translate(-16, 47)">
+          <circle cx="4" cy="4" r="3" fill="#222222" stroke="#ffffff" stroke-width="1" />
+          <circle cx="10" cy="4" r="3" fill="#222222" stroke="#ffffff" stroke-width="1" />
+          <circle cx="16" cy="4" r="3" fill="#222222" stroke="#ffffff" stroke-width="1" />
+          <circle cx="7" cy="9" r="3" fill="#222222" stroke="#ffffff" stroke-width="1" />
+          <circle cx="13" cy="9" r="3" fill="#222222" stroke="#ffffff" stroke-width="1" />
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- F. MATERIAL STAGING YARD and SECURITY BOOTH (x=770 to x=825) -->
+  <g id="material-staging" transform="translate(775, 472)">
     <!-- Stack of Heavy Steel I-Beams -->
     <rect x="0" y="-12" width="35" height="4" fill="#ffffff" />
     <rect x="0" y="-8" width="35" height="4" fill="#a3a3a3" />
@@ -936,8 +1048,7 @@
     <line x1="42" y1="-4" x2="68" y2="-4" stroke="#ffffff" stroke-width="2" />
   </g>
 
-  <!-- F. GROUND FLOODLIGHT STANCHIONS (Luminous White Beams) -->
-  <!-- Floodlight Stanchion 1 (Left: x=270, y=480) -->
+  <!-- G. GROUND FLOODLIGHT STANCHIONS (Luminous White Beams) -->
   <g transform="translate(270, 480)">
     <line x1="0" y1="0" x2="0" y2="-40" stroke="#ffffff" stroke-width="3" />
     <polygon points="-12,0 12,0 0,-18" fill="none" stroke="#ffffff" stroke-width="1.8" />
@@ -945,7 +1056,6 @@
     <circle cx="3" cy="-42" r="5" fill="#ffffff" filter="url(#whiteFlare)" />
   </g>
 
-  <!-- Floodlight Stanchion 2 (Right: x=760, y=480) -->
   <g transform="translate(760, 480)">
     <line x1="0" y1="0" x2="0" y2="-40" stroke="#ffffff" stroke-width="3" />
     <polygon points="-12,0 12,0 0,-18" fill="none" stroke="#ffffff" stroke-width="1.8" />
@@ -958,9 +1068,8 @@
        ====================================================================== -->
   <!-- Top-Left Site Command Status Card -->
   <g transform="translate(25, 20)">
-    <rect width="265" height="100" rx="6" fill="#050505" stroke="#ffffff" stroke-width="1.8" />
+    <rect width="270" height="105" rx="6" fill="#040404" stroke="#ffffff" stroke-width="1.8" />
     
-    <!-- Header with Pulsing White Beacon -->
     <circle cx="16" cy="18" r="4" fill="#ffffff" />
     <circle cx="16" cy="18" r="4" fill="none" stroke="#ffffff" stroke-width="1.5">
       <animate attributeName="r" values="4;13" dur="1.8s" repeatCount="indefinite" />
@@ -970,7 +1079,6 @@
       COMMERCIAL SITE • TOWER ALPHA
     </text>
 
-    <!-- Metrics in High-Contrast Monochrome -->
     <g font-family="'JetBrains Mono', Courier" font-size="8.5" fill="#d4d4d4" transform="translate(14, 40)">
       <text x="0" y="0">STRUCTURAL CORE : <tspan fill="#ffffff" font-weight="800">LEVEL 34 [ACTIVE JUMP]</tspan></text>
       <text x="0" y="16">STEEL SUPERSTRUCTURE: <tspan fill="#ffffff" font-weight="800">LEVEL 26 (94% RIGID)</tspan></text>
@@ -980,10 +1088,9 @@
   </g>
 
   <!-- Top-Right Crane Operations and Safety Telemetry Card -->
-  <g transform="translate(905, 20)">
-    <rect width="270" height="100" rx="6" fill="#050505" stroke="#ffffff" stroke-width="1.8" />
+  <g transform="translate(900, 20)">
+    <rect width="275" height="105" rx="6" fill="#040404" stroke="#ffffff" stroke-width="1.8" />
     
-    <!-- Header with Strobe Beacon -->
     <circle cx="16" cy="18" r="4" fill="#ffffff" />
     <circle cx="16" cy="18" r="4" fill="none" stroke="#ffffff" stroke-width="1.5">
       <animate attributeName="r" values="4;13" dur="1.5s" repeatCount="indefinite" />
@@ -993,25 +1100,24 @@
       CRANE OPERATIONS &amp; SAFETY
     </text>
 
-    <!-- Metrics -->
     <g font-family="'JetBrains Mono', Courier" font-size="8.5" fill="#d4d4d4" transform="translate(14, 40)">
-      <text x="0" y="0">TOWER CRANE-01 : <tspan fill="#ffffff" font-weight="800">18.4t [GIRDER HOIST]</tspan></text>
-      <text x="0" y="16">TOWER CRANE-02 : <tspan fill="#ffffff" font-weight="800">9.1t  [CONCRETE SKIP]</tspan></text>
-      <text x="0" y="32">ANEMOMETER GUST : <tspan fill="#ffffff" font-weight="800">12 KNOTS [SAFE HOIST]</tspan></text>
-      <text x="0" y="48">SAFETY RECORD   : <tspan fill="#ffffff" font-weight="800">ZERO INCIDENTS • 100%</tspan></text>
+      <text x="0" y="0">CRANE-01 (HAMMERHEAD): <tspan fill="#ffffff" font-weight="800">18.4t [GIRDER HOIST]</tspan></text>
+      <text x="0" y="16">CRANE-02 (EAST JIB)  : <tspan fill="#ffffff" font-weight="800">9.1t  [CONCRETE SKIP]</tspan></text>
+      <text x="0" y="32">CRANE-03 (CORE LUFF) : <tspan fill="#ffffff" font-weight="800">6.2t  [REBAR CAGE]</tspan></text>
+      <text x="0" y="48">ANEMOMETER GUST      : <tspan fill="#ffffff" font-weight="800">11 KNOTS [SAFE HOIST]</tspan></text>
     </g>
   </g>
 
   <!-- Bottom Coordinate and Telemetry Banner Strip -->
   <g transform="translate(0, 516)">
-    <rect width="1200" height="24" fill="#000000" stroke="#262626" stroke-width="1" />
+    <rect width="1200" height="24" fill="#000000" stroke="#222222" stroke-width="1" />
     <g font-family="'JetBrains Mono', Courier" font-size="8.2" fill="#888888" transform="translate(25, 16)">
-      <text x="0" y="0">BIM MODEL: REVIT-LOD400 • SITE GPS: 40°42'46"N 74°00'21"W • TOTAL REBAR: 14,200t • CONCRETE CLASS: C60/75 • REAL-TIME SENSORS: 512</text>
+      <text x="0" y="0">BIM MODEL: REVIT-LOD400 • SITE GPS: 40°42'46"N 74°00'21"W • TOTAL REBAR: 14,200t • CONCRETE CLASS: C60/75 • SENSORS: 642 NODES</text>
       <text x="1150" y="0" text-anchor="end" fill="#ffffff" font-weight="900">COMMERCIAL BUILDING SITE ACTIVE [MONOCHROME CAD] ⚡</text>
     </g>
   </g>
 
-  <!-- Outer Structural Framing Borders (Stark High Contrast) -->
+  <!-- Outer Structural Framing Borders -->
   <line x1="0" y1="0" x2="1200" y2="0" stroke="#ffffff" stroke-width="3" />
   <line x1="0" y1="540" x2="1200" y2="540" stroke="#ffffff" stroke-width="3" />
   <line x1="0" y1="0" x2="0" y2="540" stroke="#ffffff" stroke-width="3" />
