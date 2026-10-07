@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-90%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="90 Skills"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-19%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="19 Tracks"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-100%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="100 Skills"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-20%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="20 Tracks"></a>
   <a href="#"><img src="https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Cursor%20%7C%20Claude-10b981?style=for-the-badge&logo=openai&logoColor=white" alt="Agent Ready"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge" alt="License"></a>
 </p>
@@ -13,7 +13,7 @@
 
 > 🌐 **Interactive Animated Showcase Site**: Visit the live single-page web app in [`docs/index.html`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/docs/index.html) with 60 FPS interactive particle constellation animations, instant search, track filters, and 1-click prompt copies! Easily deployed to **GitHub Pages** via the `/docs` folder.
 
-A comprehensive, production-grade suite of **90 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, and **Professional QA & SDET Test Architect** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, and Session-Based Test Management (SBTM).
+A comprehensive, production-grade suite of **100 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, **Professional QA & SDET Test Architect**, and **Principal Anti-Slop Code Simplifier** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, Session-Based Test Management (SBTM), and the ruthless elimination of AI code slop, phantom dependencies, mock theater, context window bloat, and vibe-coding technical debt.
 
 Designed for modern AI coding agents (**Antigravity**, **Gemini CLI**, **Cursor**, **Claude Code**, **Copilot Workspace**, and **Windsurf**), this repository provides modular, standardized runbooks (`SKILL.md`) that instruct AI agents how to think and operate as domain experts across every organizational role.
 
@@ -151,14 +151,27 @@ flowchart TD
         S88 & S89 --> S90["90: Exploratory Testing & SBTM Charters"]
     end
 
-    S80 & S90 & S22 -.->|Continuous Feedback Loop| S27
+    subgraph S14["14. AI Slop Removal, Code De-Bloating & Sanitization"]
+        S18 --> S91["91: AI Code De-Slopping & Simplification"]
+        S91 --> S92["92: Hallucinated Dependency & API Auditing"]
+        S91 --> S93["93: AI Test De-Slopping & Mock Eradication"]
+        S91 --> S94["94: AI Doc & PR Humanization (Anti-Buzzword)"]
+        S91 --> S95["95: Anti-Slop Linters & AST Guardrails"]
+        S95 --> S96["96: Context Window Pruning & Token Diet"]
+        S95 --> S97["97: Synthetic Data Cleaning & Model Collapse"]
+        S91 --> S98["98: AI Code Smell Deodorizing (Zombie Args)"]
+        S91 --> S99["99: Insecure AI Defaults & ReDoS Remediation"]
+        S98 & S99 --> S100["100: Vibe-Coding Recovery & Debt Rehabilitation"]
+    end
+
+    S80 & S90 & S100 & S22 -.->|Continuous Feedback Loop| S27
 ```
 
 ---
 
-## 🏛️ The 19 Functional Organizational Tracks
+## 🏛️ The 20 Functional Organizational Tracks
 
-The 90 skills are organized into 19 distinct professional disciplines:
+The 100 skills are organized into 20 distinct professional disciplines:
 
 | Track | Focus Area | Skills Included |
 | :--- | :--- | :--- |
@@ -181,10 +194,11 @@ The 90 skills are organized into 19 distinct professional disciplines:
 | **Track Q** | Mobile, Native & Multi-Platform Application Engineering | `71`, `72`, `73`, `74`, `75`, `76`, `77`, `78`, `79`, `80` |
 | **Track R** | Software Design & Architecture (SDA) & System Design Authority | `81`, `82`, `83` |
 | **Track S** | Professional Software Testing, QA & SDET Excellence | `84`, `85`, `86`, `87`, `88`, `89`, `90` |
+| **Track T** | AI Slop Removal, Code De-Bloating & LLM Output Sanitization | `91`, `92`, `93`, `94`, `95`, `96`, `97`, `98`, `99`, `100` |
 
 ---
 
-## 📚 Master Skills Directory & Catalog (90 Skills)
+## 📚 Master Skills Directory & Catalog (100 Skills)
 
 | # | Skill Directory | Track | Role & Capabilities | Key Deliverables |
 | :-: | :--- | :--- | :--- | :--- |
@@ -278,6 +292,16 @@ The 90 skills are organized into 19 distinct professional disciplines:
 | `88` | [`88-mutation-testing-and-test-suite-resilience`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/88-mutation-testing-and-test-suite-resilience/SKILL.md) | QA & Testing | **Test Quality Architect**: Mutation testing (Stryker, Pitest), eliminating surviving mutants, flaky test quarantine architectures, test parallelization. | Stryker Configs, Flaky Quarantine Pipelines |
 | `89` | [`89-mobile-test-automation-appium-maestro`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/89-mobile-test-automation-appium-maestro/SKILL.md) | QA & Testing | **Lead Mobile QA / SDET**: Declarative Maestro YAML flows, Appium 2.0, biometric simulation, airplane mode testing, cloud device farm orchestration. | Maestro Test Flows, Device Farm CI Workflows |
 | `90` | [`90-exploratory-testing-and-session-based-test-management`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/90-exploratory-testing-and-session-based-test-management/SKILL.md) | QA & Testing | **Principal Exploratory Tester**: Session-Based Test Management (SBTM), charter-driven exploration, testing tours, SFDIPOT/FEW HICCUPPS heuristics, Bug Bashes. | Test Charters, TBS Session Logs, Bug Bash Guides |
+| `91` | [`91-ai-code-deslopping-and-simplification`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/91-ai-code-deslopping-and-simplification/SKILL.md) | Anti-Slop | **Principal Code Simplifier**: Strip AI boilerplate, eliminate patronizing comments, remove redundant wrappers, enforce dense idiomatic logic. | De-Slopped Codebases, Complexity Reductions |
+| `92` | [`92-hallucinated-dependency-and-phantom-api-auditing`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/92-hallucinated-dependency-and-phantom-api-auditing/SKILL.md) | Anti-Slop | **Supply Chain Auditor**: Detect hallucinated npm/PyPI dependencies, eliminate phantom methods, audit lockfiles against supply chain attacks. | Dependency Verification Scripts, AST Audits |
+| `93` | [`93-ai-test-deslopping-and-assertion-hardening`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/93-ai-test-deslopping-and-assertion-hardening/SKILL.md) | Anti-Slop | **Test Integrity Auditor**: Eradicate AI mock theater, eliminate tautological `toBeDefined()` placebo tests, harden assertions with state verification. | Hardened Test Suites, Anti-Mock Guidelines |
+| `94` | [`94-ai-documentation-and-pr-humanization`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/94-ai-documentation-and-pr-humanization/SKILL.md) | Anti-Slop | **Technical Editor**: Purge robotic AI buzzwords (delve, testament, pivotal), replace generic bullet walls with BLUF summaries, fix dead links. | High-Signal PR Descriptions, BLUF Docs |
+| `95` | [`95-anti-slop-linter-rules-and-ast-guardrails`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/95-anti-slop-linter-rules-and-ast-guardrails/SKILL.md) | Anti-Slop | **DevEx Gatekeeper**: Automated Semgrep & ESLint anti-slop rules, block swallowed exceptions, enforce nesting and complexity budgets in CI. | Semgrep Anti-Slop YAMLs, ESLint AST Rules |
+| `96` | [`96-context-window-pruning-and-token-diet`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/96-context-window-pruning-and-token-diet/SKILL.md) | Anti-Slop | **Context Engineer**: Agent context pruning, token diet budgets, AST skeleton generation, eliminate prompt echoes, maximize prompt caching. | Token Diet Budgets, AST Skeleton Scripts |
+| `97` | [`97-synthetic-data-cleaning-and-model-collapse-prevention`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/97-synthetic-data-cleaning-and-model-collapse-prevention/SKILL.md) | Anti-Slop | **AI Data Engineer**: MinHash LSH deduplication, purge recursive synthetic data loops, prevent model collapse, filter AI cliché phrasing. | MinHash Dedup Pipelines, Degeneracy Filters |
+| `98` | [`98-ai-code-smell-detection-and-deodorizing`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/98-ai-code-smell-detection-and-deodorizing/SKILL.md) | Anti-Slop | **Code Quality Fellow**: Detect AI smells (zombie parameters, amnesiac reinvented helpers, placebo retries, hallucinated config keys). | Deodorized Refactoring Plans, Clean Signatures |
+| `99` | [`99-insecure-ai-defaults-and-exploit-remediation`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/99-insecure-ai-defaults-and-exploit-remediation/SKILL.md) | Anti-Slop | **Security Auditor**: Remediate insecure AI defaults (SQL template injection, fallback secret bypasses, disabled TLS checks, ReDoS regexes). | Hardened Parameterized Queries, Secret Validators |
+| `100` | [`100-vibe-coding-remediation-and-technical-debt-recovery`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/100-vibe-coding-remediation-and-technical-debt-recovery/SKILL.md) | Anti-Slop | **Architecture Recovery Fellow**: 5-phase rehabilitation of vibe-coded repositories, characterization test nets, schema extraction, god file strangler. | Characterization Suites, Schema Migrations |
 
 ---
 
@@ -287,7 +311,7 @@ The 90 skills are organized into 19 distinct professional disciplines:
 
 #### On Windows (PowerShell):
 ```powershell
-# Copy all 90 skills to a target project:
+# Copy all 100 skills to a target project:
 .\install-skills.ps1 -Destination "C:\Path\To\MyProject"
 
 # Or install globally for all projects on your machine:
@@ -468,6 +492,38 @@ chmod +x install-skills.sh
 "Conduct a charter-driven exploratory testing session using exploratory-testing-and-session-based-test-management with SFDIPOT heuristics and compile a quantified TBS session log."
 ```
 
+### AI Slop Removal & Code Sanitization Prompts
+```text
+"De-slop our bloated services using ai-code-deslopping-and-simplification to strip patronizing comments, eliminate redundant wrappers, and refactor 80 lines into 15 lines of dense TypeScript."
+```
+```text
+"Audit our dependencies using hallucinated-dependency-and-phantom-api-auditing to verify every npm/PyPI package against official registries and eliminate phantom library methods."
+```
+```text
+"Eradicate mock theater and tautological tests using ai-test-deslopping-and-assertion-hardening to replace shallow toBeDefined assertions with state-verifying contracts."
+```
+```text
+"Humanize our pull request descriptions and documentation using ai-documentation-and-pr-humanization to purge robotic buzzwords like 'delve' and 'testament' with concise BLUF memos."
+```
+```text
+"Enforce automated anti-slop guardrails using anti-slop-linter-rules-and-ast-guardrails with custom Semgrep and ESLint rules to block swallowed exceptions and complexity bloat."
+```
+```text
+"Prune our agent context window using context-window-pruning-and-token-diet with AST skeleton generation and optimized prompt cache ordering."
+```
+```text
+"Clean our synthetic instruction-tuning dataset using synthetic-data-cleaning-and-model-collapse-prevention with MinHash LSH deduplication and linguistic degeneracy filters."
+```
+```text
+"Deodorize our codebase using ai-code-smell-detection-and-deodorizing to eliminate zombie parameters, consolidate amnesiac reinvented helpers, and fix placebo retries."
+```
+```text
+"Audit our application against insecure LLM code shortcuts using insecure-ai-defaults-and-exploit-remediation to eliminate SQL template injection and permissive CORS wildcards."
+```
+```text
+"Rehabilitate our vibe-coded repository using vibe-coding-remediation-and-technical-debt-recovery through characterization test nets, schema extraction, and god file strangler refactoring."
+```
+
 ---
 
 ## 🚀 How to Push to GitHub & Enable Animated GitHub Pages
@@ -483,7 +539,7 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "feat: complete suite of 90 enterprise AI agent skills and animated showcase"
+git commit -m "feat: complete suite of 100 enterprise AI agent skills and animated showcase"
 
 # Set primary branch to main
 git branch -M main
@@ -508,7 +564,7 @@ git push -u origin main
 
 Your live site features:
 - **Interactive 60 FPS Particle Constellation Canvas** with mouse gravity.
-- **Dynamic Search & Instant Filtering** across all 90 skills.
+- **Dynamic Search & Instant Filtering** across all 100 skills.
 - **Interactive Skill Runbook Drawer** with 1-click prompt copying.
 - **Native Animated SVG Header** rendering directly in GitHub's markdown view.
 

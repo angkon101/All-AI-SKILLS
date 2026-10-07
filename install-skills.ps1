@@ -16,7 +16,7 @@
 
 .PARAMETER SkillName
     Optional. Name of a specific skill folder to copy (e.g. '01-requirements-spec').
-    If omitted, all 90 skills are copied.
+    If omitted, all 100 skills are copied.
 
 .EXAMPLE
     .\install-skills.ps1 -Destination "C:\Projects\my-new-microservice"
