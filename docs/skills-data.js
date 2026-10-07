@@ -1,0 +1,592 @@
+window.SKILLS_DATA = {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "master-ai-agent-skills-enterprise-engineering",
+  "version": "6.0.0",
+  "description": "Comprehensive suite of 70 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, and Principal Cybersecurity & Threat Defense Architect: from executive strategy and full-stack type safety, to OWASP API Top 10, WAF/DDoS, DLP, red teaming, eBPF Blue Team SOC, Zero Trust IAM, Vault secrets, and container hardening.",
+  "tracks": [
+    {
+      "id": "track-strategy-and-user-research",
+      "name": "Track A: Executive Strategy, Market Inception & User Research",
+      "skills": ["27-product-strategy-and-market-research", "40-user-research-and-usability-testing", "26-business-analysis-and-process-modeling", "32-executive-stakeholder-communication"]
+    },
+    {
+      "id": "track-research-and-principal-thinking",
+      "name": "Track B: Deep Technical Research & Principal Systems Thinking",
+      "skills": ["23-deep-technical-research-and-rfcs", "24-principal-systems-thinking", "25-build-vs-buy-evaluation", "31-team-topologies-and-org-design"]
+    },
+    {
+      "id": "track-ai-and-agent-architectures",
+      "name": "Track C: AI Systems, LLMs & Autonomous Agent Architectures",
+      "skills": ["33-llm-and-rag-system-architecture", "34-ai-agent-design-and-tool-use"]
+    },
+    {
+      "id": "track-system-architecture-and-specs",
+      "name": "Track D: System Architecture, Domain Modeling & Event Sourcing",
+      "skills": ["01-requirements-spec", "02-domain-driven-design", "03-system-architecture-design", "04-architecture-decision-records", "05-api-contract-design", "06-event-and-messaging-design", "44-event-sourcing-and-cqrs"]
+    },
+    {
+      "id": "track-edge-networking-and-service-mesh",
+      "name": "Track E: Edge Networking, API Gateways & Service Mesh",
+      "skills": ["37-api-gateway-and-service-mesh"]
+    },
+    {
+      "id": "track-data-engineering-and-storage",
+      "name": "Track F: Data Engineering, Lakehouses, Storage Engines & Sharding",
+      "skills": ["07-database-modeling-and-migrations", "08-caching-and-data-stores", "35-data-pipeline-and-streaming-architecture", "42-database-internals-and-storage-engines", "50-database-sharding-and-partitioning"]
+    },
+    {
+      "id": "track-distributed-systems-and-performance",
+      "name": "Track G: Distributed Systems, Consensus & Low-Latency Performance",
+      "skills": ["41-distributed-consensus-and-replication", "43-high-performance-and-low-latency"]
+    },
+    {
+      "id": "track-security-and-cryptography",
+      "name": "Track H: Security Architecture, Applied Cryptography & GRC",
+      "skills": ["09-security-and-threat-modeling", "30-compliance-governance-and-risk", "39-devsecops-and-supply-chain-security", "47-applied-cryptography-and-data-protection"]
+    },
+    {
+      "id": "track-saas-and-multi-tenancy",
+      "name": "Track I: Enterprise Multi-Tenancy & SaaS Architecture",
+      "skills": ["45-multi-tenant-saas-architecture"]
+    },
+    {
+      "id": "track-software-engineering-and-patterns",
+      "name": "Track J: Core Software Engineering & Clean Code",
+      "skills": ["10-clean-architecture-and-solid", "11-design-patterns-and-idioms", "12-resilience-and-error-handling", "13-concurrency-and-async-systems"]
+    },
+    {
+      "id": "track-super-expert-fullstack-frameworks",
+      "name": "Track K: Super Expert Full-Stack Frameworks & Type Safety",
+      "skills": ["51-end-to-end-type-safety-and-trpc", "52-ssr-rsc-and-modern-fullstack-frameworks", "53-advanced-form-architecture-and-validation", "57-fullstack-auth-sessions-and-passkeys", "58-media-processing-and-edge-delivery", "59-fullstack-monorepo-and-turborepo"]
+    },
+    {
+      "id": "track-realtime-localfirst-and-motion",
+      "name": "Track L: Real-Time Multiplayer, Local-First Sync & UI Motion",
+      "skills": ["54-realtime-collaboration-websockets-and-crdts", "55-offline-first-indexeddb-and-local-sync", "56-web-animations-and-60fps-ui-performance", "14-frontend-architecture-and-state", "49-micro-frontends-and-modular-web"]
+    },
+    {
+      "id": "track-testing-analytics-and-debugging",
+      "name": "Track M: Quality Engineering, Full-Stack Debugging & Product Analytics",
+      "skills": ["15-test-driven-development", "16-integration-and-e2e-testing", "17-performance-and-load-testing", "28-data-analytics-and-experimentation", "60-fullstack-debugging-and-devtools-profiling"]
+    },
+    {
+      "id": "track-code-review-and-tooling",
+      "name": "Track N: Code Review, Quality Audit & AST Codemods",
+      "skills": ["18-code-review-and-audit", "19-refactoring-and-debt-reduction", "48-ast-codemods-and-developer-tooling"]
+    },
+    {
+      "id": "track-devops-sre-and-operations",
+      "name": "Track O: DevOps, GitOps, SRE, Chaos & Operations",
+      "skills": ["20-containerization-and-devops", "21-observability-and-telemetry", "29-cloud-economics-and-finops", "36-chaos-engineering-and-disaster-recovery", "38-sre-slo-and-error-budget-engineering", "46-infrastructure-as-code-and-gitops", "22-incident-debugging-and-runbooks"]
+    },
+    {
+      "id": "track-cybersecurity-and-threat-defense",
+      "name": "Track P: Cybersecurity Engineering, Threat Defense & Data Protection",
+      "skills": [
+        "61-api-security-and-zero-trust-gateways",
+        "62-cyber-attack-prevention-and-waf",
+        "63-data-security-dlp-and-tokenization",
+        "64-penetration-testing-and-red-teaming",
+        "65-siem-detection-and-incident-response",
+        "66-iam-zero-trust-and-rbac-rebac",
+        "67-secrets-lifecycle-and-vault-architecture",
+        "68-runtime-defense-and-container-hardening",
+        "69-cloud-security-posture-and-kubernetes-hardening",
+        "70-vulnerability-management-and-cvss-triage"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "01-requirements-spec",
+      "name": "requirements-spec",
+      "path": "skills/01-requirements-spec/SKILL.md",
+      "category": "Specification",
+      "summary": "Product Requirement Documents (PRDs), user stories with acceptance criteria, and NFR quantification."
+    },
+    {
+      "id": "02-domain-driven-design",
+      "name": "domain-driven-design",
+      "path": "skills/02-domain-driven-design/SKILL.md",
+      "category": "Domain Modeling",
+      "summary": "Strategic and tactical DDD, Bounded Contexts, Ubiquitous Language, Aggregates, and Value Objects."
+    },
+    {
+      "id": "03-system-architecture-design",
+      "name": "system-architecture-design",
+      "path": "skills/03-system-architecture-design/SKILL.md",
+      "category": "System Design",
+      "summary": "High-level architectural topology, C4 model diagrams, and distributed trade-offs (CAP/PACELC)."
+    },
+    {
+      "id": "04-architecture-decision-records",
+      "name": "architecture-decision-records",
+      "path": "skills/04-architecture-decision-records/SKILL.md",
+      "category": "Architecture",
+      "summary": "Standardized ADR authoring, trade-off matrix evaluation, and architectural lifecycle tracking."
+    },
+    {
+      "id": "05-api-contract-design",
+      "name": "api-contract-design",
+      "path": "skills/05-api-contract-design/SKILL.md",
+      "category": "Protocols & Contracts",
+      "summary": "Contract-first OpenAPI 3.1, gRPC Protobuf, cursor pagination, and RFC 7807 error taxonomy."
+    },
+    {
+      "id": "06-event-and-messaging-design",
+      "name": "event-and-messaging-design",
+      "path": "skills/06-event-and-messaging-design/SKILL.md",
+      "category": "Messaging",
+      "summary": "CloudEvents, message broker patterns, Transactional Outbox, DLQ topologies, and Sagas."
+    },
+    {
+      "id": "07-database-modeling-and-migrations",
+      "name": "database-modeling-and-migrations",
+      "path": "skills/07-database-modeling-and-migrations/SKILL.md",
+      "category": "Database Engineering",
+      "summary": "Relational schema design, UUIDv7 PKs, index tuning, and zero-downtime expand-and-contract migrations."
+    },
+    {
+      "id": "08-caching-and-data-stores",
+      "name": "caching-and-data-stores",
+      "path": "skills/08-caching-and-data-stores/SKILL.md",
+      "category": "Caching",
+      "summary": "Distributed caching patterns, TTL jitter, thundering herd mitigation, and Redis distributed locks."
+    },
+    {
+      "id": "09-security-and-threat-modeling",
+      "name": "security-and-threat-modeling",
+      "path": "skills/09-security-and-threat-modeling/SKILL.md",
+      "category": "Security",
+      "summary": "STRIDE threat modeling, OWASP Top 10 mitigation, OAuth2/OIDC/JWT hardening, and secret hygiene."
+    },
+    {
+      "id": "10-clean-architecture-and-solid",
+      "name": "clean-architecture-and-solid",
+      "path": "skills/10-clean-architecture-and-solid/SKILL.md",
+      "category": "Software Architecture",
+      "summary": "Hexagonal / Ports-and-Adapters architecture, dependency inversion rule, and SOLID principles."
+    },
+    {
+      "id": "11-design-patterns-and-idioms",
+      "name": "design-patterns-and-idioms",
+      "path": "skills/11-design-patterns-and-idioms/SKILL.md",
+      "category": "Design Patterns",
+      "summary": "GoF patterns (Builder, Strategy, Observer, Adapter), Specification pattern, and Result/Either idiom."
+    },
+    {
+      "id": "12-resilience-and-error-handling",
+      "name": "resilience-and-error-handling",
+      "path": "skills/12-resilience-and-error-handling/SKILL.md",
+      "category": "Resilience",
+      "summary": "Circuit Breakers, Exponential Backoff with Jitter, Bulkheads, Rate Limiting, and domain errors."
+    },
+    {
+      "id": "13-concurrency-and-async-systems",
+      "name": "concurrency-and-async-systems",
+      "path": "skills/13-concurrency-and-async-systems/SKILL.md",
+      "category": "Concurrency",
+      "summary": "Race condition mitigation, optimistic vs pessimistic locking, deadlock avoidance, and bounded worker pools."
+    },
+    {
+      "id": "14-frontend-architecture-and-state",
+      "name": "frontend-architecture-and-state",
+      "path": "skills/14-frontend-architecture-and-state/SKILL.md",
+      "category": "Frontend",
+      "summary": "Component hierarchy, 3-tier state model (Server/Client/URL), design tokens, and WCAG 2.1 AA a11y."
+    },
+    {
+      "id": "15-test-driven-development",
+      "name": "test-driven-development",
+      "path": "skills/15-test-driven-development/SKILL.md",
+      "category": "Testing",
+      "summary": "Red-Green-Refactor loop, AAA pattern, test doubles (Stubs/Spies/Fakes/Mocks), and behavior testing."
+    },
+    {
+      "id": "16-integration-and-e2e-testing",
+      "name": "integration-and-e2e-testing",
+      "path": "skills/16-integration-and-e2e-testing/SKILL.md",
+      "category": "Testing",
+      "summary": "Testcontainers for real database tests, MSW/WireMock HTTP mocking, and Playwright Page Object Model."
+    },
+    {
+      "id": "17-performance-and-load-testing",
+      "name": "performance-and-load-testing",
+      "path": "skills/17-performance-and-load-testing/SKILL.md",
+      "category": "Performance",
+      "summary": "k6 load simulation scripts, latency percentiles (p95/p99), memory leak profiling, and EXPLAIN ANALYZE."
+    },
+    {
+      "id": "18-code-review-and-audit",
+      "name": "code-review-and-audit",
+      "path": "skills/18-code-review-and-audit/SKILL.md",
+      "category": "Code Quality",
+      "summary": "Multi-dimensional PR evaluation, Conventional Comments (Blocker/Suggestion/Nit), and actionable diffs."
+    },
+    {
+      "id": "19-refactoring-and-debt-reduction",
+      "name": "refactoring-and-debt-reduction",
+      "path": "skills/19-refactoring-and-debt-reduction/SKILL.md",
+      "category": "Refactoring",
+      "summary": "Fowler refactoring catalog, characterization tests, Strangler Fig pattern, and Branch by Abstraction."
+    },
+    {
+      "id": "20-containerization-and-devops",
+      "name": "containerization-and-devops",
+      "path": "skills/20-containerization-and-devops/SKILL.md",
+      "category": "DevOps",
+      "summary": "Multi-stage Dockerfiles, non-root security, Docker Compose dev environments, and GitHub Actions CI/CD."
+    },
+    {
+      "id": "21-observability-and-telemetry",
+      "name": "observability-and-telemetry",
+      "path": "skills/21-observability-and-telemetry/SKILL.md",
+      "category": "Observability",
+      "summary": "Structured JSON logging with trace context, OpenTelemetry tracing, Prometheus RED metrics, and health probes."
+    },
+    {
+      "id": "22-incident-debugging-and-runbooks",
+      "name": "incident-debugging-and-runbooks",
+      "path": "skills/22-incident-debugging-and-runbooks/SKILL.md",
+      "category": "Operations",
+      "summary": "Incident triage, mitigation-first protocol, 5 Whys RCA, blameless postmortems, and operational runbooks."
+    },
+    {
+      "id": "23-deep-technical-research-and-rfcs",
+      "name": "deep-technical-research-and-rfcs",
+      "path": "skills/23-deep-technical-research-and-rfcs/SKILL.md",
+      "category": "Technical Research",
+      "summary": "Rigorous technical investigations, whitepaper reviews, time-boxed PoC spikes, and formal RFC authoring."
+    },
+    {
+      "id": "24-principal-systems-thinking",
+      "name": "principal-systems-thinking",
+      "path": "skills/24-principal-systems-thinking/SKILL.md",
+      "category": "Systems Architecture",
+      "summary": "First-principles reasoning, Gall's Law, Conway's Law, Little's Law, Complexity Budgets, and back-of-the-envelope math."
+    },
+    {
+      "id": "25-build-vs-buy-evaluation",
+      "name": "build-vs-buy-evaluation",
+      "path": "skills/25-build-vs-buy-evaluation/SKILL.md",
+      "category": "Procurement & Architecture",
+      "summary": "Core vs Context differentiation, 3-5 year TCO financial modeling, vendor risk audits, and exit/reversibility strategies."
+    },
+    {
+      "id": "26-business-analysis-and-process-modeling",
+      "name": "business-analysis-and-process-modeling",
+      "path": "skills/26-business-analysis-and-process-modeling/SKILL.md",
+      "category": "Business Analysis",
+      "summary": "BABOK standards, RACI stakeholder governance, AS-IS vs TO-BE process flows (BPMN 2.0), Gap Analysis, and DMN decision tables."
+    },
+    {
+      "id": "27-product-strategy-and-market-research",
+      "name": "product-strategy-and-market-research",
+      "path": "skills/27-product-strategy-and-market-research/SKILL.md",
+      "category": "Product Strategy",
+      "summary": "Bottom-up TAM/SAM/SOM market sizing, Helmer's 7 Powers moat teardowns, Value Proposition Canvas, and RICE/Kano prioritization."
+    },
+    {
+      "id": "28-data-analytics-and-experimentation",
+      "name": "data-analytics-and-experimentation",
+      "path": "skills/28-data-analytics-and-experimentation/SKILL.md",
+      "category": "Data Analytics",
+      "summary": "North Star metric trees, structured event telemetry, statistical A/B test sizing (power, MDE), and peeking mitigation."
+    },
+    {
+      "id": "29-cloud-economics-and-finops",
+      "name": "cloud-economics-and-finops",
+      "path": "skills/29-cloud-economics-and-finops/SKILL.md",
+      "category": "FinOps",
+      "summary": "Cloud cost modeling, Unit Economics (Cost per Transaction/MAU), egress fee traps, and Infracost CI/CD budget guardrails."
+    },
+    {
+      "id": "30-compliance-governance-and-risk",
+      "name": "compliance-governance-and-risk",
+      "path": "skills/30-compliance-governance-and-risk/SKILL.md",
+      "category": "Governance & Compliance",
+      "summary": "SOC 2 Type II / ISO 27001 readiness, GDPR Right to Erasure, OSS license audits (MIT vs GPL/AGPL), and Enterprise Risk Registers."
+    },
+    {
+      "id": "31-team-topologies-and-org-design",
+      "name": "team-topologies-and-org-design",
+      "path": "skills/31-team-topologies-and-org-design/SKILL.md",
+      "category": "Organizational Architecture",
+      "summary": "Reverse Conway Maneuver, Team Topologies (Stream-aligned, Platform, Enabling, Complicated), and cognitive load minimization."
+    },
+    {
+      "id": "32-executive-stakeholder-communication",
+      "name": "executive-stakeholder-communication",
+      "path": "skills/32-executive-stakeholder-communication/SKILL.md",
+      "category": "Executive Communication",
+      "summary": "Minto Pyramid Principle, 1-page BLUF executive decision memos, technical-to-business value translation, and Steering Committees."
+    },
+    {
+      "id": "33-llm-and-rag-system-architecture",
+      "name": "llm-and-rag-system-architecture",
+      "path": "skills/33-llm-and-rag-system-architecture/SKILL.md",
+      "category": "AI & LLM Architecture",
+      "summary": "Semantic chunking, hybrid vector search (dense + BM25), Cross-Encoder reranking, hallucination guardrails, and Ragas evaluation."
+    },
+    {
+      "id": "34-ai-agent-design-and-tool-use",
+      "name": "ai-agent-design-and-tool-use",
+      "path": "skills/34-ai-agent-design-and-tool-use/SKILL.md",
+      "category": "Autonomous AI Agents",
+      "summary": "ReAct reasoning loop, JSON Schema tool calling, multi-tier memory (working/episodic/semantic), and HITL destructive action gates."
+    },
+    {
+      "id": "35-data-pipeline-and-streaming-architecture",
+      "name": "data-pipeline-and-streaming-architecture",
+      "path": "skills/35-data-pipeline-and-streaming-architecture/SKILL.md",
+      "category": "Data Engineering",
+      "summary": "Medallion Lakehouse (Bronze, Silver, Gold), Apache Iceberg/Delta formats, Flink/Kafka event-time streaming, and dbt modeling."
+    },
+    {
+      "id": "36-chaos-engineering-and-disaster-recovery",
+      "name": "chaos-engineering-and-disaster-recovery",
+      "path": "skills/36-chaos-engineering-and-disaster-recovery/SKILL.md",
+      "category": "Resilience & SRE",
+      "summary": "Hypothesis-driven chaos experiments, fault injection (Chaos Mesh/Toxiproxy), blast radius stop criteria, and RTO/RPO GameDays."
+    },
+    {
+      "id": "37-api-gateway-and-service-mesh",
+      "name": "api-gateway-and-service-mesh",
+      "path": "skills/37-api-gateway-and-service-mesh/SKILL.md",
+      "category": "Cloud Networking",
+      "summary": "North-South Edge Gateway (Envoy/Kong), East-West Service Mesh (Istio/Linkerd), edge JWT offloading, and zero-trust mTLS."
+    },
+    {
+      "id": "38-sre-slo-and-error-budget-engineering",
+      "name": "sre-slo-and-error-budget-engineering",
+      "path": "skills/38-sre-slo-and-error-budget-engineering/SKILL.md",
+      "category": "Site Reliability Engineering",
+      "summary": "SLI formulation, 30-day rolling SLOs, Error Budget multi-window burn rate alerts (Prometheus), and feature freeze policies."
+    },
+    {
+      "id": "39-devsecops-and-supply-chain-security",
+      "name": "devsecops-and-supply-chain-security",
+      "path": "skills/39-devsecops-and-supply-chain-security/SKILL.md",
+      "category": "DevSecOps",
+      "summary": "Shift-left SAST (Semgrep), Trivy container scanning, CycloneDX SBOM generation, Cosign keyless signing, and SLSA provenance."
+    },
+    {
+      "id": "40-user-research-and-usability-testing",
+      "name": "user-research-and-usability-testing",
+      "path": "skills/40-user-research-and-usability-testing/SKILL.md",
+      "category": "User Experience Research",
+      "summary": "The Mom Test customer discovery, Teresa Torres Opportunity Solution Trees, Think-Aloud usability tests, and System Usability Scale (SUS)."
+    },
+    {
+      "id": "41-distributed-consensus-and-replication",
+      "name": "distributed-consensus-and-replication",
+      "path": "skills/41-distributed-consensus-and-replication/SKILL.md",
+      "category": "Distributed Systems",
+      "summary": "Raft algorithm consensus, quorum arithmetic (floor(N/2)+1), split-brain fencing tokens, WAL replication, and Vector Clocks."
+    },
+    {
+      "id": "42-database-internals-and-storage-engines",
+      "name": "database-internals-and-storage-engines",
+      "path": "skills/42-database-internals-and-storage-engines/SKILL.md",
+      "category": "Database Internals",
+      "summary": "B-Tree vs LSM-Tree trade-offs, MemTable and SSTables, Leveled vs Size-Tiered compaction, RUM conjecture, and Bloom filters."
+    },
+    {
+      "id": "43-high-performance-and-low-latency",
+      "name": "high-performance-and-low-latency",
+      "path": "skills/43-high-performance-and-low-latency/SKILL.md",
+      "category": "Performance Engineering",
+      "summary": "Mechanical sympathy, CPU cache lines (false sharing elimination), zero-copy I/O (io_uring), GC elimination, and SIMD."
+    },
+    {
+      "id": "44-event-sourcing-and-cqrs",
+      "name": "event-sourcing-and-cqrs",
+      "path": "skills/44-event-sourcing-and-cqrs/SKILL.md",
+      "category": "Event Sourcing",
+      "summary": "Append-only Event Store, aggregate state reconstitution via reducers, snapshotting, read projections, and Upcasters."
+    },
+    {
+      "id": "45-multi-tenant-saas-architecture",
+      "name": "multi-tenant-saas-architecture",
+      "path": "skills/45-multi-tenant-saas-architecture/SKILL.md",
+      "category": "SaaS Architecture",
+      "summary": "Pool vs Silo vs Bridge models, PostgreSQL Row-Level Security (RLS), noisy neighbor throttling, and tenant envelope encryption."
+    },
+    {
+      "id": "46-infrastructure-as-code-and-gitops",
+      "name": "infrastructure-as-code-and-gitops",
+      "path": "skills/46-infrastructure-as-code-and-gitops/SKILL.md",
+      "category": "GitOps & IaC",
+      "summary": "Terraform remote state isolation with DynamoDB locks, ArgoCD declarative GitOps reconciliation, and Policy as Code (OPA)."
+    },
+    {
+      "id": "47-applied-cryptography-and-data-protection",
+      "name": "applied-cryptography-and-data-protection",
+      "path": "skills/47-applied-cryptography-and-data-protection/SKILL.md",
+      "category": "Applied Cryptography",
+      "summary": "Envelope Encryption (KEK/DEK via KMS), Authenticated Encryption (AES-256-GCM), Argon2id hashing, and HMAC webhook signing."
+    },
+    {
+      "id": "48-ast-codemods-and-developer-tooling",
+      "name": "ast-codemods-and-developer-tooling",
+      "path": "skills/48-ast-codemods-and-developer-tooling/SKILL.md",
+      "category": "Developer Tooling",
+      "summary": "AST parsing and traversal, automated large-scale codemods with jscodeshift/ast-grep, custom ESLint architectural rules, and DSLs."
+    },
+    {
+      "id": "49-micro-frontends-and-modular-web",
+      "name": "micro-frontends-and-modular-web",
+      "path": "skills/49-micro-frontends-and-modular-web/SKILL.md",
+      "category": "Frontend Architecture",
+      "summary": "Module Federation (Host vs Remote), shared dependency singletons (React/Vue), decoupled CustomEvents, and CSS sandboxing."
+    },
+    {
+      "id": "50-database-sharding-and-partitioning",
+      "name": "database-sharding-and-partitioning",
+      "path": "skills/50-database-sharding-and-partitioning/SKILL.md",
+      "category": "Ultra-Scale Data",
+      "summary": "Shard Key selection, Consistent Hashing (Ketama ring), PostgreSQL declarative partitioning, partition pruning, and Citus/Vitess."
+    },
+    {
+      "id": "51-end-to-end-type-safety-and-trpc",
+      "name": "end-to-end-type-safety-and-trpc",
+      "path": "skills/51-end-to-end-type-safety-and-trpc/SKILL.md",
+      "category": "Fullstack Frameworks",
+      "summary": "tRPC v11 router structures, shared Zod validation schemas, automatic client type inference, and zero-runtime type bloat."
+    },
+    {
+      "id": "52-ssr-rsc-and-modern-fullstack-frameworks",
+      "name": "ssr-rsc-and-modern-fullstack-frameworks",
+      "path": "skills/52-ssr-rsc-and-modern-fullstack-frameworks/SKILL.md",
+      "category": "Fullstack Frameworks",
+      "summary": "React Server Components (RSC), streaming Suspense skeletons, Server Actions, progressive enhancement, and hydration debugging."
+    },
+    {
+      "id": "53-advanced-form-architecture-and-validation",
+      "name": "advanced-form-architecture-and-validation",
+      "path": "skills/53-advanced-form-architecture-and-validation/SKILL.md",
+      "category": "Fullstack Frameworks",
+      "summary": "Uncontrolled forms (React Hook Form), dynamic nested field arrays, accessible ARIA error bindings, and direct S3 presigned uploads."
+    },
+    {
+      "id": "54-realtime-collaboration-websockets-and-crdts",
+      "name": "realtime-collaboration-websockets-and-crdts",
+      "path": "skills/54-realtime-collaboration-websockets-and-crdts/SKILL.md",
+      "category": "Real-Time Systems",
+      "summary": "Full-duplex WebSockets, SSE token streaming, Yjs CRDTs for collaborative editing, live cursor presence, and backoff reconnects."
+    },
+    {
+      "id": "55-offline-first-indexeddb-and-local-sync",
+      "name": "offline-first-indexeddb-and-local-sync",
+      "path": "skills/55-offline-first-indexeddb-and-local-sync/SKILL.md",
+      "category": "Real-Time Systems",
+      "summary": "Local-first IndexedDB storage (Dexie.js), offline mutation outboxes, Last-Write-Wins conflicts, and Stale-While-Revalidate PWA workers."
+    },
+    {
+      "id": "56-web-animations-and-60fps-ui-performance",
+      "name": "web-animations-and-60fps-ui-performance",
+      "path": "skills/56-web-animations-and-60fps-ui-performance/SKILL.md",
+      "category": "UI Performance",
+      "summary": "GPU compositor properties (transform/opacity), layout thrashing elimination, Framer Motion springs (FLIP), and TanStack Virtual."
+    },
+    {
+      "id": "57-fullstack-auth-sessions-and-passkeys",
+      "name": "fullstack-auth-sessions-and-passkeys",
+      "path": "skills/57-fullstack-auth-sessions-and-passkeys/SKILL.md",
+      "category": "Fullstack Frameworks",
+      "summary": "HttpOnly Secure SameSite cookies, CSRF defenses, biometric Passkeys (FIDO2/WebAuthn), SSR session hydration without FOUC."
+    },
+    {
+      "id": "58-media-processing-and-edge-delivery",
+      "name": "media-processing-and-edge-delivery",
+      "path": "skills/58-media-processing-and-edge-delivery/SKILL.md",
+      "category": "Fullstack Frameworks",
+      "summary": "Image optimization (AVIF/WebP via Sharp, Blurhash), adaptive bitrate video streaming (HLS/m3u8), and Cloudflare Workers edge compute."
+    },
+    {
+      "id": "59-fullstack-monorepo-and-turborepo",
+      "name": "fullstack-monorepo-and-turborepo",
+      "path": "skills/59-fullstack-monorepo-and-turborepo/SKILL.md",
+      "category": "Fullstack Frameworks",
+      "summary": "Turborepo task DAG orchestration (turbo.json), pnpm workspaces (apps/*, packages/*), and Remote Build Caching for instant CI."
+    },
+    {
+      "id": "60-fullstack-debugging-and-devtools-profiling",
+      "name": "fullstack-debugging-and-devtools-profiling",
+      "path": "skills/60-fullstack-debugging-and-devtools-profiling/SKILL.md",
+      "category": "Diagnostics & Profiling",
+      "summary": "Chrome DevTools Performance flame charts (long tasks >50ms), Memory heap snapshots (detached DOM leaks), and Node.js V8 CPU profiling."
+    },
+    {
+      "id": "61-api-security-and-zero-trust-gateways",
+      "name": "api-security-and-zero-trust-gateways",
+      "path": "skills/61-api-security-and-zero-trust-gateways/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "OWASP API Security Top 10 mitigation, Broken Object Level Authorization (BOLA/IDOR) elimination, schema-driven validation, and token revocation blocklists."
+    },
+    {
+      "id": "62-cyber-attack-prevention-and-waf",
+      "name": "cyber-attack-prevention-and-waf",
+      "path": "skills/62-cyber-attack-prevention-and-waf/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Layer 3/4 and Layer 7 DDoS mitigation, HTTP/2 Rapid Reset defense, OWASP Core Rule Set WAF configuration, and JA4 TLS fingerprinting bot defense."
+    },
+    {
+      "id": "63-data-security-dlp-and-tokenization",
+      "name": "data-security-dlp-and-tokenization",
+      "path": "skills/63-data-security-dlp-and-tokenization/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Data loss prevention (DLP), automated PII/PHI redaction, Format-Preserving Encryption (FPE), tokenization vaults, and GDPR crypto-shredding."
+    },
+    {
+      "id": "64-penetration-testing-and-red-teaming",
+      "name": "penetration-testing-and-red-teaming",
+      "path": "skills/64-penetration-testing-and-red-teaming/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Offensive security engineering, DAST automation with Nuclei and OWASP ZAP, API fuzzing with schemathesis, and MITRE ATT&CK adversary emulation."
+    },
+    {
+      "id": "65-siem-detection-and-incident-response",
+      "name": "siem-detection-and-incident-response",
+      "path": "skills/65-siem-detection-and-incident-response/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Blue team detection engineering, Sigma rules, eBPF runtime threat detection with Falco, automated SOAR playbooks, and NIST SP 800-61 incident response."
+    },
+    {
+      "id": "66-iam-zero-trust-and-rbac-rebac",
+      "name": "iam-zero-trust-and-rbac-rebac",
+      "path": "skills/66-iam-zero-trust-and-rbac-rebac/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Zero Trust Architecture, Cloud IAM least privilege, Policy-as-Code with Open Policy Agent (OPA/Rego), Google Zanzibar ReBAC, and ephemeral JIT access."
+    },
+    {
+      "id": "67-secrets-lifecycle-and-vault-architecture",
+      "name": "secrets-lifecycle-and-vault-architecture",
+      "path": "skills/67-secrets-lifecycle-and-vault-architecture/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "HashiCorp Vault architecture, dynamic ephemeral database credentials, automated secret rotation, Gitleaks secret scanning CI gates, and PKI lifecycles."
+    },
+    {
+      "id": "68-runtime-defense-and-container-hardening",
+      "name": "runtime-defense-and-container-hardening",
+      "path": "skills/68-runtime-defense-and-container-hardening/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Linux kernel seccomp BPF syscall filtering, AppArmor profiles, rootless container security, read-only root filesystems, and gVisor microVM sandboxing."
+    },
+    {
+      "id": "69-cloud-security-posture-and-kubernetes-hardening",
+      "name": "cloud-security-posture-and-kubernetes-hardening",
+      "path": "skills/69-cloud-security-posture-and-kubernetes-hardening/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Cloud Security Posture Management (CSPM), CIS Benchmarks, Kubernetes default-deny NetworkPolicies, and Kyverno declarative admission controllers."
+    },
+    {
+      "id": "70-vulnerability-management-and-cvss-triage",
+      "name": "vulnerability-management-and-cvss-triage",
+      "path": "skills/70-vulnerability-management-and-cvss-triage/SKILL.md",
+      "category": "Cybersecurity & Threat Defense",
+      "summary": "Vulnerability management lifecycle, CVSS v3.1/v4.0 scoring, EPSS exploit likelihood analysis, CISA KEV tracking, reachability analysis, and bug bounty triage."
+    }
+  ]
+}
+;
