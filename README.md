@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-80%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="80 Skills"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-17%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="17 Tracks"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Production%20Skills-90%20Verified-00f2fe?style=for-the-badge&logo=codeforces&logoColor=black" alt="90 Skills"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Org%20Tracks-19%20Specialized-a855f7?style=for-the-badge&logo=buffer&logoColor=white" alt="19 Tracks"></a>
   <a href="#"><img src="https://img.shields.io/badge/AI%20Agents-Antigravity%20%7C%20Cursor%20%7C%20Claude-10b981?style=for-the-badge&logo=openai&logoColor=white" alt="Agent Ready"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge" alt="License"></a>
 </p>
@@ -13,7 +13,7 @@
 
 > 🌐 **Interactive Animated Showcase Site**: Visit the live single-page web app in [`docs/index.html`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/docs/index.html) with 60 FPS interactive particle constellation animations, instant search, track filters, and 1-click prompt copies! Easily deployed to **GitHub Pages** via the `/docs` folder.
 
-A comprehensive, production-grade suite of **80 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, and **Mobile & Multi-Platform Application Engineer** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, and Fastlane CI/CD store delivery.
+A comprehensive, production-grade suite of **90 AI Agent Skills** modeling an **entire modern technology organization**, **Super Expert Full-Stack Developer**, **Principal Cybersecurity & Threat Defense Architect**, **Mobile & Multi-Platform Application Engineer**, **Software Design Authority (SDA)**, and **Professional QA & SDET Test Architect** collaborating on software and systems—spanning executive strategy, user research (UXR), AI/LLM architectures, distributed consensus, storage engines, mechanical sympathy, event sourcing, multi-tenant SaaS, end-to-end type safety (tRPC), React Server Components (RSC), real-time CRDTs (Yjs), local-first sync (Dexie), 60 FPS UI performance, WebAuthn Passkeys, media pipelines, Turborepos, GitOps, DevSecOps, SRE error budgets, OWASP API Top 10, WAF & L7 DDoS mitigation, PII/DLP tokenization vaults, offensive Red Teaming, eBPF Blue Team SOC, Zero Trust IAM, HashiCorp Vault, seccomp container hardening, EPSS vulnerability triage, React Native/Expo, native Android (Jetpack Compose), native iOS (SwiftUI), E-reader engines & reflowable pagination, Flutter, encrypted offline SQLite sync, APNs/FCM push notifications, mobile hardware keystores, Fastlane CI/CD store delivery, Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, ATAM architecture tradeoff evaluation, automated Architecture Fitness Functions (ArchUnit), ISO 29119 test planning, ISTQB black-box testing (ECP, BVA, Decision Tables), Behavior-Driven Development (BDD/Cucumber), Consumer-Driven Contract Testing (Pact), WireMock service virtualization, visual regression diffing, WCAG 2.2 digital accessibility (axe-core), mutation testing (Stryker), Maestro mobile QA automation, and Session-Based Test Management (SBTM).
 
 Designed for modern AI coding agents (**Antigravity**, **Gemini CLI**, **Cursor**, **Claude Code**, **Copilot Workspace**, and **Windsurf**), this repository provides modular, standardized runbooks (`SKILL.md`) that instruct AI agents how to think and operate as domain experts across every organizational role.
 
@@ -135,14 +135,30 @@ flowchart TD
         S78 & S79 --> S80["80: Mobile CI/CD & Fastlane Release"]
     end
 
-    S80 & S22 -.->|Continuous Feedback Loop| S27
+    subgraph S12["12. Software Design & Architecture (SDA) Authority"]
+        S03 --> S81["81: OOAD & GRASP Responsibility Design"]
+        S81 --> S82["82: ATAM Architecture Tradeoff Analysis"]
+        S82 --> S83["83: Architectural Styles & Fitness Functions"]
+    end
+
+    subgraph S13["13. Professional QA, SDET & Tester Operations"]
+        S16 --> S84["84: ISO 29119 Test Planning & ISTQB"]
+        S84 --> S85["85: BDD & Cucumber Acceptance Testing"]
+        S84 --> S86["86: API Contract & Service Virtualization"]
+        S85 --> S87["87: Visual Regression & Accessibility (a11y)"]
+        S86 --> S88["88: Mutation Testing & Suite Resilience"]
+        S87 & S71 --> S89["89: Mobile QA Automation (Maestro/Appium)"]
+        S88 & S89 --> S90["90: Exploratory Testing & SBTM Charters"]
+    end
+
+    S80 & S90 & S22 -.->|Continuous Feedback Loop| S27
 ```
 
 ---
 
-## 🏛️ The 17 Functional Organizational Tracks
+## 🏛️ The 19 Functional Organizational Tracks
 
-The 80 skills are organized into 17 distinct professional disciplines:
+The 90 skills are organized into 19 distinct professional disciplines:
 
 | Track | Focus Area | Skills Included |
 | :--- | :--- | :--- |
@@ -163,10 +179,12 @@ The 80 skills are organized into 17 distinct professional disciplines:
 | **Track O** | DevOps, GitOps, SRE, Chaos Engineering & Operations | `20`, `21`, `22`, `29`, `36`, `38`, `46` |
 | **Track P** | Cybersecurity Engineering, Threat Defense & Data Protection | `61`, `62`, `63`, `64`, `65`, `66`, `67`, `68`, `69`, `70` |
 | **Track Q** | Mobile, Native & Multi-Platform Application Engineering | `71`, `72`, `73`, `74`, `75`, `76`, `77`, `78`, `79`, `80` |
+| **Track R** | Software Design & Architecture (SDA) & System Design Authority | `81`, `82`, `83` |
+| **Track S** | Professional Software Testing, QA & SDET Excellence | `84`, `85`, `86`, `87`, `88`, `89`, `90` |
 
 ---
 
-## 📚 Master Skills Directory & Catalog (80 Skills)
+## 📚 Master Skills Directory & Catalog (90 Skills)
 
 | # | Skill Directory | Track | Role & Capabilities | Key Deliverables |
 | :-: | :--- | :--- | :--- | :--- |
@@ -250,6 +268,16 @@ The 80 skills are organized into 17 distinct professional disciplines:
 | `78` | [`78-mobile-security-and-tamper-resistance`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/78-mobile-security-and-tamper-resistance/SKILL.md) | Mobile & Native | **Principal Mobile Security Architect**: Root/Jailbreak detection, Google Play Integrity attestation, SSL public key hash pinning, Secure Enclave/KeyStore, R8 rules. | Root/Jailbreak Detectors, HPKP Pinning Delegates, R8 Rules |
 | `79` | [`79-mobile-performance-profiling-and-battery`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/79-mobile-performance-profiling-and-battery/SKILL.md) | Mobile & Native | **Mobile Performance Engineer**: 120 FPS jank elimination, LeakCanary memory leak diagnosis, Macrobenchmarks, battery radio throttling, MetricKit. | MetricKit Subscribers, Macrobenchmarks, WorkManager Sync |
 | `80` | [`80-mobile-cicd-fastlane-and-store-deployment`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/80-mobile-cicd-fastlane-and-store-deployment/SKILL.md) | Mobile & Native | **Mobile Release Operations Engineer**: Fastlane automated release pipelines, Match encrypted code signing, TestFlight, staged rollouts, privacy manifests. | Fastfiles, Matchfiles, Privacy Manifests, GitHub Actions |
+| `81` | [`81-software-design-and-architecture-ooad-grasp`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/81-software-design-and-architecture-ooad-grasp/SKILL.md) | Software Design | **Principal SDA Architect**: OOAD, Craig Larman's GRASP patterns, UML 2.5 modeling, package coupling metrics (Ca/Ce, Instability, Abstractness). | UML Class & Sequence Models, Coupling Metrics |
+| `82` | [`82-architecture-evaluation-and-atam`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/82-architecture-evaluation-and-atam/SKILL.md) | Software Design | **Chief SDA Evaluator**: SEI ATAM evaluation, Quality Attribute Workshops (QAW), Utility Trees, sensitivity points, tradeoff points. | Utility Trees, Architecture Risk Registers |
+| `83` | [`83-architectural-styles-and-component-governance`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/83-architectural-styles-and-component-governance/SKILL.md) | Software Design | **SDA Governance Lead**: Architectural styles (Pipes & Filters, Blackboard, Space-Based, Microkernel), ARB memos, automated CI Fitness Functions (ArchUnit). | Architecture Fitness Tests, ARB Submissions |
+| `84` | [`84-test-planning-and-istqb-test-design-techniques`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/84-test-planning-and-istqb-test-design-techniques/SKILL.md) | QA & Testing | **Lead QA Architect**: ISO/IEC/IEEE 29119 Test Plans, Equivalence Partitioning (ECP), Boundary Value Analysis (BVA), Decision Tables, Traceability Matrix (RTM). | Master Test Plans, RTM Matrices, Defect Tickets |
+| `85` | [`85-bdd-acceptance-testing-and-cucumber-gherkin`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/85-bdd-acceptance-testing-and-cucumber-gherkin/SKILL.md) | QA & Testing | **BDD & Acceptance Test Lead**: Specification by Example, Cucumber Gherkin feature files, Scenario Outlines, Data Tables, Three Amigos loops. | Living Documentation, Cucumber Step Definitions |
+| `86` | [`86-api-contract-and-service-virtualization-testing`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/86-api-contract-and-service-virtualization-testing/SKILL.md) | QA & Testing | **Senior API SDET**: Automated API suites, Consumer-Driven Contract Testing (Pact / Pactflow), WireMock service virtualization, boundary fuzzing. | Pact Contract Specs, WireMock Stubs, API Test Suites |
+| `87` | [`87-visual-regression-and-accessibility-testing`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/87-visual-regression-and-accessibility-testing/SKILL.md) | QA & Testing | **Visual QA & Digital Accessibility Specialist**: Pixel-perfect visual regression (Playwright/Percy), WCAG 2.1/2.2 AA & AAA audits with axe-core, Pa11y CI gates. | Visual Baseline Snapshots, axe-core A11y Audits |
+| `88` | [`88-mutation-testing-and-test-suite-resilience`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/88-mutation-testing-and-test-suite-resilience/SKILL.md) | QA & Testing | **Test Quality Architect**: Mutation testing (Stryker, Pitest), eliminating surviving mutants, flaky test quarantine architectures, test parallelization. | Stryker Configs, Flaky Quarantine Pipelines |
+| `89` | [`89-mobile-test-automation-appium-maestro`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/89-mobile-test-automation-appium-maestro/SKILL.md) | QA & Testing | **Lead Mobile QA / SDET**: Declarative Maestro YAML flows, Appium 2.0, biometric simulation, airplane mode testing, cloud device farm orchestration. | Maestro Test Flows, Device Farm CI Workflows |
+| `90` | [`90-exploratory-testing-and-session-based-test-management`](file:///d:/Exploring%20new%20ideas/All%20AI%20skills/skills/90-exploratory-testing-and-session-based-test-management/SKILL.md) | QA & Testing | **Principal Exploratory Tester**: Session-Based Test Management (SBTM), charter-driven exploration, testing tours, SFDIPOT/FEW HICCUPPS heuristics, Bug Bashes. | Test Charters, TBS Session Logs, Bug Bash Guides |
 
 ---
 
@@ -259,7 +287,7 @@ The 80 skills are organized into 17 distinct professional disciplines:
 
 #### On Windows (PowerShell):
 ```powershell
-# Copy all 80 skills to a target project:
+# Copy all 90 skills to a target project:
 .\install-skills.ps1 -Destination "C:\Path\To\MyProject"
 
 # Or install globally for all projects on your machine:
@@ -406,6 +434,40 @@ chmod +x install-skills.sh
 "Automate our release pipeline using mobile-cicd-fastlane-and-store-deployment with Fastlane Match code signing and staged App Store / Google Play rollouts."
 ```
 
+### Software Design Authority (SDA) Prompts
+```text
+"Deconstruct our e-commerce domain using software-design-and-architecture-ooad-grasp applying Craig Larman's GRASP patterns and formal UML class/sequence models."
+```
+```text
+"Conduct a rigorous architecture tradeoff evaluation using architecture-evaluation-and-atam with 6-part scenarios and utility trees to evaluate our database migration."
+```
+```text
+"Evaluate our streaming data ingestion architecture using architectural-styles-and-component-governance and codify ArchUnit fitness functions in CI to prevent architectural drift."
+```
+
+### Professional Software Testing & SDET Prompts
+```text
+"Draft an ISO/IEC/IEEE 29119 master test plan using test-planning-and-istqb-test-design-techniques with Equivalence Partitioning, Boundary Value Analysis, and a Requirements Traceability Matrix."
+```
+```text
+"Formulate customer-facing Gherkin acceptance criteria and automate step definitions using bdd-acceptance-testing-and-cucumber-gherkin following the Three Amigos workflow."
+```
+```text
+"Write consumer-driven contract tests using api-contract-and-service-virtualization-testing with Pact and simulate flaky payment gateways using WireMock."
+```
+```text
+"Set up pixel-perfect visual regression diffing and automated WCAG 2.2 AA accessibility audits using visual-regression-and-accessibility-testing with Playwright and axe-core."
+```
+```text
+"Audit our unit test assertion quality using mutation-testing-and-test-suite-resilience with Stryker, eliminate surviving mutants, and configure a flaky test quarantine pipeline."
+```
+```text
+"Automate our cross-platform mobile checkout flows using mobile-test-automation-appium-maestro with Maestro YAML scripts, biometric Face ID simulation, and offline mode assertions."
+```
+```text
+"Conduct a charter-driven exploratory testing session using exploratory-testing-and-session-based-test-management with SFDIPOT heuristics and compile a quantified TBS session log."
+```
+
 ---
 
 ## 🚀 How to Push to GitHub & Enable Animated GitHub Pages
@@ -421,7 +483,7 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "feat: complete suite of 80 enterprise AI agent skills and animated showcase"
+git commit -m "feat: complete suite of 90 enterprise AI agent skills and animated showcase"
 
 # Set primary branch to main
 git branch -M main
@@ -446,7 +508,7 @@ git push -u origin main
 
 Your live site features:
 - **Interactive 60 FPS Particle Constellation Canvas** with mouse gravity.
-- **Dynamic Search & Instant Filtering** across all 80 skills.
+- **Dynamic Search & Instant Filtering** across all 90 skills.
 - **Interactive Skill Runbook Drawer** with 1-click prompt copying.
 - **Native Animated SVG Header** rendering directly in GitHub's markdown view.
 
