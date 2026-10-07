@@ -203,7 +203,7 @@
 
   <!-- Subtitle -->
   <text x="50" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500" fill="#94a3b8">
-    80 Production Engineering Runbooks • 17 Specialized Tracks
+    90 Production Engineering Runbooks • 19 Specialized Tracks
   </text>
 
   <!-- Live Working Agents Terminal Console -->
@@ -255,7 +255,7 @@
       <!-- Line 5: Active Prompt Prompting with Blinking Cursor -->
       <g transform="translate(0, 130)">
         <text x="0" y="0" fill="#38bdf8" font-weight="700">swarm@production:~$</text>
-        <text x="180" y="0" fill="#e2e8f0">agents collaborating across 80 skills</text>
+        <text x="180" y="0" fill="#e2e8f0">agents collaborating across 90 skills</text>
         <rect x="500" y="-11" width="8" height="14" fill="#00f2fe" class="terminal-cursor" />
       </g>
     </g>

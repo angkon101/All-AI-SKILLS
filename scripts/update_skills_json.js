@@ -4,105 +4,122 @@ const path = require('path');
 const filePath = path.join(__dirname, '..', 'skills.json');
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-data.version = '8.0.0';
-data.description = 'Comprehensive suite of 80 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, Principal Cybersecurity Architect, and Mobile Application Engineer: from executive strategy and full-stack type safety, to e-reader document engines, native Android/iOS, Flutter, offline sync, APNs/FCM push, OWASP API Top 10, and container hardening.';
+data.version = '9.0.0';
+data.description = 'Comprehensive suite of 90 production AI agent skills modeling an entire technology organization, Super Expert Full-Stack Developer, Principal Cybersecurity Architect, Mobile Application Engineer, Software Design Authority (SDA), and Professional QA/SDET Test Architect: spanning executive strategy, OOAD & GRASP, ATAM architecture evaluation, ISTQB test planning, BDD Gherkin, Pact contract testing, visual regression & WCAG 2.2 accessibility, mutation testing, Maestro mobile QA, and exploratory session-based testing.';
 
-const newTrack = {
-  id: 'track-mobile-and-multiplatform',
-  name: 'Track Q: Mobile, Native & Multi-Platform Application Engineering',
+// Add Track R: Software Design & Architecture (SDA) & System Design Authority
+const trackR = {
+  id: 'track-software-design-and-architecture',
+  name: 'Track R: Software Design & Architecture (SDA) & System Design Authority',
   skills: [
-    '71-cross-platform-mobile-react-native-expo',
-    '72-native-android-kotlin-and-jetpack-compose',
-    '73-native-ios-swift-and-swiftui',
-    '74-ereader-document-rendering-and-pagination',
-    '75-flutter-and-multiplatform-dart',
-    '76-mobile-offline-sync-and-sqlite-architecture',
-    '77-push-notifications-and-deep-linking',
-    '78-mobile-security-and-tamper-resistance',
-    '79-mobile-performance-profiling-and-battery',
-    '80-mobile-cicd-fastlane-and-store-deployment'
+    '81-software-design-and-architecture-ooad-grasp',
+    '82-architecture-evaluation-and-atam',
+    '83-architectural-styles-and-component-governance'
   ]
 };
 
-if (!data.tracks.some(t => t.id === newTrack.id)) {
-  data.tracks.push(newTrack);
-}
+// Add Track S: Professional Software Testing, QA & SDET Excellence
+const trackS = {
+  id: 'track-testing-qa-and-sdet',
+  name: 'Track S: Professional Software Testing, QA & SDET Excellence',
+  skills: [
+    '84-test-planning-and-istqb-test-design-techniques',
+    '85-bdd-acceptance-testing-and-cucumber-gherkin',
+    '86-api-contract-and-service-virtualization-testing',
+    '87-visual-regression-and-accessibility-testing',
+    '88-mutation-testing-and-test-suite-resilience',
+    '89-mobile-test-automation-appium-maestro',
+    '90-exploratory-testing-and-session-based-test-management'
+  ]
+};
+
+[trackR, trackS].forEach(track => {
+  const existingIdx = data.tracks.findIndex(t => t.id === track.id);
+  if (existingIdx >= 0) {
+    data.tracks[existingIdx] = track;
+  } else {
+    data.tracks.push(track);
+  }
+});
 
 const newSkills = [
   {
-    id: '71-cross-platform-mobile-react-native-expo',
-    name: 'cross-platform-mobile-react-native-expo',
-    path: 'skills/71-cross-platform-mobile-react-native-expo/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'React Native Fabric New Architecture, TurboModules C++ JSI, Expo Router v3 file-based navigation, Reanimated 3 worklets, and 120 FPS gesture handling.'
+    id: '81-software-design-and-architecture-ooad-grasp',
+    name: 'software-design-and-architecture-ooad-grasp',
+    path: 'skills/81-software-design-and-architecture-ooad-grasp/SKILL.md',
+    category: 'Software Design & Architecture (SDA)',
+    summary: "Object-Oriented Analysis & Design (OOAD), Craig Larman's GRASP patterns, UML 2.5 structural/behavioral diagrams, and package coupling metrics (Afferent/Efferent coupling, Instability, Abstractness)."
   },
   {
-    id: '72-native-android-kotlin-and-jetpack-compose',
-    name: 'native-android-kotlin-and-jetpack-compose',
-    path: 'skills/72-native-android-kotlin-and-jetpack-compose/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Modern Android development with Kotlin, Jetpack Compose, Material 3, Unidirectional Data Flow (MVI), Room Database, Coroutines/StateFlow, and WorkManager.'
+    id: '82-architecture-evaluation-and-atam',
+    name: 'architecture-evaluation-and-atam',
+    path: 'skills/82-architecture-evaluation-and-atam/SKILL.md',
+    category: 'Software Design & Architecture (SDA)',
+    summary: 'Architecture evaluation using the SEI Architecture Tradeoff Analysis Method (ATAM), Quality Attribute Workshops (QAW), Utility Trees, sensitivity points, and tradeoff analysis.'
   },
   {
-    id: '73-native-ios-swift-and-swiftui',
-    name: 'native-ios-swift-and-swiftui',
-    path: 'skills/73-native-ios-swift-and-swiftui/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Production iOS engineering with Swift 6 structured concurrency, SwiftUI declarative view hierarchies, NavigationStack, AppStorage, and Keychain biometrics.'
+    id: '83-architectural-styles-and-component-governance',
+    name: 'architectural-styles-and-component-governance',
+    path: 'skills/83-architectural-styles-and-component-governance/SKILL.md',
+    category: 'Software Design & Architecture (SDA)',
+    summary: 'Architectural styles evaluation (Pipes-and-Filters, Blackboard, Space-Based, Plugin/Microkernel), Architecture Review Board (ARB) governance, and automated Architecture Fitness Functions in CI.'
   },
   {
-    id: '74-ereader-document-rendering-and-pagination',
-    name: 'ereader-document-rendering-and-pagination',
-    path: 'skills/74-ereader-document-rendering-and-pagination/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'E-reader engines, EPUB3 and PDF rendering, CSS multi-column reflowable pagination, EPUB CFI canonical bookmarks, font typography, and AMOLED/E-Ink optimizations.'
+    id: '84-test-planning-and-istqb-test-design-techniques',
+    name: 'test-planning-and-istqb-test-design-techniques',
+    path: 'skills/84-test-planning-and-istqb-test-design-techniques/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Master test planning (IEEE 829 / ISO 29119), ISTQB black-box test design techniques (Equivalence Partitioning, Boundary Value Analysis, Decision Tables), Traceability Matrices, and defect lifecycle management.'
   },
   {
-    id: '75-flutter-and-multiplatform-dart',
-    name: 'flutter-and-multiplatform-dart',
-    path: 'skills/75-flutter-and-multiplatform-dart/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Cross-platform Flutter 3 with Impeller GPU rendering, BLoC state management, custom painters, platform channels, and adaptive layouts for foldables and tablets.'
+    id: '85-bdd-acceptance-testing-and-cucumber-gherkin',
+    name: 'bdd-acceptance-testing-and-cucumber-gherkin',
+    path: 'skills/85-bdd-acceptance-testing-and-cucumber-gherkin/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Behavior-Driven Development (BDD), Specification by Example, Cucumber and Gherkin feature files, step definitions, Scenario Outlines, Data Tables, and Three Amigos collaboration.'
   },
   {
-    id: '76-mobile-offline-sync-and-sqlite-architecture',
-    name: 'mobile-offline-sync-and-sqlite-architecture',
-    path: 'skills/76-mobile-offline-sync-and-sqlite-architecture/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Local-first mobile architecture, SQLCipher AES-256 database encryption, SQLite FTS5 full-text search, optimistic writes, and offline outbox sync workers.'
+    id: '86-api-contract-and-service-virtualization-testing',
+    name: 'api-contract-and-service-virtualization-testing',
+    path: 'skills/86-api-contract-and-service-virtualization-testing/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Automated API test suites, Consumer-Driven Contract Testing with Pact, Service Virtualization with WireMock, JSON Schema validation, negative boundary testing, and idempotency verification.'
   },
   {
-    id: '77-push-notifications-and-deep-linking',
-    name: 'push-notifications-and-deep-linking',
-    path: 'skills/77-push-notifications-and-deep-linking/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Unified push notification delivery with Apple APNs and Google FCM v1, Notification Service payload decryptors, iOS Universal Links, and Android App Links.'
+    id: '87-visual-regression-and-accessibility-testing',
+    name: 'visual-regression-and-accessibility-testing',
+    path: 'skills/87-visual-regression-and-accessibility-testing/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Pixel-perfect visual regression testing with Playwright and Percy, viewport matrix diffing, and automated WCAG 2.1/2.2 AA & AAA digital accessibility testing using axe-core and Pa11y.'
   },
   {
-    id: '78-mobile-security-and-tamper-resistance',
-    name: 'mobile-security-and-tamper-resistance',
-    path: 'skills/78-mobile-security-and-tamper-resistance/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Client-side hardening, Root & Jailbreak detection, Google Play Integrity attestation, SSL public key hash pinning, Secure Enclave / KeyStore, and R8 obfuscation.'
+    id: '88-mutation-testing-and-test-suite-resilience',
+    name: 'mutation-testing-and-test-suite-resilience',
+    path: 'skills/88-mutation-testing-and-test-suite-resilience/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Mutation testing with Stryker and Pitest, mutation score evaluation, surviving mutant eradication, flaky test quarantine architectures, and test suite execution optimization.'
   },
   {
-    id: '79-mobile-performance-profiling-and-battery',
-    name: 'mobile-performance-profiling-and-battery',
-    path: 'skills/79-mobile-performance-profiling-and-battery/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Frame rate optimization (60/120 FPS jank elimination), memory leak diagnosis with LeakCanary and Instruments, cold startup benchmarks, and battery radio conservation.'
+    id: '89-mobile-test-automation-appium-maestro',
+    name: 'mobile-test-automation-appium-maestro',
+    path: 'skills/89-mobile-test-automation-appium-maestro/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Cross-platform mobile test automation with Maestro YAML flows, Appium 2.0, native Espresso and XCUITest, mobile gesture simulation, offline mode testing, and cloud device farm orchestration.'
   },
   {
-    id: '80-mobile-cicd-fastlane-and-store-deployment',
-    name: 'mobile-cicd-fastlane-and-store-deployment',
-    path: 'skills/80-mobile-cicd-fastlane-and-store-deployment/SKILL.md',
-    category: 'Mobile & Multi-Platform Engineering',
-    summary: 'Automated mobile release pipelines with Fastlane, iOS Match certificates, Google Play App Signing, TestFlight, staged rollouts, OTA updates, and store compliance.'
+    id: '90-exploratory-testing-and-session-based-test-management',
+    name: 'exploratory-testing-and-session-based-test-management',
+    path: 'skills/90-exploratory-testing-and-session-based-test-management/SKILL.md',
+    category: 'Quality Engineering & Testing',
+    summary: 'Session-Based Test Management (SBTM), James Bach & Cem Kaner charter-based exploratory testing, tour-based heuristics (SFDIPOT, FEW HICCUPPS), and team-wide Bug Bash orchestration.'
   }
 ];
 
 for (const skill of newSkills) {
-  if (!data.skills.some(s => s.id === skill.id)) {
+  const existingIdx = data.skills.findIndex(s => s.id === skill.id);
+  if (existingIdx >= 0) {
+    data.skills[existingIdx] = skill;
+  } else {
     data.skills.push(skill);
   }
 }
