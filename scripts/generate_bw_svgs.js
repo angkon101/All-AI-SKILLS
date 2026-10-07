@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
+// Script to generate high-fidelity, strictly Black and White SVG animations for:
+// 1. assets/commercial-building-site.svg (Widescreen 1200x540 commercial construction site)
+// 2. assets/animated-banner.svg (Header hero banner 1200x440 with black-and-white construction site in background/right)
+// and mirror both into docs/assets/
+
+const fs = require('fs');
+const path = require('path');
+
+function generateCommercialBuildingSiteSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="100%" height="100%">
   <defs>
     <!-- Monochrome Deep Black Sky Gradient -->
     <linearGradient id="bwSky" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -1016,4 +1025,459 @@
   <line x1="0" y1="540" x2="1200" y2="540" stroke="#ffffff" stroke-width="3" />
   <line x1="0" y1="0" x2="0" y2="540" stroke="#ffffff" stroke-width="3" />
   <line x1="1200" y1="0" x2="1200" y2="540" stroke="#ffffff" stroke-width="3" />
-</svg>
+</svg>`;
+}
+
+function generateAnimatedBannerSVG() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="100%">
+  <defs>
+    <!-- Monochrome Deep Black Sky Background -->
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="50%" stop-color="#080808" />
+      <stop offset="100%" stop-color="#020202" />
+    </linearGradient>
+
+    <!-- Structural Steel Grayscale Gradient -->
+    <linearGradient id="bannerSteel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#262626" />
+      <stop offset="35%" stop-color="#666666" />
+      <stop offset="70%" stop-color="#999999" />
+      <stop offset="100%" stop-color="#262626" />
+    </linearGradient>
+
+    <!-- Luminous Beam Gradient -->
+    <linearGradient id="bannerBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#888888" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#888888" />
+    </linearGradient>
+
+    <!-- Glass Curtain Wall -->
+    <linearGradient id="bannerGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#262626" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0f0f0f" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Volumetric Floodlight Beam (Stark White) -->
+    <linearGradient id="bannerFloodlight" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Hazard Stripes -->
+    <pattern id="bannerHazard" width="16" height="16" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="8" height="16" fill="#ffffff" />
+      <rect x="8" width="8" height="16" fill="#000000" />
+    </pattern>
+
+    <!-- CAD Coordinate Grid -->
+    <pattern id="bannerCadGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.06" />
+    </pattern>
+
+    <!-- White Glow Filter -->
+    <filter id="bannerWhiteGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+    <![CDATA[
+      /* Crane Trolley Travel */
+      @keyframes bCraneTrolley {
+        0%, 100% { transform: translateX(0px); }
+        50% { transform: translateX(110px); }
+      }
+      /* Crane Hoist Lift and Pendulum Sway */
+      @keyframes bHoistSway {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        25% { transform: translateY(18px) rotate(-1.6deg); }
+        75% { transform: translateY(-12px) rotate(1.4deg); }
+      }
+      /* Hoist Elevator Transit */
+      @keyframes bElevatorTransit {
+        0%, 10% { transform: translateY(0px); }
+        45%, 55% { transform: translateY(-210px); }
+        90%, 100% { transform: translateY(0px); }
+      }
+      /* Welding Arc Flashes */
+      @keyframes bWeldFlash {
+        0%, 100% { opacity: 0; transform: scale(0.6); }
+        12% { opacity: 1; transform: scale(1.6); }
+        18% { opacity: 0.2; transform: scale(0.8); }
+        25% { opacity: 1; transform: scale(1.8); }
+        35% { opacity: 0.15; transform: scale(0.6); }
+        45%, 95% { opacity: 0; }
+      }
+      /* Falling Sparks */
+      @keyframes bSparkDrop {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-16px, 45px) scale(0.2); opacity: 0; }
+      }
+      /* Laser Scanline */
+      @keyframes bLaserScan {
+        0% { transform: translateY(0px); opacity: 0.8; }
+        50% { transform: translateY(220px); opacity: 1; }
+        100% { transform: translateY(0px); opacity: 0.8; }
+      }
+      /* White Strobe Beacon */
+      @keyframes bStrobe {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px #ffffff); }
+      }
+      /* Terminal Cursor */
+      @keyframes bBlinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      /* Circuit Packet Flow */
+      @keyframes bPacketFlow {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .b-crane-trolley { animation: bCraneTrolley 11s ease-in-out infinite; }
+      .b-hoist-sway { animation: bHoistSway 11s ease-in-out infinite; }
+      .b-elevator { animation: bElevatorTransit 15s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; }
+      .b-weld-flash { animation: bWeldFlash 4s ease-in-out infinite; transform-origin: center; }
+      .b-spark { animation: bSparkDrop 1.2s ease-out infinite; }
+      .b-laser { animation: bLaserScan 7s ease-in-out infinite; }
+      .b-strobe { animation: bStrobe 1s ease-in-out infinite; }
+      .b-cursor { animation: bBlinkCursor 0.8s infinite; }
+      .b-packet { stroke-dasharray: 10 25; animation: bPacketFlow 3.5s linear infinite; }
+        ]]>
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="440" fill="url(#bannerBg)" />
+  <rect width="1200" height="400" fill="url(#bannerCadGrid)" />
+
+  <!-- ======================================================================
+       BACKGROUND: EXPANSIVE COMMERCIAL CONSTRUCTION MEGA-SITE
+       ====================================================================== -->
+  <!-- Distant Background Towers under construction (Silhouettes across full canvas) -->
+  <g fill="#0c0c0c" stroke="#1f1f1f" stroke-width="1">
+    <rect x="420" y="240" width="60" height="160" />
+    <line x1="450" y1="240" x2="450" y2="200" stroke="#333333" stroke-width="1" />
+    <line x1="430" y1="205" x2="475" y2="205" stroke="#333333" stroke-width="0.8" />
+    <circle cx="450" cy="200" r="1.5" fill="#ffffff" class="b-strobe" />
+
+    <rect x="520" y="210" width="80" height="190" />
+    <line x1="560" y1="210" x2="560" y2="175" stroke="#333333" stroke-width="1" />
+    <line x1="535" y1="180" x2="590" y2="180" stroke="#333333" stroke-width="0.8" />
+    <circle cx="560" cy="175" r="1.5" fill="#ffffff" class="b-strobe" />
+
+    <rect x="1080" y="220" width="90" height="180" />
+    <line x1="1120" y1="220" x2="1120" y2="180" stroke="#333333" stroke-width="1" />
+    <circle cx="1120" cy="180" r="1.5" fill="#ffffff" class="b-strobe" />
+  </g>
+
+  <!-- Volumetric Ground Floodlight Beams -->
+  <polygon points="680,400 750,50 850,45 700,400" fill="url(#bannerFloodlight)" />
+  <polygon points="1050,400 930,70 1010,65 1070,400" fill="url(#bannerFloodlight)" opacity="0.6" />
+
+  <!-- ======================================================================
+       RIGHT HALF: ACTIVE COMMERCIAL SKYSCRAPER and CRANE CONSTRUCTION SITE
+       ====================================================================== -->
+  <!-- Secondary Wing (x=980 to 1120) -->
+  <rect x="980" y="150" width="140" height="250" fill="#0d0d0d" stroke="#262626" stroke-width="1.5" />
+  <g fill="url(#bannerGlass)">
+    <rect x="990" y="170" width="120" height="10" />
+    <rect x="990" y="190" width="120" height="10" />
+    <rect x="990" y="210" width="120" height="10" />
+    <rect x="990" y="230" width="120" height="10" />
+    <rect x="990" y="250" width="120" height="10" />
+    <rect x="990" y="270" width="120" height="10" />
+    <rect x="990" y="290" width="120" height="10" />
+    <rect x="990" y="310" width="120" height="10" />
+    <rect x="990" y="330" width="120" height="10" />
+    <rect x="990" y="350" width="120" height="10" />
+    <rect x="990" y="370" width="120" height="10" />
+  </g>
+  <circle cx="985" cy="148" r="2.5" fill="#ffffff" class="b-strobe" />
+  <circle cx="1115" cy="148" r="2.5" fill="#ffffff" class="b-strobe" />
+
+  <!-- Main Central Skyscraper Tower (x=730 to x=960) -->
+  <rect x="730" y="50" width="230" height="350" fill="#080808" stroke="#262626" stroke-width="2" />
+  <!-- Concrete Core Top Formwork -->
+  <rect x="815" y="35" width="60" height="16" fill="#e5e5e5" stroke="#000000" stroke-width="1.5" />
+  <text x="845" y="46" fill="#000000" font-family="'JetBrains Mono', Courier" font-size="6.5" font-weight="900" text-anchor="middle">CORE L-32</text>
+  <line x1="845" y1="35" x2="845" y2="20" stroke="#ffffff" stroke-width="1.8" />
+  <circle cx="845" cy="18" r="3.5" fill="#ffffff" class="b-strobe" />
+
+  <!-- High-Rise Structural Steel Skeleton (Floors 16 - 30: y=50 to y=230) -->
+  <g stroke="url(#bannerSteel)" stroke-width="2" fill="none">
+    <!-- Columns -->
+    <line x1="745" y1="50" x2="745" y2="240" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="790" y1="50" x2="790" y2="240" stroke="#cccccc" stroke-width="1.8" />
+    <line x1="845" y1="50" x2="845" y2="240" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="900" y1="50" x2="900" y2="240" stroke="#cccccc" stroke-width="1.8" />
+    <line x1="945" y1="50" x2="945" y2="240" stroke="#ffffff" stroke-width="2.5" />
+    <!-- Horizontal Girders -->
+    <line x1="730" y1="70" x2="960" y2="70" stroke="#ffffff" stroke-width="1.8" />
+    <line x1="730" y1="90" x2="960" y2="90" stroke="#888888" stroke-width="1.5" />
+    <line x1="730" y1="110" x2="960" y2="110" stroke="#888888" stroke-width="1.5" />
+    <line x1="730" y1="130" x2="960" y2="130" stroke="#ffffff" stroke-width="2" />
+    <line x1="730" y1="150" x2="960" y2="150" stroke="#888888" stroke-width="1.5" />
+    <line x1="730" y1="170" x2="960" y2="170" stroke="#888888" stroke-width="1.5" />
+    <line x1="730" y1="190" x2="960" y2="190" stroke="#ffffff" stroke-width="2" />
+    <line x1="730" y1="210" x2="960" y2="210" stroke="#888888" stroke-width="1.5" />
+    <line x1="730" y1="230" x2="960" y2="230" stroke="#ffffff" stroke-width="2" />
+    <!-- Diagonal Braces -->
+    <path d="M 745 70 L 790 90 M 790 70 L 745 90
+             M 790 70 L 845 90 M 845 70 L 790 90
+             M 845 70 L 900 90 M 900 70 L 845 90
+             M 900 70 L 945 90 M 945 70 L 900 90
+             M 745 130 L 845 170 M 845 130 L 745 170
+             M 845 130 L 945 170 M 945 130 L 845 170
+             M 745 190 L 845 230 M 845 190 L 745 230
+             M 845 190 L 945 230 M 945 190 L 845 230" stroke="#666666" stroke-width="1.5" />
+  </g>
+
+  <!-- Lower Curtain Wall Facade (Floors 1 - 10: y=240 to y=400) -->
+  <g fill="url(#bannerGlass)" stroke="#ffffff" stroke-width="1">
+    <rect x="735" y="240" width="220" height="15" />
+    <rect x="735" y="260" width="220" height="15" />
+    <rect x="735" y="280" width="220" height="15" />
+    <rect x="735" y="300" width="220" height="15" />
+    <rect x="735" y="320" width="220" height="15" />
+    <rect x="735" y="340" width="220" height="15" />
+    <rect x="735" y="360" width="220" height="15" />
+    <rect x="735" y="380" width="220" height="18" />
+  </g>
+  <!-- Office Night Light Slabs -->
+  <g fill="#ffffff" opacity="0.35">
+    <rect x="750" y="262" width="60" height="11" />
+    <rect x="860" y="282" width="75" height="11" />
+    <rect x="780" y="322" width="80" height="11" />
+    <rect x="850" y="362" width="60" height="11" />
+  </g>
+
+  <!-- Climbing Hoist Mast and Cage (At x=965) -->
+  <line x1="964" y1="80" x2="964" y2="400" stroke="#ffffff" stroke-width="2" />
+  <line x1="976" y1="80" x2="976" y2="400" stroke="#ffffff" stroke-width="2" />
+  <path d="M 964 90 L 976 90 M 964 110 L 976 110 M 964 130 L 976 130 M 964 150 L 976 150 M 964 170 L 976 170 M 964 190 L 976 190 M 964 210 L 976 210 M 964 230 L 976 230 M 964 250 L 976 250 M 964 270 L 976 270 M 964 290 L 976 290 M 964 310 L 976 310 M 964 330 L 976 330 M 964 350 L 976 350 M 964 370 L 976 370 M 964 390 L 976 390" stroke="#666666" stroke-width="1" />
+  <!-- Animated Climbing Elevator -->
+  <g transform="translate(0, 360)" class="b-elevator">
+    <rect x="962" y="0" width="18" height="26" rx="2" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
+    <rect x="964" y="3" width="14" height="10" fill="#2b2b2b" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
+    <rect x="962" y="19" width="18" height="7" fill="url(#bannerHazard)" />
+    <circle cx="971" cy="-2" r="2.5" fill="#ffffff" class="b-strobe" />
+  </g>
+
+  <!-- Primary Tower Crane (Mast at x=695) -->
+  <g id="banner-crane">
+    <line x1="688" y1="20" x2="688" y2="400" stroke="#ffffff" stroke-width="3" />
+    <line x1="704" y1="20" x2="704" y2="400" stroke="#ffffff" stroke-width="3" />
+    <path d="M 688 20 L 704 36 M 704 20 L 688 36
+             M 688 36 L 704 52 M 704 36 L 688 52
+             M 688 52 L 704 68 M 704 52 L 688 68
+             M 688 68 L 704 84 M 704 68 L 688 84
+             M 688 84 L 704 100 M 704 84 L 688 100
+             M 688 100 L 704 120 M 704 100 L 688 120
+             M 688 120 L 704 140 M 704 120 L 688 140
+             M 688 140 L 704 160 M 704 140 L 688 160
+             M 688 160 L 704 180 M 704 160 L 688 180
+             M 688 180 L 704 200 M 704 180 L 688 200
+             M 688 200 L 704 220 M 704 200 L 688 220
+             M 688 220 L 704 240 M 704 220 L 688 240
+             M 688 240 L 704 260 M 704 240 L 688 260
+             M 688 260 L 704 280 M 704 260 L 688 280
+             M 688 280 L 704 300 M 704 280 L 688 300
+             M 688 300 L 704 320 M 704 300 L 688 320
+             M 688 320 L 704 340 M 704 320 L 688 340
+             M 688 340 L 704 360 M 704 340 L 688 360
+             M 688 360 L 704 380 M 704 360 L 688 380
+             M 688 380 L 704 400 M 704 380 L 688 400" stroke="#737373" stroke-width="1.5" />
+
+    <!-- Wall Ties to Building -->
+    <line x1="704" y1="130" x2="730" y2="130" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="704" y1="230" x2="730" y2="230" stroke="#ffffff" stroke-width="2.5" />
+
+    <!-- Turntable and Cab -->
+    <rect x="682" y="14" width="28" height="6" fill="#000000" stroke="#ffffff" stroke-width="1.8" />
+    <rect x="700" y="10" width="16" height="14" rx="2" fill="#171717" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="704" y="12" width="10" height="9" fill="#ffffff" opacity="0.85" />
+
+    <!-- Apex Tower -->
+    <polygon points="688,14 704,14 696,-2" fill="#0d0d0d" stroke="#ffffff" stroke-width="2.5" />
+    <circle cx="696" cy="-3" r="4" fill="#ffffff" class="b-strobe" />
+
+    <!-- Jib Arm (Main Working Jib extends Right: 696 to 1010) -->
+    <line x1="696" y1="12" x2="1020" y2="12" stroke="#ffffff" stroke-width="3" />
+    <line x1="696" y1="2" x2="1010" y2="12" stroke="#ffffff" stroke-width="1.8" />
+    <!-- Counter Jib (Left: 696 to 615) -->
+    <line x1="696" y1="12" x2="615" y2="12" stroke="#ffffff" stroke-width="3" />
+    <rect x="620" y="6" width="25" height="16" rx="2" fill="#262626" stroke="#ffffff" stroke-width="1.8" />
+    <line x1="696" y1="-2" x2="625" y2="8" stroke="#cccccc" stroke-width="1.8" />
+    <!-- Jib Pendants and Webbing -->
+    <line x1="696" y1="-2" x2="850" y2="9" stroke="#cccccc" stroke-width="2" />
+    <path d="M 696 12 L 720 3 L 744 12 L 768 4 L 792 12 L 816 5 L 840 12 L 864 6 L 888 12 L 912 7 L 936 12 L 960 8 L 984 12" stroke="#888888" stroke-width="1.2" />
+    <circle cx="1020" cy="12" r="3" fill="#ffffff" class="b-strobe" />
+
+    <!-- Animated Trolley and Suspended Girder -->
+    <g transform="translate(780, 0)">
+      <g class="b-crane-trolley">
+        <rect x="-10" y="10" width="20" height="7" rx="1.5" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+        <g class="b-hoist-sway">
+          <!-- Cables -->
+          <line x1="-5" y1="17" x2="-4" y2="95" stroke="#ffffff" stroke-width="1.5" />
+          <line x1="5" y1="17" x2="4" y2="95" stroke="#ffffff" stroke-width="1.5" />
+          <!-- Hook Block -->
+          <rect x="-7" y="95" width="14" height="10" rx="1.5" fill="#171717" stroke="#ffffff" stroke-width="1.5" />
+          <path d="M 0 105 C -4 107 -4 112 0 114 C 4 115 5 111 2 108" fill="none" stroke="#ffffff" stroke-width="2.5" />
+          <!-- Slings -->
+          <line x1="0" y1="114" x2="-45" y2="135" stroke="#ffffff" stroke-width="1.2" />
+          <line x1="0" y1="114" x2="45" y2="135" stroke="#ffffff" stroke-width="1.2" />
+          <!-- Suspended Steel I-Beam -->
+          <g transform="translate(0, 137)">
+            <rect x="-50" y="-4" width="100" height="4" rx="1" fill="#ffffff" />
+            <rect x="-46" y="0" width="92" height="5" fill="#444444" stroke="#ffffff" stroke-width="0.8" />
+            <rect x="-50" y="5" width="100" height="4" rx="1" fill="#ffffff" />
+            <text x="0" y="4" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="5.5" font-weight="900" text-anchor="middle">SWL 20T • W24x104</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- High-Altitude Arc Welding Station (Joint at 790, 130) -->
+  <g transform="translate(790, 130)">
+    <circle cx="0" cy="0" r="14" fill="#ffffff" filter="url(#bannerWhiteGlow)" class="b-weld-flash" />
+    <circle cx="0" cy="0" r="5" fill="#ffffff" class="b-weld-flash" />
+    <circle cx="-2" cy="0" r="1.8" fill="#ffffff" class="b-spark" />
+    <circle cx="2" cy="0" r="1.5" fill="#ffffff" class="b-spark" style="animation-delay: 0.3s;" />
+    <!-- Ironworker -->
+    <circle cx="10" cy="-6" r="3.2" fill="#ffffff" />
+    <rect x="7" y="-2" width="7" height="11" rx="1" fill="#262626" stroke="#ffffff" stroke-width="1" />
+  </g>
+
+  <!-- Laser Elevation Scanner Beam -->
+  <g class="b-laser" transform="translate(0, 110)">
+    <line x1="710" y1="0" x2="980" y2="0" stroke="#ffffff" stroke-width="1.8" filter="url(#bannerWhiteGlow)" opacity="0.9" />
+    <rect x="984" y="-7" width="65" height="14" rx="2" fill="#000000" stroke="#ffffff" stroke-width="1" />
+    <text x="1016" y="3" fill="#ffffff" font-family="'JetBrains Mono', Courier" font-size="6.5" font-weight="900" text-anchor="middle">DATUM ±0.01mm</text>
+  </g>
+
+  <!-- Ground Grade Construction Strip and Machinery -->
+  <rect x="600" y="400" width="600" height="40" fill="#080808" stroke="#262626" stroke-width="1.5" />
+  <rect x="600" y="396" width="600" height="5" fill="url(#bannerHazard)" />
+  <!-- Concrete Pump Truck Silhouette at Grade -->
+  <g transform="translate(620, 375)">
+    <rect x="0" y="8" width="55" height="18" rx="2" fill="#1c1c1c" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="38" y="10" width="14" height="9" fill="#ffffff" opacity="0.8" />
+    <circle cx="12" cy="26" r="5" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+    <circle cx="26" cy="26" r="5" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+    <circle cx="44" cy="26" r="5" fill="#000000" stroke="#ffffff" stroke-width="1.5" />
+    <!-- Boom Pipe -->
+    <polyline points="30,6 60,-35 95,-45 130,-15" fill="none" stroke="#ffffff" stroke-width="2.5" />
+  </g>
+
+  <!-- ======================================================================
+       LEFT HALF: TERMINAL and AI SWARM HUD (Monochrome High Contrast)
+       ====================================================================== -->
+  <!-- IDE / Terminal Window Container -->
+  <g transform="translate(40, 30)">
+    <!-- Window Frame -->
+    <rect width="530" height="340" rx="10" fill="#050505" stroke="#ffffff" stroke-width="1.8" opacity="0.95" />
+    
+    <!-- Title Bar -->
+    <rect width="530" height="34" rx="10" fill="#141414" stroke="#ffffff" stroke-width="0.8" />
+    <!-- Window Controls (Pure BandW circles) -->
+    <circle cx="22" cy="17" r="5.5" fill="#ffffff" />
+    <circle cx="38" cy="17" r="5.5" fill="#888888" />
+    <circle cx="54" cy="17" r="5.5" fill="#444444" />
+    <text x="265" y="22" fill="#ffffff" font-family="'JetBrains Mono', Courier, monospace" font-size="11.5" font-weight="800" text-anchor="middle" letter-spacing="1">
+      SWARM SITE RUNBOOK • 110 SKILLS ACTIVE
+    </text>
+
+    <!-- Terminal Lines -->
+    <g font-family="'JetBrains Mono', Courier, monospace" font-size="11" fill="#e5e5e5" transform="translate(25, 62)">
+      <!-- Line 1 -->
+      <text x="0" y="0"><tspan fill="#888888">$</tspan> <tspan fill="#ffffff" font-weight="700">antigravity</tspan> swarm --site "Tower Alpha" --discipline all</text>
+      
+      <!-- Line 2 -->
+      <text x="0" y="24" fill="#888888">[00:00:01] <tspan fill="#ffffff" font-weight="700">FOUNDATION</tspan>  : Storage engines &amp; Raft consensus [L-00]</text>
+      
+      <!-- Line 3 -->
+      <text x="0" y="48" fill="#888888">[00:00:02] <tspan fill="#ffffff" font-weight="700">SUPERSTRUCTURE</tspan>: 110 production runbooks compiled [L-26]</text>
+      
+      <!-- Line 4 -->
+      <text x="0" y="72" fill="#888888">[00:00:03] <tspan fill="#ffffff" font-weight="700">CRANE HOIST</tspan>   : CI/CD Fastlane &amp; Turborepo DAG [L-32]</text>
+      
+      <!-- Line 5 -->
+      <text x="0" y="96" fill="#888888">[00:00:04] <tspan fill="#ffffff" font-weight="700">CLADDING</tspan>      : Design tokens, RSC streaming &amp; tRPC</text>
+
+      <!-- Line 6 -->
+      <text x="0" y="120" fill="#888888">[00:00:05] <tspan fill="#ffffff" font-weight="700">SAFETY/QA</tspan>     : Zero slop, zero mutants, 100% contracts</text>
+
+      <!-- Line 7 -->
+      <text x="0" y="144" fill="#888888">[00:00:06] <tspan fill="#ffffff" font-weight="700">TOKEN DIET</tspan>    : KV prompt cache active (89% saved)</text>
+
+      <!-- Active Prompt with Blinking Cursor -->
+      <text x="0" y="176">
+        <tspan fill="#888888">$</tspan> <tspan fill="#ffffff" font-weight="700">status: all 21 tracks operational</tspan>
+        <tspan class="b-cursor" fill="#ffffff" font-weight="900"> █</tspan>
+      </text>
+    </g>
+
+    <!-- Bottom Metrics Badges inside Terminal -->
+    <g transform="translate(25, 275)">
+      <!-- Badge 1 -->
+      <rect x="0" y="0" width="110" height="26" rx="4" fill="#141414" stroke="#ffffff" stroke-width="1.2" />
+      <text x="55" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">110 SKILLS</text>
+
+      <!-- Badge 2 -->
+      <rect x="122" y="0" width="110" height="26" rx="4" fill="#141414" stroke="#ffffff" stroke-width="1.2" />
+      <text x="177" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">21 TRACKS</text>
+
+      <!-- Badge 3 -->
+      <rect x="244" y="0" width="110" height="26" rx="4" fill="#141414" stroke="#ffffff" stroke-width="1.2" />
+      <text x="299" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">BIM LOD-400</text>
+
+      <!-- Badge 4 -->
+      <rect x="366" y="0" width="110" height="26" rx="4" fill="#141414" stroke="#ffffff" stroke-width="1.2" />
+      <text x="421" y="17" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" text-anchor="middle">ZERO ACCIDENT</text>
+    </g>
+  </g>
+
+  <!-- Bottom Coordinates Banner Strip -->
+  <g transform="translate(0, 418)">
+    <rect width="1200" height="22" fill="#000000" stroke="#262626" stroke-width="1" />
+    <g font-family="'JetBrains Mono', Courier" font-size="8.5" fill="#888888" transform="translate(30, 15)">
+      <text x="0" y="0">MONOCHROME COMMERCIAL CONSTRUCTION BLUEPRINT • BIM ARCHITECTURE • 110 SKILLS IN COLLABORATIVE SWARM EXECUTION</text>
+      <text x="1140" y="0" text-anchor="end" fill="#ffffff" font-weight="900">SYSTEM: ONLINE ⚡</text>
+    </g>
+  </g>
+
+  <!-- Framing Accents -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#ffffff" stroke-width="2.5" />
+  <line x1="0" y1="440" x2="1200" y2="440" stroke="#ffffff" stroke-width="2.5" />
+  <line x1="0" y1="0" x2="0" y2="440" stroke="#ffffff" stroke-width="2.5" />
+  <line x1="1200" y1="0" x2="1200" y2="440" stroke="#ffffff" stroke-width="2.5" />
+</svg>`;
+}
+
+// Generate the files
+const buildingSiteSvg = generateCommercialBuildingSiteSVG();
+const animatedBannerSvg = generateAnimatedBannerSVG();
+
+const paths = [
+  { file: path.join(__dirname, '../assets/commercial-building-site.svg'), content: buildingSiteSvg },
+  { file: path.join(__dirname, '../docs/assets/commercial-building-site.svg'), content: buildingSiteSvg },
+  { file: path.join(__dirname, '../assets/animated-banner.svg'), content: animatedBannerSvg },
+  { file: path.join(__dirname, '../docs/assets/animated-banner.svg'), content: animatedBannerSvg },
+];
+
+paths.forEach(({ file, content }) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, content, 'utf8');
+  console.log(`Generated: ${file} (${Buffer.byteLength(content, 'utf8')} bytes)`);
+});

@@ -185,10 +185,10 @@ flowchart TD
 ## 🏗️ Commercial Building Architecture & Swarm Construction Site
 
 <p align="center">
-  <img src="./assets/commercial-building-site.svg" alt="Autonomous Commercial Building Construction Site - BIM CAD High-Rise Erection" width="100%">
+  <img src="./assets/commercial-building-site.svg" alt="Autonomous Commercial Building Construction Site - Monochrome BIM CAD High-Rise Erection" width="100%">
 </p>
 
-> 🏢 **Software Architecture as a High-Rise Construction Site**: Just as a commercial skyscraper requires foundational pilings (storage engines & distributed consensus), high-capacity tower cranes (CI/CD release pipelines), floor-by-floor structural steel erection (microservices, type-safe APIs & tRPC), double-glazed curtain wall cladding (frontend design tokens & RSC), and real-time BIM telemetry (observability, SLIs & GenAI cost governance), enterprise software engineering demands structured discipline across every layer.
+> 🏢 **Software Architecture as a High-Rise Construction Site (Monochrome CAD/BIM)**: Rendered in a high-contrast architectural black-and-white drafting aesthetic, this dynamic visualization maps the physical lifecycle of a commercial skyscraper to software engineering. Active site operations illustrate the entire system in motion: deep foundation pilings (storage engines & distributed consensus), dual tower cranes hoisting structural steel and concrete skips (CI/CD release pipelines & packaging), multi-tier external Alimak climber hoists (data streaming & worker pipelines), high-altitude ironworkers with electric arc welding showers (code refactoring & contract integration), hydraulic boom pumps and earthmoving excavators (data ingestion & mutations), and precision CAD laser leveling scans (continuous testing, telemetry & GenAI context economics).
 
 ---
 
